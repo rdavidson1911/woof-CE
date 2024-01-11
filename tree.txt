@@ -1,0 +1,4791 @@
+.
+├── CHANGELOG
+├── LICENSE
+├── README.init -> initrd-progs/0initrd/README.txt
+├── README.md
+├── initrd-progs
+│   ├── 0initrd
+│   │   ├── README.txt
+│   │   ├── bin
+│   │   │   ├── ash -> busybox
+│   │   │   ├── cp -> busybox
+│   │   │   ├── fsck
+│   │   │   ├── ln -> busybox
+│   │   │   ├── mkdir -> busybox
+│   │   │   ├── mount -> busybox
+│   │   │   ├── poweroff
+│   │   │   ├── reboot -> poweroff
+│   │   │   └── sh -> busybox
+│   │   ├── etc
+│   │   │   ├── profile
+│   │   │   ├── rc.d
+│   │   │   │   └── functions_x
+│   │   │   └── terminfo
+│   │   │       └── x
+│   │   │           └── xterm
+│   │   ├── init
+│   │   ├── lib
+│   │   │   ├── consolefonts
+│   │   │   │   ├── LatArCyrHeb-16.psfu.gz
+│   │   │   │   ├── LatGrkCyr-8x16.psfu.gz
+│   │   │   │   ├── lat1-12.psfu.gz
+│   │   │   │   ├── lat2-12.psfu.gz
+│   │   │   │   └── ter-u16n.psf.gz
+│   │   │   └── keymaps
+│   │   │       ├── azerty.gz
+│   │   │       ├── be-latin1.gz
+│   │   │       ├── br-abnt.gz
+│   │   │       ├── br-abnt2.gz
+│   │   │       ├── br-latin1-abnt2.gz
+│   │   │       ├── br-latin1-us.gz
+│   │   │       ├── by.gz
+│   │   │       ├── cf.gz
+│   │   │       ├── croat.gz
+│   │   │       ├── cz.gz
+│   │   │       ├── de-latin1.gz
+│   │   │       ├── de.gz
+│   │   │       ├── dk.gz
+│   │   │       ├── dvorak-l.gz
+│   │   │       ├── dvorak-r.gz
+│   │   │       ├── dvorak.gz
+│   │   │       ├── es.gz
+│   │   │       ├── et.gz
+│   │   │       ├── fi.gz
+│   │   │       ├── fr.gz
+│   │   │       ├── gr.gz
+│   │   │       ├── hu.gz
+│   │   │       ├── hu101.gz
+│   │   │       ├── il.gz
+│   │   │       ├── it.gz
+│   │   │       ├── jp106.gz
+│   │   │       ├── lt.gz
+│   │   │       ├── mk.gz
+│   │   │       ├── nl.gz
+│   │   │       ├── no.gz
+│   │   │       ├── pl.gz
+│   │   │       ├── pt-latin1.gz
+│   │   │       ├── ro.gz
+│   │   │       ├── ru.gz
+│   │   │       ├── se.gz
+│   │   │       ├── sg.gz
+│   │   │       ├── sk-qwerty.gz
+│   │   │       ├── sk-qwertz.gz
+│   │   │       ├── slovene.gz
+│   │   │       ├── sv-latin1.gz
+│   │   │       ├── uk.gz
+│   │   │       ├── us.gz
+│   │   │       └── wangbe.gz
+│   │   ├── locale
+│   │   │   ├── de
+│   │   │   │   └── init.mo
+│   │   │   ├── es
+│   │   │   │   └── init.mo
+│   │   │   ├── fr
+│   │   │   │   └── init.mo
+│   │   │   ├── gr
+│   │   │   │   └── init.mo
+│   │   │   ├── hu
+│   │   │   │   └── init.mo
+│   │   │   ├── it
+│   │   │   │   └── init.mo
+│   │   │   ├── ja
+│   │   │   │   └── init.mo
+│   │   │   ├── ko
+│   │   │   │   └── init.mo
+│   │   │   ├── no
+│   │   │   │   └── init.mo
+│   │   │   ├── pl
+│   │   │   │   └── init.mo
+│   │   │   ├── pt
+│   │   │   │   └── init.mo
+│   │   │   ├── ro
+│   │   │   │   └── init.mo
+│   │   │   ├── ru
+│   │   │   │   └── init.mo
+│   │   │   └── se
+│   │   │       └── init.mo
+│   │   └── sbin
+│   │       ├── debugsave
+│   │       ├── functions_x -> ../etc/rc.d/functions_x
+│   │       ├── init-bootmenu
+│   │       ├── init_full_install
+│   │       ├── isoboot
+│   │       ├── load_ext_file
+│   │       ├── mountpartition
+│   │       ├── probedisk
+│   │       ├── probepart
+│   │       ├── resize_part
+│   │       ├── set_plang
+│   │       ├── switch
+│   │       ├── usablefs
+│   │       └── validate_pupsave_upgrade
+│   └── build.sh
+├── kernel-kit
+│   ├── 5.10.x-x86-build.conf
+│   ├── 5.10.x-x86_64-build.conf
+│   ├── 5.15.x-x86-build.conf
+│   ├── 5.15.x-x86_64-build.conf
+│   ├── 6.1.x-x86-build.conf
+│   ├── 6.1.x-x86_64-build.conf
+│   ├── 6.6.x-x86-build.conf
+│   ├── 6.6.x-x86_64-build.conf
+│   ├── README
+│   ├── ZNOTES
+│   ├── build.conf
+│   ├── build.sh
+│   ├── configs_arm
+│   │   └── EMPTYDIRMARKER
+│   ├── configs_x86
+│   │   ├── DOTconfig-5.10.142-i686-pae
+│   │   ├── DOTconfig-5.15.4-i686-pae
+│   │   ├── DOTconfig-6.1.52-x86
+│   │   └── DOTconfig-6.6.2-x86
+│   ├── configs_x86_64
+│   │   ├── DOTconfig-5.10.142-x86_64
+│   │   ├── DOTconfig-5.15.4-x86_64
+│   │   ├── DOTconfig-6.1.13-x86_64
+│   │   └── DOTconfig-6.6.2-x86_64
+│   ├── debian-diffconfigs
+│   │   ├── bookworm
+│   │   ├── bullseye
+│   │   ├── sid -> bookworm
+│   │   └── trixie -> bookworm
+│   ├── firmware_extra.sh
+│   ├── firmware_picker.sh
+│   ├── funcs.sh
+│   ├── get_sof.sh
+│   ├── kbuild.sh
+│   ├── patches
+│   │   ├── 3.16
+│   │   │   ├── aufs316-3.16.7.4.patchz
+│   │   │   ├── fix-mod_devicetable.patch
+│   │   │   └── readme.txt
+│   │   ├── aufs_sources
+│   │   │   ├── apply
+│   │   │   ├── k3.16.35.patch
+│   │   │   ├── k3.2.66.patch
+│   │   │   ├── k3.4.112.patch
+│   │   │   ├── k5.4.x.patch
+│   │   │   └── k6.6.4.patch
+│   │   └── commoncap-symbol.patch
+│   ├── pi-zero-build.conf
+│   ├── pi2-build.conf
+│   ├── pi4-build.conf
+│   ├── ubuntu-diffconfigs
+│   │   └── jammy
+│   └── usrmerge.sh
+├── merge2out
+├── merge2out-gui
+├── tree.txt
+├── woof-arch
+│   ├── arm
+│   │   ├── build
+│   │   │   └── support
+│   │   │       ├── debdb2pupdb
+│   │   │       ├── dpkg-deb
+│   │   │       ├── find_cat
+│   │   │       ├── findpkgs-dep-helper
+│   │   │       └── findpkgs-search-helper
+│   │   └── target
+│   │       └── rootfs-skeleton
+│   │           ├── sbin
+│   │           │   └── losetup-222
+│   │           └── usr
+│   │               ├── bin
+│   │               │   └── pm13tray
+│   │               └── sbin
+│   │                   ├── pngoverlay -> pngoverlay-cairo
+│   │                   ├── pngoverlay-cairo
+│   │                   └── pngoverlay-gtk2
+│   ├── x86
+│   │   ├── build
+│   │   │   └── support
+│   │   │       ├── debdb2pupdb
+│   │   │       ├── dpkg-deb
+│   │   │       ├── find_cat
+│   │   │       ├── findpkgs-dep-helper
+│   │   │       └── findpkgs-search-helper
+│   │   └── target
+│   │       └── rootfs-skeleton
+│   │           ├── sbin
+│   │           │   └── losetup-222
+│   │           └── usr
+│   │               ├── bin
+│   │               │   └── mdview
+│   │               └── sbin
+│   │                   ├── pngoverlay -> pngoverlay-cairo
+│   │                   ├── pngoverlay-cairo
+│   │                   └── pngoverlay-gtk2
+│   └── x86_64
+│       ├── build
+│       │   └── support
+│       │       ├── debdb2pupdb
+│       │       ├── dpkg-deb
+│       │       ├── find_cat
+│       │       ├── findpkgs-dep-helper
+│       │       └── findpkgs-search-helper
+│       └── target
+│           └── rootfs-skeleton
+│               ├── sbin
+│               │   └── losetup-222
+│               └── usr
+│                   ├── bin
+│                   │   └── mdview
+│                   └── sbin
+│                       ├── pngoverlay -> pngoverlay-cairo
+│                       ├── pngoverlay-cairo
+│                       └── pngoverlay-gtk2
+├── woof-code
+│   ├── 0setup
+│   ├── 1download
+│   ├── 2createpackages
+│   ├── 3builddistro
+│   ├── 3builddistro-Z -> 3builddistro
+│   ├── PKGS_MANAGEMENT
+│   ├── README.pkgs_specs
+│   ├── _00build.conf
+│   ├── _00func
+│   ├── boot
+│   │   └── boot-dialog -> ../rootfs-skeleton/usr/share/boot-dialog
+│   ├── build.sh
+│   ├── huge_kernel
+│   │   └── EMPTYDIRMARKER
+│   ├── packages-templates
+│   │   ├── abiword_FIXUPHACK
+│   │   ├── alsa-base_FIXUPHACK
+│   │   ├── alsa-lib_FIXUPHACK
+│   │   ├── alsa-utils_FIXUPHACK
+│   │   ├── asunder_FIXUPHACK
+│   │   ├── automake_FIXUPHACK
+│   │   ├── bash_FIXUPHACK
+│   │   ├── bc_FIXUPHACK
+│   │   ├── binutils_FIXUPHACK
+│   │   ├── bison_FIXUPHACK
+│   │   ├── blueman_FIXUPHACK
+│   │   ├── bluez_FIXUPHACK
+│   │   ├── ca-certificates
+│   │   │   ├── FIXUPHACK
+│   │   │   ├── pinstall-cross.sh
+│   │   │   └── pinstall.sh
+│   │   ├── cd-boot-images-amd64_FIXUPHACK
+│   │   ├── cdrkit_FIXUPHACK
+│   │   ├── connman_FIXUPHACK
+│   │   ├── coreutils_FIXUPHACK
+│   │   ├── crda_FIXUPHACK
+│   │   ├── cups_FIXUPHACK
+│   │   ├── dash_FIXUPHACK
+│   │   ├── dbus_FIXUPHACK
+│   │   ├── dbus_slack_FIXUPHACK -> dbus_FIXUPHACK
+│   │   ├── dejavu_fonts_FIXUPHACK
+│   │   ├── dhcpcd_FIXUPHACK
+│   │   ├── e2fsprogs_FIXUPHACK
+│   │   ├── evince_FIXUPHACK
+│   │   ├── ffmpeg_FIXUPHACK
+│   │   ├── firefox-esr_FIXUPHACK -> firefox_FIXUPHACK
+│   │   ├── firefox_FIXUPHACK
+│   │   ├── flac_FIXUPHACK
+│   │   ├── flatpak_FIXUPHACK
+│   │   ├── fonts-liberation2_FIXUPHACK -> fonts-liberation_FIXUPHACK
+│   │   ├── fonts-liberation_FIXUPHACK
+│   │   ├── fonts-noto_FIXUPHACK
+│   │   ├── fpm2_FIXUPHACK
+│   │   ├── gadmin-rsync_FIXUPHACK
+│   │   ├── galculator_FIXUPHACK
+│   │   ├── gawk_FIXUPHACK
+│   │   ├── gcc_dev_FIXUPHACK
+│   │   ├── gcc_lib_FIXUPHACK
+│   │   ├── gcolor2_FIXUPHACK
+│   │   ├── gdk-pixbuf_FIXUPHACK
+│   │   ├── gdmap_FIXUPHACK
+│   │   ├── geany_FIXUPHACK
+│   │   ├── gettext_FIXUPHACK
+│   │   ├── gexec_FIXUPHACK
+│   │   ├── gftp_FIXUPHACK
+│   │   ├── ghostscript_FIXUPHACK
+│   │   ├── glibc_FIXUPHACK
+│   │   ├── glibc_PRE
+│   │   ├── glibc_locales_FIXUPHACK
+│   │   ├── glibc_locales_PRE
+│   │   ├── gnumeric_FIXUPHACK
+│   │   ├── gparted_FIXUPHACK
+│   │   ├── gsimplecal_FIXUPHACK
+│   │   ├── gtk+3_FIXUPHACK -> gtk3_FIXUPHACK
+│   │   ├── gtk+_FIXUPHACK
+│   │   ├── gtk-chtheme_FIXUPHACK
+│   │   ├── gtk3_FIXUPHACK
+│   │   ├── gtkam_FIXUPHACK
+│   │   ├── hardinfo_FIXUPHACK
+│   │   ├── homebank_FIXUPHACK
+│   │   ├── icu_FIXUPHACK
+│   │   ├── ifplugd_FIXUPHACK
+│   │   ├── init-system-helpers_FIXUPHACK
+│   │   ├── initscripts_FIXUPHACK
+│   │   ├── isomaster_FIXUPHACK
+│   │   ├── kmod_FIXUPHACK
+│   │   ├── leafpad_FIXUPHACK
+│   │   ├── libasound2-plugins-pulseonly_FIXUPHACK
+│   │   ├── libelogind0_FIXUPHACK
+│   │   ├── libelogind_FIXUPHACK
+│   │   ├── libfftw_FIXUPHACK
+│   │   ├── libgphoto2_FIXUPHACK
+│   │   ├── llvm-cut_FIXUPHACK
+│   │   ├── man-db_FIXUPHACK
+│   │   ├── mesa_FIXUPHACK
+│   │   ├── metamail_FIXUPHACK
+│   │   ├── mhwaveedit_FIXUPHACK
+│   │   ├── mpv_FIXUPHACK
+│   │   ├── mtpaint_FIXUPHACK
+│   │   ├── nano_FIXUPHACK
+│   │   ├── ncurses_PRE
+│   │   ├── ndiswrapper_FIXUPHACK
+│   │   ├── net-tools_FIXUPHACK
+│   │   ├── netsurf_FIXUPHACK
+│   │   ├── network-manager_FIXUPHACK
+│   │   ├── nscd
+│   │   │   └── etc
+│   │   │       └── nscd.conf
+│   │   ├── ntpdate_FIXUPHACK
+│   │   ├── openldap_FIXUPHACK
+│   │   ├── openssh_client_FIXUPHACK
+│   │   ├── openssh_server_FIXUPHACK
+│   │   ├── openssl_FIXUPHACK
+│   │   ├── pam_slack_FIXUPHACK
+│   │   ├── pango_FIXUPHACK
+│   │   ├── pavucontrol_FIXUPHACK
+│   │   ├── pciutils_FIXUPHACK
+│   │   ├── pcmciautils_FIXUPHACK
+│   │   ├── perl_FIXUPHACK
+│   │   ├── perl_tiny_FIXUPHACK
+│   │   ├── picom_FIXUPHACK
+│   │   ├── picom_PRE
+│   │   ├── pigz_FIXUPHACK
+│   │   ├── pipewire_FIXUPHACK
+│   │   ├── pm-utils_FIXUPHACK
+│   │   ├── polkit_FIXUPHACK
+│   │   ├── poppler_FIXUPHACK
+│   │   ├── ppp_FIXUPHACK
+│   │   ├── procps_FIXUPHACK
+│   │   ├── psmisc_FIXUPHACK
+│   │   ├── pulseaudio_FIXUPHACK
+│   │   ├── python-dev_FIXUPHACK
+│   │   ├── python_FIXUPHACK
+│   │   ├── python_lib_FIXUPHACK
+│   │   ├── rxvt-unicode_FIXUPHACK
+│   │   ├── samba_client_FIXUPHACK
+│   │   ├── sane-backends_FIXUPHACK
+│   │   ├── seatd_FIXUPHACK
+│   │   ├── setserial_FIXUPHACK
+│   │   ├── shared-mime-info_FIXUPHACK
+│   │   ├── sudo_FIXUPHACK
+│   │   ├── swaybg_FIXUPHACK
+│   │   ├── swayidle_FIXUPHACK
+│   │   ├── syslinux_FIXUPHACK
+│   │   ├── tar_FIXUPHACK
+│   │   ├── tofi_FIXUPHACK
+│   │   ├── transmission_FIXUPHACK
+│   │   ├── udev_FIXUPHACK
+│   │   ├── util-linux_FIXUPHACK
+│   │   ├── v4l-utils_FIXUPHACK
+│   │   ├── vcdimager_FIXUPHACK
+│   │   ├── vlc-nox_FIXUPHACK -> vlc_FIXUPHACK
+│   │   ├── vlc_FIXUPHACK
+│   │   ├── vte_FIXUPHACK
+│   │   ├── vulkan-sdk_FIXUPHACK
+│   │   ├── wget_FIXUPHACK
+│   │   ├── wireplumber_FIXUPHACK
+│   │   ├── wpa_supplicant_FIXUPHACK
+│   │   ├── wv_FIXUPHACK
+│   │   ├── xchat_FIXUPHACK
+│   │   ├── xdg-utils_FIXUPHACK
+│   │   ├── xorg_base_new
+│   │   │   ├── FIXUPHACK
+│   │   │   ├── etc
+│   │   │   │   ├── X11
+│   │   │   │   │   └── xorg.conf.d
+│   │   │   │   │       └── 90-touchscreen-rightclick.conf
+│   │   │   │   └── fonts-puppy
+│   │   │   │       ├── fonts.conf
+│   │   │   │       ├── fonts.dtd
+│   │   │   │       └── local.conf
+│   │   │   ├── pinstall.sh
+│   │   │   └── usr
+│   │   │       └── share
+│   │   │           └── X11
+│   │   │               └── xorg.conf.d
+│   │   │                   └── 01-panfrost.conf
+│   │   ├── xorg_dri_FIXUPHACK
+│   │   ├── xournalpp_FIXUPHACK
+│   │   ├── xsane_FIXUPHACK
+│   │   └── xserver_xorg_FIXUPHACK
+│   ├── rootfs-packages
+│   │   ├── acpid_busybox
+│   │   │   ├── etc
+│   │   │   │   ├── acpi
+│   │   │   │   │   ├── LID
+│   │   │   │   │   │   └── 00000080 -> ../actions/suspend.sh
+│   │   │   │   │   ├── PWRF
+│   │   │   │   │   │   └── 00000080 -> ../actions/acpi_poweroff.sh
+│   │   │   │   │   ├── acpi.conf
+│   │   │   │   │   └── actions
+│   │   │   │   │       ├── acpi_poweroff.sh
+│   │   │   │   │       ├── powerbtn.sh -> acpi_poweroff.sh
+│   │   │   │   │       └── suspend.sh
+│   │   │   │   ├── init.d
+│   │   │   │   │   └── rc.acpi
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── acpid.desktop
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── startacpid
+│   │   │       └── share
+│   │   │           └── locale
+│   │   │               ├── fr
+│   │   │               │   └── LC_MESSAGES
+│   │   │               │       └── acpi.mo
+│   │   │               └── ja
+│   │   │                   └── LC_MESSAGES
+│   │   │                       └── acpi.mo
+│   │   ├── backend_modprobe
+│   │   │   ├── etc
+│   │   │   │   └── rc.d
+│   │   │   │       └── MODULESCONFIG-backend_modprobe
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   └── sbin
+│   │   │       └── pup_event_backend_modprobe
+│   │   ├── change_kernels
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── change_kernels
+│   │   │       └── share
+│   │   │           ├── doc
+│   │   │           │   └── nls
+│   │   │           │       └── change_kernels
+│   │   │           │           └── change_kernels.pot
+│   │   │           └── pixmaps
+│   │   │               └── tux.svg
+│   │   ├── check_deps_gui
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   └── petget
+│   │   │       │       └── check_deps_gui.sh
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── Puppy-package-manager-check-deps.desktop
+│   │   ├── cups_backend
+│   │   │   ├── etc
+│   │   │   │   └── cups
+│   │   │   │       └── ppd
+│   │   │   │           └── CUPS-PDF.ppd
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   └── usr
+│   │   │       ├── lib
+│   │   │       │   └── cups
+│   │   │       │       └── backend
+│   │   │       │           ├── pdf-writer
+│   │   │       │           └── smbw
+│   │   │       └── share
+│   │   │           └── cups
+│   │   │               └── model
+│   │   │                   └── ghostpdf.ppd -> /usr/share/ghostscript/8.15/lib/ghostpdf.ppd
+│   │   ├── cups_backend64 -> cups_backend
+│   │   ├── firewall_ng
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── firewall_ng
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── firewall-setup.desktop
+│   │   │           └── doc
+│   │   │               └── nls
+│   │   │                   └── firewall_ng
+│   │   │                       └── firewall_ng.pot
+│   │   ├── frisbee
+│   │   │   ├── etc
+│   │   │   │   ├── frisbee
+│   │   │   │   │   ├── dhcpcd.conf
+│   │   │   │   │   ├── frisbee.conf
+│   │   │   │   │   └── wpa_supplicant.conf
+│   │   │   │   ├── gprs.conf
+│   │   │   │   ├── init.d
+│   │   │   │   │   └── frisbee.sh
+│   │   │   │   └── ppp
+│   │   │   │       ├── chatscripts
+│   │   │   │       │   ├── gprs-connect-chat
+│   │   │   │       │   └── gprs-disconnect-chat
+│   │   │   │       └── peers
+│   │   │   │           └── gprs-editable
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puninstall.sh
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── frisbee
+│   │   │       │   └── frisbee
+│   │   │       │       ├── connect-func
+│   │   │       │       ├── frisbee
+│   │   │       │       ├── frisbee-gprs-connect
+│   │   │       │       ├── frisbee-gprs-disconnect
+│   │   │       │       ├── frisbee-main
+│   │   │       │       ├── frisbee-mode-disable
+│   │   │       │       ├── frisbee-mode-enable
+│   │   │       │       ├── frisbee-wifi-connect
+│   │   │       │       ├── frisbee-wifi-disconnect
+│   │   │       │       └── func
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── frisbee.desktop
+│   │   │           └── icons
+│   │   │               └── hicolor
+│   │   │                   └── scalable
+│   │   │                       └── apps
+│   │   │                           └── frisbee.svg
+│   │   ├── imageview
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── imgview
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── imageview.desktop
+│   │   │           └── icons
+│   │   │               └── hicolor
+│   │   │                   └── 48x48
+│   │   │                       └── apps
+│   │   │                           └── imageview.png
+│   │   ├── jwm_config
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── templates
+│   │   │   │           └── _root_.jwmrc
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── apps
+│   │   │       │   │   └── add_bookmark
+│   │   │       │   │       ├── AppInfo.xml
+│   │   │       │   │       └── AppRun
+│   │   │       │   └── jwm_config
+│   │   │       │       ├── corner
+│   │   │       │       ├── jwm_restart
+│   │   │       │       ├── keyConfigHelp
+│   │   │       │       ├── menu
+│   │   │       │       ├── menu_build_bookmarks
+│   │   │       │       ├── menu_build_clock
+│   │   │       │       ├── menu_build_main
+│   │   │       │       ├── menu_build_mouseaction
+│   │   │       │       ├── menu_build_none
+│   │   │       │       ├── menu_build_places
+│   │   │       │       ├── menu_build_places_drives
+│   │   │       │       ├── menu_build_recent_docs
+│   │   │       │       ├── shortcuts
+│   │   │       │       ├── theme_switcher
+│   │   │       │       ├── tray
+│   │   │       │       ├── window
+│   │   │       │       └── window_buttons
+│   │   │       ├── sbin
+│   │   │       │   └── pnote
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   ├── jwm_tray.desktop
+│   │   │           │   └── pnote.desktop
+│   │   │           ├── doc
+│   │   │           │   └── legal
+│   │   │           │       └── Breeze-Icons
+│   │   │           │           └── COPYING-ICONS
+│   │   │           ├── jwm
+│   │   │           │   ├── corners
+│   │   │           │   │   ├── leftbottom
+│   │   │           │   │   ├── lefttop
+│   │   │           │   │   ├── rightbottom
+│   │   │           │   │   └── righttop
+│   │   │           │   ├── themes
+│   │   │           │   │   ├── Black-vg-jwmrc
+│   │   │           │   │   ├── Blue_variety-jwmrc
+│   │   │           │   │   ├── Breeze-jwmrc
+│   │   │           │   │   ├── Deep_blue_bold-jwmrc
+│   │   │           │   │   ├── Evil_blue_glow-jwmrc
+│   │   │           │   │   ├── Flat-grey-jwmrc
+│   │   │           │   │   ├── Gradient-blueish-jwmrc
+│   │   │           │   │   ├── Gradient_grey-jwmrc
+│   │   │           │   │   ├── Numix-jwmrc
+│   │   │           │   │   ├── Stardust_bright-jwmrc
+│   │   │           │   │   ├── Stardust_dark-jwmrc
+│   │   │           │   │   └── Stark_blueish-jwmrc
+│   │   │           │   ├── themes_window_buttons
+│   │   │           │   │   ├── Basix
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Basix_white
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Breeze
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Buntu
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Buntu_white
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Classic
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Maccish
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Unix
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   ├── Unix_white
+│   │   │           │   │   │   ├── close.svg
+│   │   │           │   │   │   ├── max.svg
+│   │   │           │   │   │   ├── maxact.svg
+│   │   │           │   │   │   └── min.svg
+│   │   │           │   │   └── XPish
+│   │   │           │   │       ├── close.svg
+│   │   │           │   │       ├── max.svg
+│   │   │           │   │       ├── maxact.svg
+│   │   │           │   │       └── min.svg
+│   │   │           │   └── tray_templates
+│   │   │           │       ├── Puppy
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       ├── Puppy big
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       ├── default
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       └── minimal
+│   │   │           │           ├── jwmrc-tray1
+│   │   │           │           ├── jwmrc-tray2
+│   │   │           │           ├── jwmrc-tray3
+│   │   │           │           └── jwmrc-tray4
+│   │   │           └── pixmaps
+│   │   │               └── menu.svg
+│   │   ├── network_wizard
+│   │   │   ├── etc
+│   │   │   │   └── network-wizard
+│   │   │   │       ├── network
+│   │   │   │       │   └── interfaces
+│   │   │   │       │       └── EMPTYDIRMARKER
+│   │   │   │       └── wireless
+│   │   │   │           ├── interfaces
+│   │   │   │           │   └── EMPTYDIRMARKER
+│   │   │   │           ├── profiles
+│   │   │   │           │   ├── autoconnect.conf
+│   │   │   │           │   └── template.conf
+│   │   │   │           └── wpa_profiles
+│   │   │   │               ├── wpa_supplicant.conf
+│   │   │   │               └── wpa_supplicant2.conf
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── net-setup.sh
+│   │   │       │   └── network-wizard
+│   │   │       │       ├── ndiswrapperGUI.sh
+│   │   │       │       ├── net-setup.sh
+│   │   │       │       ├── rc.network
+│   │   │       │       └── wag-profiles.sh
+│   │   │       └── share
+│   │   │           ├── doc
+│   │   │           │   ├── help
+│   │   │           │   │   ├── C
+│   │   │           │   │   │   └── net_setup.html -> ../../net_setup.html
+│   │   │           │   │   └── ja
+│   │   │           │   │       └── net_setup.html
+│   │   │           │   └── net_setup.html
+│   │   │           ├── locale
+│   │   │           │   ├── en
+│   │   │           │   │   └── LC_MESSAGES
+│   │   │           │   │       └── net-setup.mo
+│   │   │           │   └── ja
+│   │   │           │       └── LC_MESSAGES
+│   │   │           │           └── net-setup.mo
+│   │   │           └── pixmaps
+│   │   │               └── net-setup_btnsize.png
+│   │   ├── pburn
+│   │   │   ├── pet.specs
+│   │   │   ├── root
+│   │   │   └── usr
+│   │   │       ├── bin
+│   │   │       │   └── pburn
+│   │   │       ├── local
+│   │   │       │   ├── apps
+│   │   │       │   │   └── pBurn
+│   │   │       │   │       ├── AppInfo.xml
+│   │   │       │   │       └── AppRun -> ../../../bin/pburn
+│   │   │       │   └── pburn
+│   │   │       │       ├── box
+│   │   │       │       ├── box_chooser
+│   │   │       │       ├── box_save
+│   │   │       │       ├── box_splash
+│   │   │       │       ├── box_tail
+│   │   │       │       ├── func
+│   │   │       │       ├── func_build_command
+│   │   │       │       ├── func_burn_options
+│   │   │       │       ├── func_exec
+│   │   │       │       ├── func_gui
+│   │   │       │       ├── func_gui_options
+│   │   │       │       ├── func_man
+│   │   │       │       ├── func_toc_cue
+│   │   │       │       ├── pburn
+│   │   │       │       ├── pburn20.png
+│   │   │       │       ├── pburnrc
+│   │   │       │       ├── themes
+│   │   │       │       │   └── Mini
+│   │   │       │       │       ├── button-burn.png
+│   │   │       │       │       ├── gtk
+│   │   │       │       │       │   ├── gtkrc
+│   │   │       │       │       │   ├── pburn20.png -> ../../../pburn20.png
+│   │   │       │       │       │   ├── pburn20_inactive.png
+│   │   │       │       │       │   ├── progress_green.png
+│   │   │       │       │       │   └── progress_red.png
+│   │   │       │       │       └── splash.png -> button-burn.png
+│   │   │       │       └── tv_standard
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pburn.desktop
+│   │   │           ├── doc
+│   │   │           │   └── pburn.html
+│   │   │           └── icons
+│   │   │               └── hicolor
+│   │   │                   └── scalable
+│   │   │                       └── apps
+│   │   │                           └── pburn.svg
+│   │   ├── pclock
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── pclock
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── pclock.desktop
+│   │   ├── pdiag
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── lib
+│   │   │       │   └── pdiag
+│   │   │       │       ├── pdiag-bluetooth
+│   │   │       │       ├── pdiag-dialup
+│   │   │       │       └── pdiag-network
+│   │   │       └── sbin
+│   │   │           └── pdiag
+│   │   ├── pfilesearch
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       └── local
+│   │   │           ├── bin
+│   │   │           │   └── pfilesearch
+│   │   │           └── pfilesearch
+│   │   │               ├── box_ok
+│   │   │               ├── box_splash
+│   │   │               ├── func
+│   │   │               ├── pfilesearch
+│   │   │               ├── pfilesearchMIMErc
+│   │   │               └── pfilesearchrc
+│   │   ├── pfind
+│   │   │   ├── pet.specs
+│   │   │   ├── root
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── apps
+│   │   │       │   │   └── pFind
+│   │   │       │   │       ├── AppInfo.xml
+│   │   │       │   │       └── AppRun
+│   │   │       │   ├── bin
+│   │   │       │   │   └── pfind
+│   │   │       │   └── pfind
+│   │   │       │       ├── box_input
+│   │   │       │       ├── box_ok
+│   │   │       │       ├── box_splash
+│   │   │       │       ├── box_yesno
+│   │   │       │       ├── func
+│   │   │       │       ├── pfind
+│   │   │       │       ├── pfindMIMErc
+│   │   │       │       ├── pfindhlp
+│   │   │       │       └── pfindrc
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── pfind.desktop
+│   │   ├── pgprs
+│   │   │   ├── etc
+│   │   │   │   ├── gprs.conf
+│   │   │   │   └── ppp
+│   │   │   │       ├── chatscripts
+│   │   │   │       │   ├── gprs-connect-chat
+│   │   │   │       │   └── gprs-disconnect-chat
+│   │   │   │       └── peers
+│   │   │   │           └── gprs-editable
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puninstall.sh
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   └── pgprs
+│   │   │       │       ├── pgprs
+│   │   │       │       ├── pgprs-connect
+│   │   │       │       └── pgprs-setup
+│   │   │       ├── sbin
+│   │   │       │   └── pgprs
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pgprs-connect.desktop
+│   │   │           └── pixmaps
+│   │   │               └── pgprs.svg
+│   │   ├── pmusic
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── apps
+│   │   │       │   │   ├── pMusic_add
+│   │   │       │   │   │   ├── AppInfo.xml
+│   │   │       │   │   │   └── AppRun
+│   │   │       │   │   └── pMusic_add_recursively
+│   │   │       │   │       ├── AppInfo.xml
+│   │   │       │   │       └── AppRun
+│   │   │       │   ├── bin
+│   │   │       │   │   ├── defaultaudioplayer
+│   │   │       │   │   └── pmusic
+│   │   │       │   └── pmusic
+│   │   │       │       ├── box_chooser
+│   │   │       │       ├── box_input
+│   │   │       │       ├── box_ok
+│   │   │       │       ├── box_open
+│   │   │       │       ├── box_splash
+│   │   │       │       ├── box_yesno
+│   │   │       │       ├── frontends
+│   │   │       │       │   └── Manager
+│   │   │       │       ├── func
+│   │   │       │       ├── func_C
+│   │   │       │       ├── func_add
+│   │   │       │       ├── func_cd
+│   │   │       │       ├── func_config
+│   │   │       │       ├── func_export
+│   │   │       │       ├── func_favorites
+│   │   │       │       ├── func_id3io
+│   │   │       │       ├── func_id3tagger
+│   │   │       │       ├── func_index
+│   │   │       │       ├── func_jamendo
+│   │   │       │       ├── func_kill
+│   │   │       │       ├── func_mixer
+│   │   │       │       ├── func_player
+│   │   │       │       ├── func_podcast
+│   │   │       │       ├── func_progressbar
+│   │   │       │       ├── func_radio
+│   │   │       │       ├── func_radiohits
+│   │   │       │       ├── func_rating
+│   │   │       │       ├── func_store_playlist
+│   │   │       │       ├── func_svg
+│   │   │       │       ├── func_trackinfo
+│   │   │       │       ├── gui_about
+│   │   │       │       ├── gui_add
+│   │   │       │       ├── gui_menu
+│   │   │       │       ├── gui_misc
+│   │   │       │       ├── gui_mixer
+│   │   │       │       ├── gui_navigation
+│   │   │       │       ├── gui_playlist
+│   │   │       │       ├── gui_trackinfo
+│   │   │       │       ├── menu_albumart_search
+│   │   │       │       ├── menu_playmode
+│   │   │       │       ├── menu_playqueue
+│   │   │       │       ├── menu_playqueue_tabs
+│   │   │       │       ├── menu_radiohits
+│   │   │       │       ├── menu_smartadd
+│   │   │       │       ├── menu_sourcelist
+│   │   │       │       ├── menu_trackinfo_albumlist
+│   │   │       │       ├── plugins
+│   │   │       │       │   ├── pmusic_backend_cmd
+│   │   │       │       │   ├── pmusic_backend_cmd.rc
+│   │   │       │       │   ├── pmusic_export_most_played
+│   │   │       │       │   ├── pmusic_export_most_played.rc
+│   │   │       │       │   ├── pmusic_tophits_archive
+│   │   │       │       │   └── pmusic_tophits_archive.rc
+│   │   │       │       ├── pmd_podcast_genre
+│   │   │       │       ├── pmd_podcast_language
+│   │   │       │       ├── pmusic
+│   │   │       │       ├── pmusic_.asx
+│   │   │       │       ├── pmusic_.m3u
+│   │   │       │       ├── pmusic_.pls
+│   │   │       │       ├── pmusicrc
+│   │   │       │       ├── radio-country
+│   │   │       │       ├── radio-tags
+│   │   │       │       ├── sed_html2txt
+│   │   │       │       ├── themes
+│   │   │       │       │   ├── Gtk
+│   │   │       │       │   │   ├── album_art.svg
+│   │   │       │       │   │   ├── album_art_radio.svg
+│   │   │       │       │   │   ├── artist.svg
+│   │   │       │       │   │   ├── gtk-2.0
+│   │   │       │       │   │   │   ├── gtkrc
+│   │   │       │       │   │   │   └── gtkrc_mainwindow
+│   │   │       │       │   │   ├── gtk-3.0
+│   │   │       │       │   │   │   ├── assets
+│   │   │       │       │   │   │   │   └── frame.png
+│   │   │       │       │   │   │   ├── gtk.css
+│   │   │       │       │   │   │   └── settings.ini
+│   │   │       │       │   │   ├── icons
+│   │   │       │       │   │   │   └── pMusic
+│   │   │       │       │   │   │       ├── icon-theme.cache
+│   │   │       │       │   │   │       ├── index.theme
+│   │   │       │       │   │   │       └── scalable
+│   │   │       │       │   │   │           ├── about.svg
+│   │   │       │       │   │   │           ├── add_more.svg
+│   │   │       │       │   │   │           ├── add_next.svg
+│   │   │       │       │   │   │           ├── add_playqueue.svg
+│   │   │       │       │   │   │           ├── artist.svg
+│   │   │       │       │   │   │           ├── audio.svg
+│   │   │       │       │   │   │           ├── audio_cd.svg
+│   │   │       │       │   │   │           ├── audio_playlist.svg
+│   │   │       │       │   │   │           ├── audio_playlist_favorites.svg
+│   │   │       │       │   │   │           ├── audio_playlist_setup.svg
+│   │   │       │       │   │   │           ├── audio_podcast.svg
+│   │   │       │       │   │   │           ├── audio_rated0.svg
+│   │   │       │       │   │   │           ├── audio_rated1.svg
+│   │   │       │       │   │   │           ├── audio_rated2.svg
+│   │   │       │       │   │   │           ├── audio_rated3.svg
+│   │   │       │       │   │   │           ├── audio_url.svg
+│   │   │       │       │   │   │           ├── audio_youtube.svg
+│   │   │       │       │   │   │           ├── blank.svg
+│   │   │       │       │   │   │           ├── cdrom.svg
+│   │   │       │       │   │   │           ├── dialog_warning.svg
+│   │   │       │       │   │   │           ├── download.svg
+│   │   │       │       │   │   │           ├── favorites.svg
+│   │   │       │       │   │   │           ├── favorites_add.svg
+│   │   │       │       │   │   │           ├── favorites_group.svg
+│   │   │       │       │   │   │           ├── favorites_remove.svg
+│   │   │       │       │   │   │           ├── favorites_ungroup.svg
+│   │   │       │       │   │   │           ├── find_more.svg
+│   │   │       │       │   │   │           ├── fullscreen.svg
+│   │   │       │       │   │   │           ├── genre.svg
+│   │   │       │       │   │   │           ├── go_left.svg
+│   │   │       │       │   │   │           ├── go_right.svg
+│   │   │       │       │   │   │           ├── import.svg
+│   │   │       │       │   │   │           ├── leave-fullscreen.svg
+│   │   │       │       │   │   │           ├── next.svg
+│   │   │       │       │   │   │           ├── pause.svg
+│   │   │       │       │   │   │           ├── play.svg
+│   │   │       │       │   │   │           ├── playmode_loop.svg
+│   │   │       │       │   │   │           ├── playmode_shuffle.svg
+│   │   │       │       │   │   │           ├── playmode_stop.svg
+│   │   │       │       │   │   │           ├── playmode_straight.svg
+│   │   │       │       │   │   │           ├── playqueue_marker.svg
+│   │   │       │       │   │   │           ├── pmusic.svg
+│   │   │       │       │   │   │           ├── pmusic_add.svg
+│   │   │       │       │   │   │           ├── pmusic_clear.svg
+│   │   │       │       │   │   │           ├── pmusic_close.svg
+│   │   │       │       │   │   │           ├── pmusic_find.svg
+│   │   │       │       │   │   │           ├── pmusic_redo.svg
+│   │   │       │       │   │   │           ├── pmusic_remove.svg
+│   │   │       │       │   │   │           ├── pmusic_undo.svg
+│   │   │       │       │   │   │           ├── podcast_available.svg
+│   │   │       │       │   │   │           ├── podcast_channel.svg
+│   │   │       │       │   │   │           ├── podcast_dead.svg
+│   │   │       │       │   │   │           ├── podcast_played.svg
+│   │   │       │       │   │   │           ├── previous.svg
+│   │   │       │       │   │   │           ├── source_local.svg
+│   │   │       │       │   │   │           ├── source_manual.svg
+│   │   │       │       │   │   │           ├── source_web.svg
+│   │   │       │       │   │   │           ├── stop.svg
+│   │   │       │       │   │   │           ├── tempo.svg
+│   │   │       │       │   │   │           ├── timestamp.svg
+│   │   │       │       │   │   │           ├── volume.svg
+│   │   │       │       │   │   │           ├── volume_mute.svg
+│   │   │       │       │   │   │           └── volume_ok.svg
+│   │   │       │       │   │   └── themerc
+│   │   │       │       │   └── Nad5
+│   │   │       │       │       ├── album_art.svg
+│   │   │       │       │       ├── album_art_radio.svg
+│   │   │       │       │       ├── artist.svg
+│   │   │       │       │       ├── gtk-2.0
+│   │   │       │       │       │   ├── gtk_button-pre.png
+│   │   │       │       │       │   ├── gtk_button_active.png
+│   │   │       │       │       │   ├── gtk_button_highlight_active.png
+│   │   │       │       │       │   ├── gtk_button_highlight_normal.png
+│   │   │       │       │       │   ├── gtk_button_insensitive.png
+│   │   │       │       │       │   ├── gtk_button_normal.png
+│   │   │       │       │       │   ├── gtk_checkbox_false.png
+│   │   │       │       │       │   ├── gtk_checkbox_insensitive.png
+│   │   │       │       │       │   ├── gtk_checkbox_true.png
+│   │   │       │       │       │   ├── gtk_header.png
+│   │   │       │       │       │   ├── gtk_menu_select.svg
+│   │   │       │       │       │   ├── gtk_slider-h.png
+│   │   │       │       │       │   ├── gtk_slider-pre-h.png
+│   │   │       │       │       │   ├── gtk_slider-pre-v.png
+│   │   │       │       │       │   ├── gtk_slider-trough-h.png
+│   │   │       │       │       │   ├── gtk_slider-trough-v.png
+│   │   │       │       │       │   ├── gtk_slider-v.png
+│   │   │       │       │       │   ├── gtk_tab_left_in.png
+│   │   │       │       │       │   ├── gtk_tab_left_out.png
+│   │   │       │       │       │   ├── gtk_tab_top_in.png
+│   │   │       │       │       │   ├── gtk_tab_top_out.png
+│   │   │       │       │       │   ├── gtk_tree.png
+│   │   │       │       │       │   ├── gtk_tree1.png
+│   │   │       │       │       │   ├── gtkrc
+│   │   │       │       │       │   ├── gtkrc_mainwindow
+│   │   │       │       │       │   └── gtkrc_splash
+│   │   │       │       │       ├── gtk-3.0
+│   │   │       │       │       │   ├── assets
+│   │   │       │       │       │   │   ├── button.png
+│   │   │       │       │       │   │   ├── checkbox_false.png
+│   │   │       │       │       │   │   ├── checkbox_insensitive.png
+│   │   │       │       │       │   │   ├── checkbox_true.png
+│   │   │       │       │       │   │   ├── entry.png
+│   │   │       │       │       │   │   ├── frame.png
+│   │   │       │       │       │   │   ├── frame_in.png
+│   │   │       │       │       │   │   ├── notebook.png
+│   │   │       │       │       │   │   ├── separator-h.png
+│   │   │       │       │       │   │   ├── separator-v.png
+│   │   │       │       │       │   │   ├── slider-h.png
+│   │   │       │       │       │   │   ├── slider-pre-h.png
+│   │   │       │       │       │   │   ├── slider-pre-v.png
+│   │   │       │       │       │   │   ├── slider-trough-h.png
+│   │   │       │       │       │   │   ├── slider-trough-v.png
+│   │   │       │       │       │   │   ├── slider-v.png
+│   │   │       │       │       │   │   ├── transparent_black_1.png
+│   │   │       │       │       │   │   └── transparent_white_2.png
+│   │   │       │       │       │   └── gtk.css
+│   │   │       │       │       ├── icons
+│   │   │       │       │       │   └── pMusic
+│   │   │       │       │       │       ├── icon-theme.cache
+│   │   │       │       │       │       ├── index.theme
+│   │   │       │       │       │       └── scalable
+│   │   │       │       │       │           ├── about.svg
+│   │   │       │       │       │           ├── add_more.svg
+│   │   │       │       │       │           ├── add_next.svg
+│   │   │       │       │       │           ├── add_playqueue.svg
+│   │   │       │       │       │           ├── artist.svg
+│   │   │       │       │       │           ├── audio.svg
+│   │   │       │       │       │           ├── audio_cd.svg
+│   │   │       │       │       │           ├── audio_playlist.svg
+│   │   │       │       │       │           ├── audio_playlist_favorites.svg
+│   │   │       │       │       │           ├── audio_playlist_setup.svg
+│   │   │       │       │       │           ├── audio_podcast.svg
+│   │   │       │       │       │           ├── audio_rated0.svg
+│   │   │       │       │       │           ├── audio_rated1.svg
+│   │   │       │       │       │           ├── audio_rated2.svg
+│   │   │       │       │       │           ├── audio_rated3.svg
+│   │   │       │       │       │           ├── audio_url.svg
+│   │   │       │       │       │           ├── audio_youtube.svg
+│   │   │       │       │       │           ├── blank.svg
+│   │   │       │       │       │           ├── cdrom.svg
+│   │   │       │       │       │           ├── clear.svg
+│   │   │       │       │       │           ├── dialog-information.svg
+│   │   │       │       │       │           ├── dialog-question.svg
+│   │   │       │       │       │           ├── dialog-warning.svg
+│   │   │       │       │       │           ├── directory.svg
+│   │   │       │       │       │           ├── download.svg
+│   │   │       │       │       │           ├── edit.svg
+│   │   │       │       │       │           ├── favorites.svg
+│   │   │       │       │       │           ├── favorites_add.svg
+│   │   │       │       │       │           ├── favorites_group.svg
+│   │   │       │       │       │           ├── favorites_remove.svg
+│   │   │       │       │       │           ├── favorites_ungroup.svg
+│   │   │       │       │       │           ├── find.svg
+│   │   │       │       │       │           ├── find_more.svg
+│   │   │       │       │       │           ├── fullscreen.svg
+│   │   │       │       │       │           ├── genre.svg
+│   │   │       │       │       │           ├── go_left.svg
+│   │   │       │       │       │           ├── go_right.svg
+│   │   │       │       │       │           ├── help.svg
+│   │   │       │       │       │           ├── import.svg
+│   │   │       │       │       │           ├── leave-fullscreen.svg
+│   │   │       │       │       │           ├── next.svg
+│   │   │       │       │       │           ├── pause.svg
+│   │   │       │       │       │           ├── play.svg
+│   │   │       │       │       │           ├── playmode_loop.svg
+│   │   │       │       │       │           ├── playmode_shuffle.svg
+│   │   │       │       │       │           ├── playmode_stop.svg
+│   │   │       │       │       │           ├── playmode_straight.svg
+│   │   │       │       │       │           ├── playqueue_marker.svg
+│   │   │       │       │       │           ├── pmusic.svg
+│   │   │       │       │       │           ├── pmusic_add.svg
+│   │   │       │       │       │           ├── pmusic_clear.svg
+│   │   │       │       │       │           ├── pmusic_close.svg
+│   │   │       │       │       │           ├── pmusic_find.svg
+│   │   │       │       │       │           ├── pmusic_redo.svg
+│   │   │       │       │       │           ├── pmusic_remove.svg
+│   │   │       │       │       │           ├── pmusic_undo.svg
+│   │   │       │       │       │           ├── podcast_available.svg
+│   │   │       │       │       │           ├── podcast_channel.svg
+│   │   │       │       │       │           ├── podcast_dead.svg
+│   │   │       │       │       │           ├── podcast_played.svg
+│   │   │       │       │       │           ├── preferences.svg
+│   │   │       │       │       │           ├── previous.svg
+│   │   │       │       │       │           ├── quit.svg
+│   │   │       │       │       │           ├── save-as.svg
+│   │   │       │       │       │           ├── save.svg
+│   │   │       │       │       │           ├── source_local.svg
+│   │   │       │       │       │           ├── source_manual.svg
+│   │   │       │       │       │           ├── source_web.svg
+│   │   │       │       │       │           ├── stop.svg
+│   │   │       │       │       │           ├── tempo.svg
+│   │   │       │       │       │           ├── timestamp.svg
+│   │   │       │       │       │           ├── volume.svg
+│   │   │       │       │       │           ├── volume_mute.svg
+│   │   │       │       │       │           └── volume_ok.svg
+│   │   │       │       │       └── themerc
+│   │   │       │       ├── txt_about
+│   │   │       │       ├── txt_attributes
+│   │   │       │       ├── txt_id3genre
+│   │   │       │       └── txt_visualization
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pmusic.desktop
+│   │   │           └── pixmaps
+│   │   │               ├── pmusic.svg
+│   │   │               ├── pmusic_backend_cmd.svg
+│   │   │               ├── pmusic_export_most_played.svg
+│   │   │               └── pmusic_tophits_archive.svg
+│   │   ├── pmusic_cd
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── pmusic_CD
+│   │   │       │   └── pmusic
+│   │   │       │       └── frontends
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pmusic_CD.desktop
+│   │   │           └── pixmaps
+│   │   │               └── pmusic_cd.svg
+│   │   ├── pmusic_podcast
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── pmusic_podcast
+│   │   │       │   └── pmusic
+│   │   │       │       └── frontends
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pmusic_podcast.desktop
+│   │   │           └── pixmaps
+│   │   │               └── pmusic_podcast.svg
+│   │   ├── pmusic_radio
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── pmusic_radio
+│   │   │       │   └── pmusic
+│   │   │       │       └── frontends
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── pmusic_radio.desktop
+│   │   │           └── pixmaps
+│   │   │               └── pmusic_radio.svg
+│   │   ├── pschedule
+│   │   │   ├── etc
+│   │   │   │   └── init.d
+│   │   │   │       └── crond
+│   │   │   ├── pet.specs
+│   │   │   ├── root
+│   │   │   │   └── Startup
+│   │   │   │       └── crond
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── pschedule
+│   │   │       │   └── pschedule
+│   │   │       │       ├── box_ok
+│   │   │       │       ├── func_cron_to_human
+│   │   │       │       ├── func_delete
+│   │   │       │       ├── func_human_to_cron
+│   │   │       │       ├── func_new
+│   │   │       │       ├── func_run
+│   │   │       │       └── pschedule
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── pschedule.desktop
+│   │   ├── ptheme
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   └── lib
+│   │   │       │       └── X11
+│   │   │       │           └── themes
+│   │   │       │               └── Blue-Moon
+│   │   │       │                   ├── archive48.png
+│   │   │       │                   ├── card48.png
+│   │   │       │                   ├── card_mntd48.png
+│   │   │       │                   ├── card_mntd_boot48.png
+│   │   │       │                   ├── chat48.png
+│   │   │       │                   ├── clipboard24.png
+│   │   │       │                   ├── configuration48.png
+│   │   │       │                   ├── connect48.png
+│   │   │       │                   ├── console48.png
+│   │   │       │                   ├── date48.png
+│   │   │       │                   ├── draw48.png
+│   │   │       │                   ├── drive48.png
+│   │   │       │                   ├── drive_mntd48.png
+│   │   │       │                   ├── drive_mntd_boot48.png
+│   │   │       │                   ├── edit48.png
+│   │   │       │                   ├── email48.png
+│   │   │       │                   ├── floppy48.png
+│   │   │       │                   ├── floppy_mntd48.png
+│   │   │       │                   ├── floppy_mntd_boot48.png
+│   │   │       │                   ├── folder48.png
+│   │   │       │                   ├── games24.png
+│   │   │       │                   ├── help48.png
+│   │   │       │                   ├── home48.png
+│   │   │       │                   ├── lock-screen48.png
+│   │   │       │                   ├── multimedia48.png
+│   │   │       │                   ├── network48.png
+│   │   │       │                   ├── optical48.png
+│   │   │       │                   ├── optical_mntd48.png
+│   │   │       │                   ├── optical_mntd_boot48.png
+│   │   │       │                   ├── paint48.png
+│   │   │       │                   ├── pc24.png
+│   │   │       │                   ├── pet48.png
+│   │   │       │                   ├── pet48x.png
+│   │   │       │                   ├── save48.png
+│   │   │       │                   ├── shutdown24.png
+│   │   │       │                   ├── spread48.png
+│   │   │       │                   ├── trashcan_empty48.png
+│   │   │       │                   ├── trashcan_full48.png
+│   │   │       │                   ├── usbdrv48.png
+│   │   │       │                   ├── usbdrv_mntd48.png
+│   │   │       │                   ├── usbdrv_mntd_boot48.png
+│   │   │       │                   ├── utility24.png
+│   │   │       │                   ├── webedit48.png
+│   │   │       │                   ├── webeditor48.png
+│   │   │       │                   ├── word48.png
+│   │   │       │                   ├── www48.png
+│   │   │       │                   ├── x.png
+│   │   │       │                   └── x24.png
+│   │   │       ├── sbin
+│   │   │       │   ├── fixPuppyPin
+│   │   │       │   ├── pdesktop
+│   │   │       │   ├── ptheme
+│   │   │       │   ├── ptheme_diricons
+│   │   │       │   ├── ptheme_gtk
+│   │   │       │   ├── ptheme_roxpin
+│   │   │       │   └── upgrade_ptheme_fix
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   ├── pdesktop.desktop
+│   │   │           │   ├── ptheme.desktop
+│   │   │           │   └── ptheme_gtk.desktop
+│   │   │           ├── backgrounds
+│   │   │           │   ├── Stardust bright.svg
+│   │   │           │   ├── Stardust dark.svg
+│   │   │           │   ├── moonlight.jpg
+│   │   │           │   ├── near_earth_moon.jpg
+│   │   │           │   ├── near_earth_moon2.jpg
+│   │   │           │   └── xfwallpaper.svg
+│   │   │           ├── jwm
+│   │   │           │   ├── themes
+│   │   │           │   │   ├── Buntoo-jwmrc
+│   │   │           │   │   └── xf-jwmrc
+│   │   │           │   ├── themes_window_buttons
+│   │   │           │   │   └── Buntu
+│   │   │           │   │       ├── close.svg
+│   │   │           │   │       ├── max.svg
+│   │   │           │   │       ├── maxact.svg
+│   │   │           │   │       └── min.svg
+│   │   │           │   └── tray_templates
+│   │   │           │       ├── Buntoo
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       ├── thin
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       ├── xf
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       ├── xf_bot
+│   │   │           │       │   ├── jwmrc-tray1
+│   │   │           │       │   ├── jwmrc-tray2
+│   │   │           │       │   ├── jwmrc-tray3
+│   │   │           │       │   └── jwmrc-tray4
+│   │   │           │       └── xf_touch
+│   │   │           │           ├── jwmrc-tray1
+│   │   │           │           ├── jwmrc-tray2
+│   │   │           │           ├── jwmrc-tray3
+│   │   │           │           └── jwmrc-tray4
+│   │   │           ├── pixmaps
+│   │   │           │   └── puppy
+│   │   │           │       ├── puppy_theme_bu_mouse.svg
+│   │   │           │       ├── puppy_theme_xf_mouse.svg
+│   │   │           │       └── puppy_theme_xf_touch.svg
+│   │   │           ├── ptheme
+│   │   │           │   ├── eventmanager_driveicons
+│   │   │           │   │   ├── Buntoo bottom
+│   │   │           │   │   ├── Labeled bottom
+│   │   │           │   │   ├── Labeled left
+│   │   │           │   │   ├── Labeled right
+│   │   │           │   │   ├── Labeled top
+│   │   │           │   │   └── Puppy bottom
+│   │   │           │   ├── globals
+│   │   │           │   │   ├── 412
+│   │   │           │   │   ├── 431
+│   │   │           │   │   ├── Bright Mouse
+│   │   │           │   │   ├── Bright Touch
+│   │   │           │   │   ├── Buntoo
+│   │   │           │   │   ├── Dark Mouse
+│   │   │           │   │   ├── Dark Touch
+│   │   │           │   │   ├── Dark_Blue
+│   │   │           │   │   ├── Flat-grey
+│   │   │           │   │   ├── Original Pup
+│   │   │           │   │   ├── Tahrpup
+│   │   │           │   │   ├── xfwm bottom
+│   │   │           │   │   ├── xfwm top
+│   │   │           │   │   ├── xfwm touch
+│   │   │           │   │   └── z null
+│   │   │           │   ├── gtkdialog
+│   │   │           │   │   ├── Stardust bright mouse
+│   │   │           │   │   ├── Stardust bright touch
+│   │   │           │   │   ├── Stardust dark mouse
+│   │   │           │   │   ├── Stardust dark touch
+│   │   │           │   │   └── default
+│   │   │           │   └── rox_pinboard
+│   │   │           │       ├── Bin
+│   │   │           │       ├── Minimal
+│   │   │           │       ├── Minimal_Labelled
+│   │   │           │       ├── None
+│   │   │           │       └── Puppy Standard
+│   │   │           └── themes
+│   │   │               ├── Polished-Blue
+│   │   │               │   ├── gtk-2.0
+│   │   │               │   │   ├── bump-for-tabs.png
+│   │   │               │   │   ├── bump.png
+│   │   │               │   │   ├── check-off.png
+│   │   │               │   │   ├── check-on.png
+│   │   │               │   │   ├── depression.png
+│   │   │               │   │   ├── gtkrc
+│   │   │               │   │   ├── horizontal-line.png
+│   │   │               │   │   ├── main-button-normal.png
+│   │   │               │   │   ├── main-button-prelit.png
+│   │   │               │   │   ├── main-button-pressed.png
+│   │   │               │   │   ├── main-button-unusable.png
+│   │   │               │   │   ├── menu-selected.png
+│   │   │               │   │   ├── option-off.png
+│   │   │               │   │   ├── option-on.png
+│   │   │               │   │   ├── progressbar-bg.png
+│   │   │               │   │   ├── progressbar.png
+│   │   │               │   │   ├── scroller-bg.png
+│   │   │               │   │   ├── scroller-locked.png
+│   │   │               │   │   ├── scroller-normal.png
+│   │   │               │   │   ├── scroller-prelit.png
+│   │   │               │   │   ├── scroller-pressed.png
+│   │   │               │   │   ├── tab-selected-bottom.png
+│   │   │               │   │   ├── tab-selected-left.png
+│   │   │               │   │   ├── tab-selected-right.png
+│   │   │               │   │   ├── tab-selected-top.png
+│   │   │               │   │   ├── tab-unselected-bottom.png
+│   │   │               │   │   ├── tab-unselected-left.png
+│   │   │               │   │   ├── tab-unselected-right.png
+│   │   │               │   │   ├── tab-unselected-top.png
+│   │   │               │   │   └── vertical-line.png
+│   │   │               │   └── index.theme
+│   │   │               ├── Stardust_bright_mouse
+│   │   │               │   ├── gtk-2.0
+│   │   │               │   │   ├── arrow_down1.svg
+│   │   │               │   │   ├── arrow_down2.svg
+│   │   │               │   │   ├── arrow_left1.svg
+│   │   │               │   │   ├── arrow_left2.svg
+│   │   │               │   │   ├── arrow_right1.svg
+│   │   │               │   │   ├── arrow_right2.svg
+│   │   │               │   │   ├── arrow_up1.svg
+│   │   │               │   │   ├── arrow_up2.svg
+│   │   │               │   │   ├── blank.svg
+│   │   │               │   │   ├── button1.png
+│   │   │               │   │   ├── button2.png
+│   │   │               │   │   ├── button3.png
+│   │   │               │   │   ├── check1.svg
+│   │   │               │   │   ├── check2.svg
+│   │   │               │   │   ├── check3.svg
+│   │   │               │   │   ├── default.png
+│   │   │               │   │   ├── gtkrc
+│   │   │               │   │   ├── in.png
+│   │   │               │   │   ├── list_header-light.png
+│   │   │               │   │   ├── list_header.png
+│   │   │               │   │   ├── notebook1.png
+│   │   │               │   │   ├── notebook2.png
+│   │   │               │   │   ├── obutton1.png
+│   │   │               │   │   ├── obutton2.png
+│   │   │               │   │   ├── option1.png
+│   │   │               │   │   ├── option2.png
+│   │   │               │   │   ├── radio1.svg
+│   │   │               │   │   ├── radio2.svg
+│   │   │               │   │   ├── spin1.png
+│   │   │               │   │   ├── spin2.png
+│   │   │               │   │   ├── spin3.png
+│   │   │               │   │   ├── trough.png
+│   │   │               │   │   └── up.png
+│   │   │               │   ├── gtk-3.0
+│   │   │               │   │   ├── assets
+│   │   │               │   │   │   ├── check1.svg -> ../../gtk-2.0/check1.svg
+│   │   │               │   │   │   ├── check2.svg -> ../../gtk-2.0/check2.svg
+│   │   │               │   │   │   ├── check3.svg -> ../../gtk-2.0/check3.svg
+│   │   │               │   │   │   ├── color-scale-slider-horizontal.png
+│   │   │               │   │   │   ├── color-scale-slider-vertical.png
+│   │   │               │   │   │   ├── horizontal-line.png
+│   │   │               │   │   │   ├── obutton1.png -> ../../gtk-2.0/obutton1.png
+│   │   │               │   │   │   ├── obutton2.png -> ../../gtk-2.0/obutton2.png
+│   │   │               │   │   │   ├── option1.png -> ../../gtk-2.0/option1.png
+│   │   │               │   │   │   ├── option2.png -> ../../gtk-2.0/option2.png
+│   │   │               │   │   │   ├── paned-separator-horizontal.png
+│   │   │               │   │   │   ├── paned-separator-vertical.png
+│   │   │               │   │   │   ├── radio1.svg -> ../../gtk-2.0/radio1.svg
+│   │   │               │   │   │   ├── radio2.svg -> ../../gtk-2.0/radio2.svg
+│   │   │               │   │   │   ├── trough.png -> ../../gtk-2.0/trough.png
+│   │   │               │   │   │   └── vertical-line.png
+│   │   │               │   │   ├── gtk-widgets.css
+│   │   │               │   │   └── gtk.css
+│   │   │               │   └── openbox-3
+│   │   │               │       ├── close.xbm
+│   │   │               │       ├── iconify.xbm
+│   │   │               │       ├── max.xbm
+│   │   │               │       ├── menu.xbm
+│   │   │               │       └── themerc
+│   │   │               ├── Stardust_bright_touch
+│   │   │               │   ├── gtk-2.0
+│   │   │               │   │   └── gtkrc
+│   │   │               │   ├── gtk-3.0
+│   │   │               │   │   ├── assets -> ../../Stardust_bright_mouse/gtk-3.0/assets
+│   │   │               │   │   ├── gtk-widgets.css
+│   │   │               │   │   └── gtk.css
+│   │   │               │   └── openbox-3 -> ../Stardust_bright_mouse/openbox-3/
+│   │   │               ├── Stardust_dark_mouse
+│   │   │               │   ├── gtk-2.0
+│   │   │               │   │   ├── button1.png
+│   │   │               │   │   ├── button2.png
+│   │   │               │   │   ├── button3.png
+│   │   │               │   │   ├── check1.svg
+│   │   │               │   │   ├── check2.svg
+│   │   │               │   │   ├── check3.svg
+│   │   │               │   │   ├── default.png
+│   │   │               │   │   ├── gtkrc
+│   │   │               │   │   ├── in.png
+│   │   │               │   │   ├── list_header-light.png
+│   │   │               │   │   ├── list_header.png
+│   │   │               │   │   ├── notebook1.png
+│   │   │               │   │   ├── notebook2.png
+│   │   │               │   │   ├── obutton1.png
+│   │   │               │   │   ├── obutton2.png
+│   │   │               │   │   ├── option1.png
+│   │   │               │   │   ├── option2.png
+│   │   │               │   │   ├── radio1.svg
+│   │   │               │   │   ├── radio2.svg
+│   │   │               │   │   ├── spin1.png
+│   │   │               │   │   ├── spin2.png
+│   │   │               │   │   ├── spin3.png
+│   │   │               │   │   ├── trough.png
+│   │   │               │   │   └── up.png
+│   │   │               │   ├── gtk-3.0
+│   │   │               │   │   ├── assets
+│   │   │               │   │   │   ├── check1.svg
+│   │   │               │   │   │   ├── check2.svg
+│   │   │               │   │   │   ├── check3.svg
+│   │   │               │   │   │   ├── color-scale-slider-horizontal.png
+│   │   │               │   │   │   ├── color-scale-slider-vertical.png
+│   │   │               │   │   │   ├── horizontal-line.png
+│   │   │               │   │   │   ├── option1.png
+│   │   │               │   │   │   ├── paned-separator-horizontal.png
+│   │   │               │   │   │   ├── paned-separator-vertical.png
+│   │   │               │   │   │   ├── radio1.svg
+│   │   │               │   │   │   ├── radio2.svg
+│   │   │               │   │   │   ├── trough.png -> ../../gtk-2.0/trough.png
+│   │   │               │   │   │   └── vertical-line.png
+│   │   │               │   │   ├── gtk-widgets.css
+│   │   │               │   │   └── gtk.css
+│   │   │               │   └── openbox-3
+│   │   │               │       ├── close.xbm
+│   │   │               │       ├── iconify.xbm
+│   │   │               │       ├── max.xbm
+│   │   │               │       ├── menu.xbm
+│   │   │               │       └── themerc
+│   │   │               ├── Stardust_dark_touch
+│   │   │               │   ├── gtk-2.0
+│   │   │               │   │   └── gtkrc
+│   │   │               │   ├── gtk-3.0
+│   │   │               │   │   ├── assets
+│   │   │               │   │   │   ├── check1.svg
+│   │   │               │   │   │   ├── check2.svg
+│   │   │               │   │   │   ├── check3.svg
+│   │   │               │   │   │   ├── color-scale-slider-horizontal.png
+│   │   │               │   │   │   ├── color-scale-slider-vertical.png
+│   │   │               │   │   │   ├── horizontal-line.png
+│   │   │               │   │   │   ├── option1.png
+│   │   │               │   │   │   ├── paned-separator-horizontal.png
+│   │   │               │   │   │   ├── paned-separator-vertical.png
+│   │   │               │   │   │   ├── radio1.svg
+│   │   │               │   │   │   ├── radio2.svg
+│   │   │               │   │   │   ├── trough.png -> ../../../Stardust_dark_mouse/gtk-3.0/assets/trough.png
+│   │   │               │   │   │   └── vertical-line.png
+│   │   │               │   │   ├── gtk-widgets.css
+│   │   │               │   │   └── gtk.css
+│   │   │               │   └── openbox-3 -> ../Stardust_dark_mouse/openbox-3/
+│   │   │               ├── ZXP
+│   │   │               │   └── gtk-2.0
+│   │   │               │       └── gtkrc
+│   │   │               ├── buntoo-ambience
+│   │   │               │   └── gtk-2.0
+│   │   │               │       ├── default.png
+│   │   │               │       ├── gtkrc
+│   │   │               │       ├── tab1.png
+│   │   │               │       ├── tab2.png
+│   │   │               │       ├── tab3.png
+│   │   │               │       └── tab4.png
+│   │   │               ├── xfdark
+│   │   │               │   └── gtk-2.0
+│   │   │               │       ├── arrow_down1.svg
+│   │   │               │       ├── arrow_down2.svg
+│   │   │               │       ├── arrow_left1.svg
+│   │   │               │       ├── arrow_left2.svg
+│   │   │               │       ├── arrow_right1.svg
+│   │   │               │       ├── arrow_right2.svg
+│   │   │               │       ├── arrow_up1.svg
+│   │   │               │       ├── arrow_up2.svg
+│   │   │               │       ├── blank.svg
+│   │   │               │       ├── button1.png
+│   │   │               │       ├── button2.png
+│   │   │               │       ├── button3.png
+│   │   │               │       ├── check1.svg
+│   │   │               │       ├── check2.svg
+│   │   │               │       ├── check3.svg
+│   │   │               │       ├── default.png
+│   │   │               │       ├── gtkrc
+│   │   │               │       ├── in.png
+│   │   │               │       ├── list_header-light.png
+│   │   │               │       ├── list_header.png
+│   │   │               │       ├── notebook1.png
+│   │   │               │       ├── notebook2.png
+│   │   │               │       ├── obutton1.png
+│   │   │               │       ├── obutton2.png
+│   │   │               │       ├── option1.png
+│   │   │               │       ├── option2.png
+│   │   │               │       ├── radio1.svg
+│   │   │               │       ├── radio2.svg
+│   │   │               │       ├── spin1.png
+│   │   │               │       ├── spin2.png
+│   │   │               │       ├── spin3.png
+│   │   │               │       ├── trough.png
+│   │   │               │       └── up.png
+│   │   │               └── xfdark_touch
+│   │   │                   └── gtk-2.0
+│   │   │                       └── gtkrc
+│   │   ├── ptiming
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   ├── bin
+│   │   │       │   │   └── ptiming
+│   │   │       │   └── ptiming
+│   │   │       │       ├── box_ok
+│   │   │       │       ├── box_yesno
+│   │   │       │       ├── competitors
+│   │   │       │       └── ptiming
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── ptiming.desktop
+│   │   │           ├── audio
+│   │   │           │   ├── beep_high.wav
+│   │   │           │   └── beep_low.wav
+│   │   │           └── icons
+│   │   │               └── hicolor
+│   │   │                   └── scalable
+│   │   │                       └── apps
+│   │   │                           └── ptiming.svg
+│   │   ├── pup_advert_blocker
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   └── pup-advert-blocker
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── pup-advert-blocker.desktop
+│   │   ├── pupdial
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puninstall.sh
+│   │   │   ├── usr
+│   │   │   │   ├── local
+│   │   │   │   │   └── pupdial
+│   │   │   │   │       ├── gen_modem_init_string
+│   │   │   │   │       ├── get_bluetooth_connection
+│   │   │   │   │       ├── modem_functions
+│   │   │   │   │       ├── modemdisconnect
+│   │   │   │   │       ├── modemprobe
+│   │   │   │   │       ├── modemprobe_erase
+│   │   │   │   │       ├── modemprobe_help
+│   │   │   │   │       ├── modemtest
+│   │   │   │   │       ├── pupdial
+│   │   │   │   │       ├── pupdial_init_hotpluggable
+│   │   │   │   │       └── pupdial_wizard_helper
+│   │   │   │   ├── sbin
+│   │   │   │   │   ├── modemdisconnect
+│   │   │   │   │   └── pupdial
+│   │   │   │   └── share
+│   │   │   │       └── applications
+│   │   │   │           └── pupdial.desktop
+│   │   │   └── var
+│   │   │       └── local
+│   │   │           └── pupdial
+│   │   │               ├── isp1
+│   │   │               │   ├── rx_bytes_month
+│   │   │               │   └── tx_bytes_month
+│   │   │               └── isp2
+│   │   │                   ├── rx_bytes_month
+│   │   │                   └── tx_bytes_month
+│   │   ├── redshiftgui_wrapper
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   │   └── Startup
+│   │   │   │       └── redshiftgui_tray
+│   │   │   └── usr
+│   │   │       └── bin
+│   │   │           └── redshiftgui.sh
+│   │   ├── rox_config
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── rox.sourceforge.net
+│   │   │   │           ├── MIME-types
+│   │   │   │           │   ├── application_abs
+│   │   │   │           │   ├── application_font-otf -> application_x-font-ttf
+│   │   │   │           │   ├── application_gzip
+│   │   │   │           │   ├── application_initramfs-gz
+│   │   │   │           │   ├── application_javascript
+│   │   │   │           │   ├── application_msword
+│   │   │   │           │   ├── application_notecase-enc
+│   │   │   │           │   ├── application_notecase-plain
+│   │   │   │           │   ├── application_pdf
+│   │   │   │           │   ├── application_pet
+│   │   │   │           │   ├── application_postscript
+│   │   │   │           │   ├── application_pup
+│   │   │   │           │   ├── application_rtf
+│   │   │   │           │   ├── application_scribus
+│   │   │   │           │   ├── application_vnd.adobe.flash.movie -> application_x-shockwave-flash
+│   │   │   │           │   ├── application_vnd.debian.binary-package -> application_x-deb
+│   │   │   │           │   ├── application_vnd.efi.img
+│   │   │   │           │   ├── application_vnd.efi.iso
+│   │   │   │           │   ├── application_vnd.ms-excel
+│   │   │   │           │   ├── application_vnd.oasis.opendocument.spreadsheet
+│   │   │   │           │   ├── application_vnd.oasis.opendocument.text
+│   │   │   │           │   ├── application_vnd.openxmlformats-officedocument.spreadsheetml.sheet
+│   │   │   │           │   ├── application_vnd.openxmlformats-officedocument.wordprocessingml.document
+│   │   │   │           │   ├── application_vnd.palm
+│   │   │   │           │   ├── application_vnd.rn-realmedia
+│   │   │   │           │   ├── application_vnd.scribus
+│   │   │   │           │   ├── application_vnd.stardivision.writer
+│   │   │   │           │   ├── application_vnd.sun.xml.writer
+│   │   │   │           │   ├── application_vym
+│   │   │   │           │   ├── application_x-7z-compressed
+│   │   │   │           │   ├── application_x-abiword
+│   │   │   │           │   ├── application_x-archlinux-package-zst
+│   │   │   │           │   ├── application_x-arj
+│   │   │   │           │   ├── application_x-bfe
+│   │   │   │           │   ├── application_x-bittorrent
+│   │   │   │           │   ├── application_x-bzip
+│   │   │   │           │   ├── application_x-bzip-compressed-tar
+│   │   │   │           │   ├── application_x-bzip2
+│   │   │   │           │   ├── application_x-cbr -> application_pdf
+│   │   │   │           │   ├── application_x-cbz -> application_pdf
+│   │   │   │           │   ├── application_x-cd-image
+│   │   │   │           │   ├── application_x-chm
+│   │   │   │           │   ├── application_x-compressed-tar
+│   │   │   │           │   ├── application_x-deb
+│   │   │   │           │   ├── application_x-delta
+│   │   │   │           │   ├── application_x-ext2-image
+│   │   │   │           │   ├── application_x-ext3-image
+│   │   │   │           │   ├── application_x-ext4-image
+│   │   │   │           │   ├── application_x-flash-video
+│   │   │   │           │   ├── application_x-font-otf -> application_x-font-ttf
+│   │   │   │           │   ├── application_x-font-ttf
+│   │   │   │           │   ├── application_x-genesis-rom -> text_x-markdown
+│   │   │   │           │   ├── application_x-gnumeric
+│   │   │   │           │   ├── application_x-gzip
+│   │   │   │           │   ├── application_x-jar
+│   │   │   │           │   ├── application_x-java-archive
+│   │   │   │           │   ├── application_x-java-jnlp-file
+│   │   │   │           │   ├── application_x-linguist
+│   │   │   │           │   ├── application_x-lzma
+│   │   │   │           │   ├── application_x-lzma-compressed-tar
+│   │   │   │           │   ├── application_x-navi-animation
+│   │   │   │           │   ├── application_x-ogg
+│   │   │   │           │   ├── application_x-php
+│   │   │   │           │   ├── application_x-pkg
+│   │   │   │           │   ├── application_x-rar
+│   │   │   │           │   ├── application_x-rpm
+│   │   │   │           │   ├── application_x-sharedlib
+│   │   │   │           │   ├── application_x-shockwave-flash
+│   │   │   │           │   ├── application_x-squashfs-image
+│   │   │   │           │   ├── application_x-tar
+│   │   │   │           │   ├── application_x-tcl
+│   │   │   │           │   ├── application_x-tgz
+│   │   │   │           │   ├── application_x-voidlinux-package
+│   │   │   │           │   ├── application_x-xz
+│   │   │   │           │   ├── application_x-xz-compressed-tar
+│   │   │   │           │   ├── application_x-zerosize -> text_plain
+│   │   │   │           │   ├── application_x-zstd
+│   │   │   │           │   ├── application_x-zstd-compressed-tar
+│   │   │   │           │   ├── application_xml -> text_plain
+│   │   │   │           │   ├── application_zip
+│   │   │   │           │   ├── audio_basic
+│   │   │   │           │   ├── audio_flac
+│   │   │   │           │   ├── audio_mp4
+│   │   │   │           │   ├── audio_mpeg
+│   │   │   │           │   ├── audio_ogg
+│   │   │   │           │   ├── audio_x-aiff
+│   │   │   │           │   ├── audio_x-flac
+│   │   │   │           │   ├── audio_x-matroska
+│   │   │   │           │   ├── audio_x-mp3
+│   │   │   │           │   ├── audio_x-ms-wma
+│   │   │   │           │   ├── audio_x-pn-realaudio
+│   │   │   │           │   ├── audio_x-ulaw
+│   │   │   │           │   ├── audio_x-vorbis+ogg
+│   │   │   │           │   ├── audio_x-wav
+│   │   │   │           │   ├── font_otf -> application_x-font-ttf
+│   │   │   │           │   ├── font_ttf -> application_x-font-ttf
+│   │   │   │           │   ├── font_woof -> application_x-font-ttf
+│   │   │   │           │   ├── image_bmp
+│   │   │   │           │   ├── image_gif
+│   │   │   │           │   ├── image_jpeg
+│   │   │   │           │   ├── image_png
+│   │   │   │           │   ├── image_svg
+│   │   │   │           │   ├── image_svg+xml
+│   │   │   │           │   ├── image_tiff
+│   │   │   │           │   ├── image_vnd.djvu -> application_pdf
+│   │   │   │           │   ├── image_vnd.microsoft.icon
+│   │   │   │           │   ├── image_vnd.wap.wbmp
+│   │   │   │           │   ├── image_x-pcx
+│   │   │   │           │   ├── image_x-pixmap
+│   │   │   │           │   ├── image_x-png
+│   │   │   │           │   ├── image_x-portable-pixmap
+│   │   │   │           │   ├── image_x-tga
+│   │   │   │           │   ├── image_x-win-bitmap
+│   │   │   │           │   ├── image_x-xbitmap
+│   │   │   │           │   ├── image_x-xfig
+│   │   │   │           │   ├── image_x-xpixmap
+│   │   │   │           │   ├── text
+│   │   │   │           │   ├── text_abiword
+│   │   │   │           │   ├── text_csv
+│   │   │   │           │   ├── text_html
+│   │   │   │           │   ├── text_markdown -> text_x-markdown
+│   │   │   │           │   ├── text_plain
+│   │   │   │           │   ├── text_x-bacon
+│   │   │   │           │   ├── text_x-c
+│   │   │   │           │   ├── text_x-changelog
+│   │   │   │           │   ├── text_x-genie
+│   │   │   │           │   ├── text_x-log
+│   │   │   │           │   ├── text_x-markdown
+│   │   │   │           │   ├── text_x-readme
+│   │   │   │           │   ├── text_x-vala
+│   │   │   │           │   ├── text_xml
+│   │   │   │           │   ├── video_3gpp
+│   │   │   │           │   ├── video_asf
+│   │   │   │           │   ├── video_mp2t
+│   │   │   │           │   ├── video_mp4
+│   │   │   │           │   ├── video_mpeg
+│   │   │   │           │   ├── video_ogg
+│   │   │   │           │   ├── video_quicktime
+│   │   │   │           │   ├── video_webm
+│   │   │   │           │   ├── video_x-flv
+│   │   │   │           │   ├── video_x-matroska
+│   │   │   │           │   ├── video_x-ms-wmv
+│   │   │   │           │   ├── video_x-msvideo
+│   │   │   │           │   └── video_x-theora+ogg
+│   │   │   │           └── URI
+│   │   │   │               ├── cdda -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── dvb -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── dvd -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── file -> /usr/local/bin/defaultbrowser
+│   │   │   │               ├── ftp -> /usr/bin/gftp
+│   │   │   │               ├── http -> /usr/local/bin/defaultbrowser
+│   │   │   │               ├── mailto -> /usr/local/bin/defaultemail
+│   │   │   │               └── rtsp -> /usr/local/bin/defaultmediaplayer
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   │   └── Choices
+│   │   │   │       ├── MIME-types -> ../../etc/xdg/rox.sourceforge.net/MIME-types/
+│   │   │   │       ├── ROX-Filer
+│   │   │   │       │   ├── PuppyPin
+│   │   │   │       │   ├── README.txt
+│   │   │   │       │   └── globicons
+│   │   │   │       ├── Templates
+│   │   │   │       │   ├── Script
+│   │   │   │       │   └── WebPage.html
+│   │   │   │       └── URI -> ../../etc/xdg/rox.sourceforge.net/URI
+│   │   │   └── usr
+│   │   │       └── local
+│   │   │           ├── apps
+│   │   │           │   └── ROX-Filer
+│   │   │           │       └── open-with-mimeinfo.sh
+│   │   │           └── bin
+│   │   │               └── rox
+│   │   ├── simple_network_setup
+│   │   │   ├── etc
+│   │   │   │   ├── simple_network_setup
+│   │   │   │   │   └── EMPTYDIRMARKER
+│   │   │   │   └── udev
+│   │   │   │       └── rules.d
+│   │   │   │           └── 51-simple_network_setup.rules
+│   │   │   ├── pet.specs
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puninstall.sh
+│   │   │   └── usr
+│   │   │       └── local
+│   │   │           ├── bin
+│   │   │           │   └── sns
+│   │   │           └── simple_network_setup
+│   │   │               ├── build_udevmodulelist
+│   │   │               ├── help_profiles
+│   │   │               ├── help_security
+│   │   │               ├── macaddress_spoofing_functions
+│   │   │               ├── rc.network
+│   │   │               └── sns
+│   │   ├── wallpaper
+│   │   │   ├── pet.specs
+│   │   │   └── usr
+│   │   │       ├── bin
+│   │   │       │   ├── set_wallpaper -> wallpaper
+│   │   │       │   ├── wallpaper
+│   │   │       │   └── wallslide
+│   │   │       ├── local
+│   │   │       │   └── apps
+│   │   │       │       └── Wallpaper
+│   │   │       │           ├── AppInfo.xml
+│   │   │       │           ├── AppRun
+│   │   │       │           ├── functions
+│   │   │       │           ├── locale
+│   │   │       │           │   └── english.po
+│   │   │       │           ├── set_bg -> ../../../sbin/set_bg
+│   │   │       │           └── slideshow
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── wallpaper.desktop
+│   │   └── xlock_gui
+│   │       ├── pet.specs
+│   │       └── usr
+│   │           ├── local
+│   │           │   └── apps
+│   │           │       └── Xlock
+│   │           │           ├── AppInfo.xml
+│   │           │           ├── AppRun
+│   │           │           └── locale
+│   │           │               ├── english.po
+│   │           │               ├── french.po
+│   │           │               └── russian.po
+│   │           └── share
+│   │               └── applications
+│   │                   ├── Xlock-lock-screen.desktop
+│   │                   └── Xlock-setup.desktop
+│   ├── rootfs-petbuilds
+│   │   ├── ExpenseTracker
+│   │   │   ├── gtk3.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── Xdialog
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── Xdialog-legacy
+│   │   │   ├── gtk-version.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── aaa_pup_c
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── abiword
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── busybox
+│   │   │   ├── DOTconfig
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── claws-mail
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── connman-gtk
+│   │   │   ├── icons.patch
+│   │   │   ├── no-settings.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── connman-puppy
+│   │   │   ├── libadjtime.c
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── pinstall.sh
+│   │   ├── connman-ui
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── connman-ui-gtk.desktop
+│   │   │   ├── grab.patch
+│   │   │   ├── no-label.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       └── share
+│   │   │           └── connman_ui_gtk
+│   │   │               └── icons
+│   │   │                   ├── network-idle-symbolic.svg
+│   │   │                   ├── network-offline-symbolic.svg
+│   │   │                   ├── network-transmit-receive-symbolic.svg
+│   │   │                   ├── network-wired-symbolic.svg
+│   │   │                   ├── network-wireless-signal-excellent-symbolic.svg
+│   │   │                   ├── network-wireless-signal-good-symbolic.svg
+│   │   │                   ├── network-wireless-signal-ok-symbolic.svg
+│   │   │                   ├── network-wireless-signal-weak-symbolic.svg
+│   │   │                   └── nm-adhoc.svg
+│   │   ├── deadbeef
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── pipewire.patch
+│   │   │   └── sha256.sum
+│   │   ├── disktype
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── dmz-cursor-theme
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── efilinux
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── epdfview
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── firewallstatus
+│   │   │   ├── firewallstatus-0.7
+│   │   │   │   ├── LICENCE.txt
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── build.sh
+│   │   │   │   ├── firewallstatus.c
+│   │   │   │   ├── firewallstatus.desktop
+│   │   │   │   └── icons
+│   │   │   │       ├── firewall.svg
+│   │   │   │       ├── shield_no.svg
+│   │   │   │       └── shield_yes.svg
+│   │   │   ├── pet.specs
+│   │   │   └── petbuild
+│   │   ├── fixmenusd
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── fixmenusd.desktop
+│   │   │   ├── fixmenusd.c
+│   │   │   ├── pet.specs
+│   │   │   └── petbuild
+│   │   ├── fpm2
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── freememapplet
+│   │   │   ├── grab.patch
+│   │   │   ├── gtk3.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── root
+│   │   │   └── sha256.sum
+│   │   ├── fsearch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gdmap
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── geany
+│   │   │   ├── defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── geany-gtk2
+│   │   │   ├── defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── gexec
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── gexec.desktop
+│   │   ├── gfnrename
+│   │   │   ├── gtk3.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gmeasures
+│   │   │   ├── gtk3.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gnumeric
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── gparted
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gpicview
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── grsync
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtk_theme_buntoo_ambience
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtk_theme_flat_grey_rounded
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtk_theme_gradient_grey
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtk_theme_polished_blue
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtk_theme_stark_blueish
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gtkdialog
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── gtkhash
+│   │   │   ├── defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── gxmessage
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── hardinfo
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── homebank
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── jwm
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── l3afpad
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── labwc-puppy
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   └── usr
+│   │   │       ├── bin
+│   │   │       │   ├── Xwayland-spot
+│   │   │       │   ├── ptheme-labwc
+│   │   │       │   ├── slurp-screenshot
+│   │   │       │   └── startlabwc
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── ptheme_labwc.desktop
+│   │   │           └── themes
+│   │   │               ├── Flat-grey-rounded
+│   │   │               │   └── openbox-3
+│   │   │               │       └── themerc
+│   │   │               ├── Gradient-grey
+│   │   │               │   └── openbox-3
+│   │   │               │       └── themerc
+│   │   │               ├── Polished-Blue
+│   │   │               │   └── openbox-3
+│   │   │               │       └── themerc
+│   │   │               ├── buntoo-ambience
+│   │   │               │   └── openbox-3
+│   │   │               │       └── themerc
+│   │   │               └── stark-blueish
+│   │   │                   └── openbox-3
+│   │   │                       └── themerc
+│   │   ├── leafpad
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── lxtask
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── sha256.sum
+│   │   │   └── spot.patch
+│   │   ├── lxterminal
+│   │   │   ├── colors.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── sha256.sum
+│   │   │   └── urxvt.c
+│   │   ├── mpv
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── mtpaint
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── sha256.sum
+│   │   │   ├── usr
+│   │   │   │   └── bin
+│   │   │   │       └── mtpaint-screenshot
+│   │   │   └── wayland.patch
+│   │   ├── mtr
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── netmon_wce
+│   │   │   ├── netmon_wce-3.3
+│   │   │   │   ├── Changelog
+│   │   │   │   ├── Icons
+│   │   │   │   │   ├── cell1_0.svg
+│   │   │   │   │   ├── cell1_1.svg
+│   │   │   │   │   ├── cell1_2.svg
+│   │   │   │   │   ├── cell1_3.svg
+│   │   │   │   │   ├── cell1_4.svg
+│   │   │   │   │   ├── cell_0.svg
+│   │   │   │   │   ├── cell_1.svg
+│   │   │   │   │   ├── cell_2.svg
+│   │   │   │   │   ├── cell_3.svg
+│   │   │   │   │   ├── cell_4.svg
+│   │   │   │   │   ├── internet_connect.svg
+│   │   │   │   │   ├── internet_connect1.svg
+│   │   │   │   │   ├── internet_connect1_both.svg
+│   │   │   │   │   ├── internet_connect1_no.svg
+│   │   │   │   │   ├── internet_connect1_yes.svg
+│   │   │   │   │   ├── internet_connect3.svg
+│   │   │   │   │   ├── internet_connect3_both.svg
+│   │   │   │   │   ├── internet_connect3_no.svg
+│   │   │   │   │   ├── internet_connect3_yes.svg
+│   │   │   │   │   ├── internet_connect_both.svg
+│   │   │   │   │   ├── internet_connect_no.svg
+│   │   │   │   │   ├── internet_connect_yes.svg
+│   │   │   │   │   ├── qual_0.svg
+│   │   │   │   │   ├── qual_1.svg
+│   │   │   │   │   ├── qual_10.svg
+│   │   │   │   │   ├── qual_2.svg
+│   │   │   │   │   ├── qual_3.svg
+│   │   │   │   │   ├── qual_4.svg
+│   │   │   │   │   ├── qual_5.svg
+│   │   │   │   │   ├── qual_6.svg
+│   │   │   │   │   ├── qual_7.svg
+│   │   │   │   │   ├── qual_8.svg
+│   │   │   │   │   └── qual_9.svg
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── netmon_wce.c
+│   │   │   │   ├── netmon_wce.desktop
+│   │   │   │   ├── netmon_wce.petbuild
+│   │   │   │   └── po
+│   │   │   │       ├── de.po
+│   │   │   │       ├── es.po
+│   │   │   │       ├── fr.po
+│   │   │   │       ├── it.po
+│   │   │   │       ├── zh_CN.po
+│   │   │   │       ├── zh_HK.po
+│   │   │   │       ├── zh_SG.po -> zh_CN.po
+│   │   │   │       └── zh_TW.po -> zh_HK.po
+│   │   │   ├── pet.specs
+│   │   │   └── petbuild
+│   │   ├── notification-daemon-stub
+│   │   │   ├── main.c
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── usr
+│   │   │       └── share
+│   │   │           └── dbus-1
+│   │   │               └── services
+│   │   │                   └── org.freedesktop.Notifications.service
+│   │   ├── osmo
+│   │   │   ├── defaults.patch
+│   │   │   ├── deps.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── pa-applet
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   └── sha256.sum
+│   │   ├── palemoon
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── pcmanfm
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── pcmanfm.desktop
+│   │   │   ├── libfm-defaults.patch
+│   │   │   ├── pcmanfm-defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   │   └── Desktop
+│   │   │   │       ├── Files -> /root
+│   │   │   │       └── Trash -> /root/.local/share/Trash/files
+│   │   │   ├── root.patch
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       └── local
+│   │   │           └── bin
+│   │   │               ├── rox -> roxfiler
+│   │   │               └── roxfiler
+│   │   ├── pmaterial_icons
+│   │   │   └── petbuild
+│   │   ├── powerapplet_tray
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── powerapplet_tray.c
+│   │   │   └── root
+│   │   ├── pup-volume-monitor
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── pupmoon-font
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── puppy_flat_icons
+│   │   │   └── petbuild
+│   │   ├── puppy_standard_icons
+│   │   │   └── petbuild
+│   │   ├── ram-saver
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── pinstall.sh
+│   │   ├── rox-filer
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── rox.sourceforge.net
+│   │   │   │           ├── MIME-types
+│   │   │   │           │   ├── application_abs
+│   │   │   │           │   ├── application_gzip
+│   │   │   │           │   ├── application_initramfs-gz
+│   │   │   │           │   ├── application_javascript
+│   │   │   │           │   ├── application_msword
+│   │   │   │           │   ├── application_notecase-enc
+│   │   │   │           │   ├── application_notecase-plain
+│   │   │   │           │   ├── application_pdf
+│   │   │   │           │   ├── application_pet
+│   │   │   │           │   ├── application_postscript
+│   │   │   │           │   ├── application_pup
+│   │   │   │           │   ├── application_rtf
+│   │   │   │           │   ├── application_scribus
+│   │   │   │           │   ├── application_vnd.efi.img
+│   │   │   │           │   ├── application_vnd.efi.iso
+│   │   │   │           │   ├── application_vnd.ms-excel
+│   │   │   │           │   ├── application_vnd.rn-realmedia
+│   │   │   │           │   ├── application_vym
+│   │   │   │           │   ├── application_x-abiword
+│   │   │   │           │   ├── application_x-bfe
+│   │   │   │           │   ├── application_x-bittorrent
+│   │   │   │           │   ├── application_x-bzip
+│   │   │   │           │   ├── application_x-bzip-compressed-tar
+│   │   │   │           │   ├── application_x-bzip2
+│   │   │   │           │   ├── application_x-cbr -> application_pdf
+│   │   │   │           │   ├── application_x-cbz -> application_pdf
+│   │   │   │           │   ├── application_x-cd-image
+│   │   │   │           │   ├── application_x-chm
+│   │   │   │           │   ├── application_x-compressed-tar
+│   │   │   │           │   ├── application_x-deb
+│   │   │   │           │   ├── application_x-delta
+│   │   │   │           │   ├── application_x-ext2-image
+│   │   │   │           │   ├── application_x-ext3-image
+│   │   │   │           │   ├── application_x-gnumeric
+│   │   │   │           │   ├── application_x-gzip
+│   │   │   │           │   ├── application_x-ogg
+│   │   │   │           │   ├── application_x-php
+│   │   │   │           │   ├── application_x-pkg
+│   │   │   │           │   ├── application_x-rar
+│   │   │   │           │   ├── application_x-rpm
+│   │   │   │           │   ├── application_x-squashfs-image
+│   │   │   │           │   ├── application_x-tar
+│   │   │   │           │   ├── application_x-tcl
+│   │   │   │           │   ├── application_x-tgz
+│   │   │   │           │   ├── application_x-xz
+│   │   │   │           │   ├── application_x-xz-compressed-tar
+│   │   │   │           │   ├── application_x-zerosize -> text_plain
+│   │   │   │           │   ├── application_x-zstd
+│   │   │   │           │   ├── application_xml -> text_plain
+│   │   │   │           │   ├── application_zip
+│   │   │   │           │   ├── audio_basic
+│   │   │   │           │   ├── audio_mp4
+│   │   │   │           │   ├── audio_mpeg
+│   │   │   │           │   ├── audio_x-aiff
+│   │   │   │           │   ├── audio_x-flac
+│   │   │   │           │   ├── audio_x-matroska
+│   │   │   │           │   ├── audio_x-mp3
+│   │   │   │           │   ├── audio_x-ms-wma
+│   │   │   │           │   ├── audio_x-pn-realaudio
+│   │   │   │           │   ├── audio_x-ulaw
+│   │   │   │           │   ├── audio_x-vorbis+ogg
+│   │   │   │           │   ├── audio_x-wav
+│   │   │   │           │   ├── image_bmp
+│   │   │   │           │   ├── image_gif
+│   │   │   │           │   ├── image_jpeg
+│   │   │   │           │   ├── image_png
+│   │   │   │           │   ├── image_svg
+│   │   │   │           │   ├── image_svg+xml
+│   │   │   │           │   ├── image_tiff
+│   │   │   │           │   ├── image_x-pixmap
+│   │   │   │           │   ├── image_x-png
+│   │   │   │           │   ├── image_x-xbitmap
+│   │   │   │           │   ├── image_x-xfig
+│   │   │   │           │   ├── image_x-xpixmap
+│   │   │   │           │   ├── text
+│   │   │   │           │   ├── text_abiword
+│   │   │   │           │   ├── text_html
+│   │   │   │           │   ├── text_plain
+│   │   │   │           │   ├── text_x-bacon
+│   │   │   │           │   ├── text_x-c
+│   │   │   │           │   ├── text_x-changelog
+│   │   │   │           │   ├── text_x-genie
+│   │   │   │           │   ├── text_x-log
+│   │   │   │           │   ├── text_x-readme
+│   │   │   │           │   ├── text_x-vala
+│   │   │   │           │   ├── text_xml
+│   │   │   │           │   ├── video_3gpp
+│   │   │   │           │   ├── video_asf
+│   │   │   │           │   ├── video_mp4
+│   │   │   │           │   ├── video_mpeg
+│   │   │   │           │   ├── video_quicktime
+│   │   │   │           │   ├── video_x-flv
+│   │   │   │           │   ├── video_x-matroska
+│   │   │   │           │   ├── video_x-ms-wmv
+│   │   │   │           │   ├── video_x-msvideo
+│   │   │   │           │   └── video_x-theora+ogg
+│   │   │   │           └── URI
+│   │   │   │               ├── cdda -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── dvb -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── dvd -> /usr/local/bin/defaultmediaplayer
+│   │   │   │               ├── file -> /usr/local/bin/defaultbrowser
+│   │   │   │               ├── http -> /usr/local/bin/defaultbrowser
+│   │   │   │               ├── https -> /usr/local/bin/defaultbrowser
+│   │   │   │               ├── mailto -> /usr/local/bin/defaultemail
+│   │   │   │               └── rtsp -> /usr/local/bin/defaultmediaplayer
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── root
+│   │   │   │   └── Choices
+│   │   │   │       ├── ROX-Filer
+│   │   │   │       │   ├── PuppyPin
+│   │   │   │       │   ├── README.txt
+│   │   │   │       │   └── globicons
+│   │   │   │       └── Templates
+│   │   │   │           ├── Script
+│   │   │   │           └── WebPage.html
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       ├── local
+│   │   │       │   └── bin
+│   │   │       │       ├── rox -> roxfiler
+│   │   │       │       └── roxfiler
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── rox-filer.desktop
+│   │   ├── rxvt-unicode
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── sfwbar
+│   │   │   ├── etc
+│   │   │   │   ├── init.d
+│   │   │   │   │   └── zrc.sfwbar
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── sfwbar.desktop
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── root
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       ├── sbin
+│   │   │       │   ├── buildmenu.sh
+│   │   │       │   ├── powerapplet.sh
+│   │   │       │   ├── sfwbar-config.sh
+│   │   │       │   ├── sfwlauncher
+│   │   │       │   └── vol.sh
+│   │   │       └── share
+│   │   │           ├── applications
+│   │   │           │   └── sfwbar-config.desktop
+│   │   │           └── icons
+│   │   │               └── hicolor
+│   │   │                   └── scalable
+│   │   │                       └── apps
+│   │   │                           ├── firefox-default.svg
+│   │   │                           ├── pcell.svg
+│   │   │                           ├── pnot.svg
+│   │   │                           ├── puppy.svg
+│   │   │                           ├── pwifi.svg
+│   │   │                           └── pwired.svg
+│   │   ├── spacefm
+│   │   │   ├── mount.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puppy-defaults.patch
+│   │   │   ├── sha256.sum
+│   │   │   ├── unmount.patch
+│   │   │   ├── usr
+│   │   │   │   ├── libexec
+│   │   │   │   │   └── spacefm
+│   │   │   │   │       ├── mount
+│   │   │   │   │       └── umount
+│   │   │   │   └── local
+│   │   │   │       └── bin
+│   │   │   │           ├── rox -> roxfiler
+│   │   │   │           └── roxfiler
+│   │   │   └── wayland.patch
+│   │   ├── spot-pkexec
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── autostart
+│   │   │   │           └── pkexecd.desktop
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── pkexec.c
+│   │   │   ├── pkexecd.c
+│   │   │   ├── sandbox.c
+│   │   │   └── usr
+│   │   │       └── sbin
+│   │   │           └── pkexec-ask
+│   │   ├── swaylock
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── root.patch
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       └── share
+│   │   │           └── applications
+│   │   │               └── swaylock.desktop
+│   │   ├── sylpheed
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── transmission
+│   │   │   ├── defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── transmission-legacy
+│   │   │   ├── defaults.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── uget
+│   │   │   ├── banner.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── sha256.sum
+│   │   │   └── wayland.patch
+│   │   ├── viewnior
+│   │   │   ├── exiv2.patch
+│   │   │   ├── gtk3.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── puppy.patch
+│   │   │   └── sha256.sum
+│   │   ├── weechat
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   ├── privacy.patch
+│   │   │   ├── sha256.sum
+│   │   │   └── usr
+│   │   │       └── bin
+│   │   │           └── weechat-shell
+│   │   ├── wlopm
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── xarchiver
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── xcur2png
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── xdelta
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   ├── xdg-puppy-jwm
+│   │   │   ├── 2089.patch
+│   │   │   ├── 3054.patch
+│   │   │   ├── 3055.patch
+│   │   │   ├── double-separators.patch
+│   │   │   ├── empty-menus.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── sha256.sum
+│   │   │   ├── terminal.patch
+│   │   │   └── unique.patch
+│   │   ├── xdg-puppy-labwc
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── templates
+│   │   │   │           └── _root_.config_labwc_menu.xml
+│   │   │   ├── labwc-xdgmenu.c
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── sha256.sum
+│   │   │   ├── terminal.patch
+│   │   │   └── usr
+│   │   │       └── sbin
+│   │   │           └── iconmenu
+│   │   ├── xdg-puppy-sfwbar
+│   │   │   ├── etc
+│   │   │   │   └── xdg
+│   │   │   │       └── templates
+│   │   │   │           └── _root_.config_sfwbar_menu.source
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── sfwbar-xdgmenu.c
+│   │   │   ├── sha256.sum
+│   │   │   └── terminal.patch
+│   │   ├── xlockmore
+│   │   │   ├── null.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── sha256.sum
+│   │   │   └── small.patch
+│   │   ├── xournalpp
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   ├── pinstall.sh
+│   │   │   └── sha256.sum
+│   │   ├── xpad
+│   │   │   ├── no-help.patch
+│   │   │   ├── no-x.patch
+│   │   │   ├── pet.specs
+│   │   │   ├── petbuild
+│   │   │   └── sha256.sum
+│   │   └── yad
+│   │       ├── pet.specs
+│   │       ├── petbuild
+│   │       └── sha256.sum
+│   ├── rootfs-skeleton
+│   │   ├── bin
+│   │   │   ├── autologin
+│   │   │   ├── df-pup
+│   │   │   ├── mount-pup
+│   │   │   ├── plogin
+│   │   │   ├── ps-pup
+│   │   │   ├── pupkill
+│   │   │   ├── runexec
+│   │   │   ├── umount-pup
+│   │   │   └── xdg_autostart.sh
+│   │   ├── dev
+│   │   │   └── EMPTYDIRMARKER
+│   │   ├── etc
+│   │   │   ├── README.txt
+│   │   │   ├── X11
+│   │   │   │   ├── app-defaults
+│   │   │   │   │   └── EMPTYDIRMARKER
+│   │   │   │   ├── rgb.txt -> ../../usr/share/X11/rgb.txt
+│   │   │   │   ├── xorg.conf-auto-pc
+│   │   │   │   ├── xorg.conf.udev
+│   │   │   │   └── xorg.conf.udev.fbturbo
+│   │   │   ├── clock
+│   │   │   ├── environment
+│   │   │   ├── ethertypes
+│   │   │   ├── eventmanager
+│   │   │   ├── fb.modes
+│   │   │   ├── fstab
+│   │   │   ├── group
+│   │   │   ├── group.debian
+│   │   │   ├── group.devuan -> group.debian
+│   │   │   ├── group.ubuntu -> group.debian
+│   │   │   ├── gshadow
+│   │   │   ├── gtk-3.0
+│   │   │   │   └── settings.ini
+│   │   │   ├── host.conf
+│   │   │   ├── hostname
+│   │   │   ├── hosts
+│   │   │   ├── hosts.allow
+│   │   │   ├── hosts.deny
+│   │   │   ├── init.d
+│   │   │   │   ├── 00sys_logger
+│   │   │   │   ├── 10alsa
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── efivarfs
+│   │   │   │   ├── javaif.sh
+│   │   │   │   ├── pupmode13
+│   │   │   │   ├── rc.ucode
+│   │   │   │   ├── start_cpu_freq
+│   │   │   │   ├── trim
+│   │   │   │   ├── usb-modeswitch
+│   │   │   │   └── z-disable-spurious-gpe
+│   │   │   ├── inittab
+│   │   │   ├── inittab.README
+│   │   │   ├── inputrc
+│   │   │   ├── iso3166-1-alpha2
+│   │   │   ├── issue
+│   │   │   ├── javaif.conf
+│   │   │   ├── ld.so.conf
+│   │   │   ├── locale.gen
+│   │   │   ├── localtime -> /usr/share/zoneinfo/Etc/GMT-8
+│   │   │   ├── mailcap
+│   │   │   ├── mime.types
+│   │   │   ├── modprobe.d
+│   │   │   │   ├── alsa-base.conf
+│   │   │   │   ├── alsa.conf
+│   │   │   │   ├── apm.conf
+│   │   │   │   ├── ath9k.conf
+│   │   │   │   ├── puppy.conf
+│   │   │   │   └── radeon-dpm.conf
+│   │   │   ├── modules
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── modules.conf
+│   │   │   ├── networks
+│   │   │   ├── nscd.conf
+│   │   │   ├── nsswitch.conf
+│   │   │   ├── passwd
+│   │   │   ├── passwd.debian
+│   │   │   ├── passwd.devuan -> passwd.debian
+│   │   │   ├── passwd.ubuntu -> passwd.debian
+│   │   │   ├── pmime.conf
+│   │   │   ├── ppp
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── chap-secrets
+│   │   │   │   ├── chat-script
+│   │   │   │   ├── chatscripts
+│   │   │   │   │   └── EMPTYDIRMARKER
+│   │   │   │   ├── connect-errors
+│   │   │   │   ├── ip-up-EXAMPLE
+│   │   │   │   ├── options
+│   │   │   │   ├── options.pptp
+│   │   │   │   ├── pap-secrets
+│   │   │   │   ├── peers
+│   │   │   │   │   ├── wvdial
+│   │   │   │   │   └── wvdial-pipe
+│   │   │   │   └── resolv.conf -> ../resolv.conf
+│   │   │   ├── profile
+│   │   │   ├── profile.d
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── flatpak-bindir.sh
+│   │   │   │   ├── gio_extra_modules.sh
+│   │   │   │   ├── gtkdialog
+│   │   │   │   ├── pup_gtk
+│   │   │   │   ├── qt-libs
+│   │   │   │   └── z-java.sh
+│   │   │   ├── protocols
+│   │   │   ├── psync.servers
+│   │   │   ├── rc.d
+│   │   │   │   ├── BOOTCONFIG
+│   │   │   │   ├── BOOTCONSTRAINED
+│   │   │   │   ├── MODULESCONFIG
+│   │   │   │   ├── PUPSTATE
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── functions
+│   │   │   │   ├── functions_x
+│   │   │   │   ├── init.d -> ../init.d
+│   │   │   │   ├── rc.country
+│   │   │   │   ├── rc.network_basic
+│   │   │   │   ├── rc.network_eth
+│   │   │   │   ├── rc.network_pwf_stop
+│   │   │   │   ├── rc.services
+│   │   │   │   ├── rc.shutdown
+│   │   │   │   ├── rc.sysinit
+│   │   │   │   ├── rc.update
+│   │   │   │   └── wl_func
+│   │   │   ├── rc0.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc1.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc2.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc3.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc4.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc5.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── rc6.d
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── resolv.conf
+│   │   │   ├── rpc
+│   │   │   ├── samba
+│   │   │   │   └── printing.auth
+│   │   │   ├── services
+│   │   │   ├── shadow
+│   │   │   ├── shadow.debian
+│   │   │   ├── shadow.devuan -> shadow.debian
+│   │   │   ├── shadow.ubuntu -> shadow.debian
+│   │   │   ├── shells
+│   │   │   ├── subgid
+│   │   │   ├── subuid
+│   │   │   ├── sudo.conf
+│   │   │   ├── sudoers
+│   │   │   ├── termcap
+│   │   │   ├── udev
+│   │   │   │   └── rules.d
+│   │   │   │       ├── 026_ti_usb_3410_5052.rules
+│   │   │   │       ├── 41-usb_modeswitch-puppy.rules
+│   │   │   │       ├── 50-udev-puppy-basic.rules
+│   │   │   │       ├── 52-usb_modem_puppy.rules
+│   │   │   │       ├── 55-cups.rules
+│   │   │   │       ├── 88-puppy-autodetect.rules
+│   │   │   │       ├── 90-udev-rule-trace.rules
+│   │   │   │       ├── 91-xinput-apply.rules
+│   │   │   │       └── 92-xkb-apply.rules
+│   │   │   ├── windowmanager
+│   │   │   ├── wmexit.conf
+│   │   │   ├── wvdial.conf.txt
+│   │   │   ├── wvdial_options
+│   │   │   │   ├── APN-VirginBroadband -> APN-virginbroadband
+│   │   │   │   └── APN-virginbroadband
+│   │   │   ├── xdg
+│   │   │   │   ├── autostart
+│   │   │   │   │   ├── xinput-apply.desktop
+│   │   │   │   │   ├── xkb-apply.desktop
+│   │   │   │   │   └── xorg-mousekeys.desktop
+│   │   │   │   ├── menus
+│   │   │   │   │   ├── hierarchy
+│   │   │   │   │   ├── puppy-business.menu
+│   │   │   │   │   ├── puppy-calculate.menu -> puppy-business.menu
+│   │   │   │   │   ├── puppy-desktop.menu
+│   │   │   │   │   ├── puppy-document.menu
+│   │   │   │   │   ├── puppy-filesystem.menu
+│   │   │   │   │   ├── puppy-fun.menu
+│   │   │   │   │   ├── puppy-graphic.menu
+│   │   │   │   │   ├── puppy-internet.menu
+│   │   │   │   │   ├── puppy-multimedia.menu
+│   │   │   │   │   ├── puppy-network.menu
+│   │   │   │   │   ├── puppy-personal.menu
+│   │   │   │   │   ├── puppy-setup.menu
+│   │   │   │   │   ├── puppy-system.menu
+│   │   │   │   │   └── puppy-utility.menu
+│   │   │   │   └── templates
+│   │   │   │       ├── README.txt
+│   │   │   │       └── _root_.jwmrc
+│   │   │   └── xorgoverrides
+│   │   ├── home
+│   │   │   └── spot
+│   │   │       ├── README.txt
+│   │   │       └── spot.png
+│   │   ├── lib
+│   │   │   ├── consolefonts
+│   │   │   │   ├── LatArCyrHeb-16.psfu.gz
+│   │   │   │   ├── LatGrkCyr-8x16.psfu.gz
+│   │   │   │   ├── lat1-12.psfu.gz
+│   │   │   │   ├── lat2-12.psfu.gz
+│   │   │   │   └── ter-u16n.psf.gz
+│   │   │   ├── dhcpcd
+│   │   │   │   └── dhcpcd-hooks
+│   │   │   │       └── 99-notify
+│   │   │   ├── firmware
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── keymaps
+│   │   │   │   ├── azerty.gz
+│   │   │   │   ├── be-latin1.gz
+│   │   │   │   ├── br-abnt.gz
+│   │   │   │   ├── br-abnt2.gz
+│   │   │   │   ├── br-latin1-abnt2.gz
+│   │   │   │   ├── br-latin1-us.gz
+│   │   │   │   ├── by.gz
+│   │   │   │   ├── cf.gz
+│   │   │   │   ├── croat.gz
+│   │   │   │   ├── cz.gz
+│   │   │   │   ├── de-latin1.gz
+│   │   │   │   ├── de.gz
+│   │   │   │   ├── dk.gz
+│   │   │   │   ├── dvorak-l.gz
+│   │   │   │   ├── dvorak-r.gz
+│   │   │   │   ├── dvorak.gz
+│   │   │   │   ├── es.gz
+│   │   │   │   ├── et.gz
+│   │   │   │   ├── fi.gz
+│   │   │   │   ├── fr.gz
+│   │   │   │   ├── gr.gz
+│   │   │   │   ├── hu.gz
+│   │   │   │   ├── hu101.gz
+│   │   │   │   ├── il.gz
+│   │   │   │   ├── it.gz
+│   │   │   │   ├── jp106.gz
+│   │   │   │   ├── lt.gz
+│   │   │   │   ├── mk.gz
+│   │   │   │   ├── nl.gz
+│   │   │   │   ├── no.gz
+│   │   │   │   ├── pl.gz
+│   │   │   │   ├── pt-latin1.gz
+│   │   │   │   ├── ro.gz
+│   │   │   │   ├── ru.gz
+│   │   │   │   ├── se.gz
+│   │   │   │   ├── sg.gz
+│   │   │   │   ├── sk-qwerty.gz
+│   │   │   │   ├── sk-qwertz.gz
+│   │   │   │   ├── slovene.gz
+│   │   │   │   ├── sv-latin1.gz
+│   │   │   │   ├── uk.gz
+│   │   │   │   ├── us.gz
+│   │   │   │   └── wangbe.gz
+│   │   │   ├── modules
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   └── udev
+│   │   │       └── rules.d
+│   │   │           └── 50-udev-default.rules
+│   │   ├── mnt
+│   │   │   ├── cdrom
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── data
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── dvd
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── flash
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── floppy
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── msdos
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── ram1
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── swap
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   └── zip
+│   │   │       └── EMPTYDIRMARKER
+│   │   ├── opt
+│   │   │   └── EMPTYDIRMARKER
+│   │   ├── pinstall.sh
+│   │   ├── proc
+│   │   │   └── EMPTYDIRMARKER
+│   │   ├── root
+│   │   │   ├── Downloads
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── Startup
+│   │   │   │   ├── README.txt
+│   │   │   │   └── pm13trayicon
+│   │   │   ├── Templates
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── my-applications
+│   │   │   │   ├── bin
+│   │   │   │   │   └── README-my-applications-bin.txt
+│   │   │   │   └── lib
+│   │   │   │       └── README-my-applications-lib.txt
+│   │   │   ├── my-documents
+│   │   │   │   ├── clipart
+│   │   │   │   │   └── README-clipart.txt
+│   │   │   │   └── tmp
+│   │   │   │       └── README-tmp.txt
+│   │   │   ├── puppy-reference
+│   │   │   │   ├── audio -> /usr/share/audio
+│   │   │   │   ├── backgrounds -> /usr/share/backgrounds
+│   │   │   │   ├── doc -> /usr/share/doc
+│   │   │   │   ├── midi-icons -> /usr/share/midi-icons
+│   │   │   │   ├── mini-icons -> /usr/share/mini-icons
+│   │   │   │   ├── pixmaps -> /usr/share/pixmaps
+│   │   │   │   ├── ps-pdf -> /usr/share/examples/ps-pdf
+│   │   │   │   ├── spreadsheets -> /usr/share/examples/spreadsheets
+│   │   │   │   ├── text -> /usr/share/examples/text
+│   │   │   │   ├── vector-images -> /usr/share/examples/vector-images
+│   │   │   │   ├── video -> /usr/share/examples/video
+│   │   │   │   └── xml -> /usr/share/examples/xml
+│   │   │   └── spot -> /home/spot
+│   │   ├── run
+│   │   │   └── EMPTYDIRMARKER
+│   │   ├── sbin
+│   │   │   ├── bdrv-update
+│   │   │   ├── cddetect
+│   │   │   ├── cddetect_quick
+│   │   │   ├── clean_desk_icons
+│   │   │   ├── dir2sfs
+│   │   │   ├── dir2tgz
+│   │   │   ├── init
+│   │   │   ├── load_consolefont
+│   │   │   ├── losetup-pup
+│   │   │   ├── mount.crypto_LUKS
+│   │   │   ├── poweroff
+│   │   │   ├── probedisk
+│   │   │   ├── probedisk2 -> probedisk
+│   │   │   ├── probepart
+│   │   │   ├── pup_event_backend_firmware
+│   │   │   ├── pup_event_frontend_d
+│   │   │   ├── reboot -> poweroff
+│   │   │   ├── runlevel
+│   │   │   ├── umount.crypto_LUKS
+│   │   │   ├── update-pciids
+│   │   │   └── update-usbids
+│   │   ├── system
+│   │   │   ├── bin -> ../bin
+│   │   │   └── xbin -> ../bin
+│   │   ├── tmp
+│   │   │   └── EMPTYDIRMARKER
+│   │   ├── usr
+│   │   │   ├── bin
+│   │   │   │   ├── Multiple-Sound-Card-Wizard -> ../sbin/mscw
+│   │   │   │   ├── alsa-capabilities
+│   │   │   │   ├── batinfo
+│   │   │   │   ├── battery-health
+│   │   │   │   ├── box_help -> ../../usr/lib/gtkdialog/box_help
+│   │   │   │   ├── box_ok -> ../../usr/lib/gtkdialog/box_ok
+│   │   │   │   ├── box_yesno -> ../../usr/lib/gtkdialog/box_yesno
+│   │   │   │   ├── brightness-set
+│   │   │   │   ├── close
+│   │   │   │   ├── cmptree
+│   │   │   │   ├── defaultfilemanager_x
+│   │   │   │   ├── dir2pet
+│   │   │   │   ├── dirs2pets
+│   │   │   │   ├── disable-spurious-gpe
+│   │   │   │   ├── dotpet
+│   │   │   │   ├── evince
+│   │   │   │   ├── gcolor2
+│   │   │   │   ├── get-monitor-names
+│   │   │   │   ├── geteltorito
+│   │   │   │   ├── gfontsel
+│   │   │   │   ├── gtk_chtheme_wrapper
+│   │   │   │   ├── gtk_text_info
+│   │   │   │   ├── gtkdialog-splash
+│   │   │   │   ├── gvfs-set-attribute
+│   │   │   │   ├── man -> pman
+│   │   │   │   ├── minixcal
+│   │   │   │   ├── new2dir
+│   │   │   │   ├── newer2dir -> new2dir
+│   │   │   │   ├── pcompress
+│   │   │   │   ├── pet2tgz
+│   │   │   │   ├── petspec
+│   │   │   │   ├── pextract
+│   │   │   │   ├── pfontview
+│   │   │   │   ├── pman
+│   │   │   │   ├── pmediainfo
+│   │   │   │   ├── po2mo
+│   │   │   │   ├── pupdialog
+│   │   │   │   ├── pupmessage -> gxmessage
+│   │   │   │   ├── pupx
+│   │   │   │   ├── qemu_gui
+│   │   │   │   ├── radeon-dpm-control.sh
+│   │   │   │   ├── raspi-version
+│   │   │   │   ├── restartwm -> wmexit
+│   │   │   │   ├── rw-sandbox.sh -> sandbox-rw.sh
+│   │   │   │   ├── sandbox-rw.sh
+│   │   │   │   ├── sandbox.sh
+│   │   │   │   ├── sandbox2dir.sh
+│   │   │   │   ├── sb2dir.sh -> sandbox2dir.sh
+│   │   │   │   ├── startx -> xwin
+│   │   │   │   ├── tgz2pet
+│   │   │   │   ├── toggle-touchpad
+│   │   │   │   ├── undeb
+│   │   │   │   ├── update-desktop-database
+│   │   │   │   ├── waitmax
+│   │   │   │   ├── wl_colpick
+│   │   │   │   ├── wmexit
+│   │   │   │   ├── wmpoweroff -> wmexit
+│   │   │   │   ├── wmreboot -> wmexit
+│   │   │   │   ├── wvdialshell
+│   │   │   │   ├── x11vnc-gui
+│   │   │   │   ├── xdg-open -> ../local/bin/xdg-open
+│   │   │   │   ├── xsaneshell
+│   │   │   │   ├── xterm
+│   │   │   │   ├── xwin
+│   │   │   │   ├── yaf-splash -> gtkdialog-splash
+│   │   │   │   └── zoom.sh
+│   │   │   ├── etc
+│   │   │   │   └── gtk -> /etc/gtk
+│   │   │   ├── games
+│   │   │   │   └── EMPTYDIRMARKER
+│   │   │   ├── lib
+│   │   │   │   ├── X11
+│   │   │   │   │   └── rgb.txt -> ../../share/X11/rgb.txt
+│   │   │   │   ├── adobe-flashplugin -> mozilla/plugins
+│   │   │   │   ├── gtkdialog
+│   │   │   │   │   ├── box_help
+│   │   │   │   │   ├── box_ok
+│   │   │   │   │   ├── box_passwd
+│   │   │   │   │   ├── box_splash
+│   │   │   │   │   ├── box_yesno
+│   │   │   │   │   ├── file_chooser
+│   │   │   │   │   ├── svg_analogclock
+│   │   │   │   │   ├── svg_bar
+│   │   │   │   │   ├── svg_text
+│   │   │   │   │   ├── xml_button-icon
+│   │   │   │   │   ├── xml_info
+│   │   │   │   │   ├── xml_pixmap
+│   │   │   │   │   └── xml_scalegrip
+│   │   │   │   ├── javaif
+│   │   │   │   │   ├── HelloWorldApp.class
+│   │   │   │   │   └── InputVerificationDemo.jnlp
+│   │   │   │   ├── modules
+│   │   │   │   │   └── EMPTYDIRMARKER
+│   │   │   │   ├── mozilla
+│   │   │   │   │   └── plugins
+│   │   │   │   │       └── EMPTYDIRMARKER
+│   │   │   │   └── terminfo -> ../share/terminfo
+│   │   │   ├── local
+│   │   │   │   ├── apps
+│   │   │   │   │   ├── Connect
+│   │   │   │   │   │   ├── AppInfo.xml
+│   │   │   │   │   │   ├── AppRun
+│   │   │   │   │   │   └── connect_help
+│   │   │   │   │   ├── PupZip
+│   │   │   │   │   │   ├── AppInfo.xml
+│   │   │   │   │   │   └── AppRun -> /usr/local/bin/pupzip
+│   │   │   │   │   └── Trash
+│   │   │   │   │       ├── AppInfo.xml
+│   │   │   │   │       ├── AppRun
+│   │   │   │   │       ├── Help
+│   │   │   │   │       │   └── help.html
+│   │   │   │   │       └── template
+│   │   │   │   │           ├── AppInfo.xml
+│   │   │   │   │           ├── temp-AppRun
+│   │   │   │   │           └── trash.png
+│   │   │   │   ├── bin
+│   │   │   │   │   ├── ascii.sh
+│   │   │   │   │   ├── basichtmlviewer
+│   │   │   │   │   ├── bdplayback_aacs
+│   │   │   │   │   ├── calc
+│   │   │   │   │   ├── defaultarchiver
+│   │   │   │   │   ├── defaultaudioeditor
+│   │   │   │   │   ├── defaultaudiomixer
+│   │   │   │   │   ├── defaultaudioplayer
+│   │   │   │   │   ├── defaultbrowser
+│   │   │   │   │   ├── defaultcalendar
+│   │   │   │   │   ├── defaultcdplayer
+│   │   │   │   │   ├── defaultcdrecorder
+│   │   │   │   │   ├── defaultchat
+│   │   │   │   │   ├── defaultconnect
+│   │   │   │   │   ├── defaultcontact
+│   │   │   │   │   ├── defaultdraw
+│   │   │   │   │   ├── defaultemail
+│   │   │   │   │   ├── defaultfilemanager
+│   │   │   │   │   ├── defaulthandler
+│   │   │   │   │   ├── defaulthtmleditor
+│   │   │   │   │   ├── defaulthtmlviewer
+│   │   │   │   │   ├── defaultimageeditor
+│   │   │   │   │   ├── defaultimageviewer
+│   │   │   │   │   ├── defaultmediaplayer
+│   │   │   │   │   ├── defaultpaint
+│   │   │   │   │   ├── defaultpdfviewer
+│   │   │   │   │   ├── defaultprocessmanager
+│   │   │   │   │   ├── defaultrun
+│   │   │   │   │   ├── defaultscreenshot
+│   │   │   │   │   ├── defaultspreadsheet
+│   │   │   │   │   ├── defaultterminal
+│   │   │   │   │   ├── defaulttexteditor
+│   │   │   │   │   ├── defaulttextviewer
+│   │   │   │   │   ├── defaulttorrent
+│   │   │   │   │   ├── defaultwordprocessor
+│   │   │   │   │   ├── gettext
+│   │   │   │   │   ├── gettext.sh
+│   │   │   │   │   ├── gtkmoz -> defaultbrowser
+│   │   │   │   │   ├── konqueror -> defaultfilemanager
+│   │   │   │   │   ├── missingdefaultapp
+│   │   │   │   │   ├── nautilus -> defaultfilemanager
+│   │   │   │   │   ├── ngettext
+│   │   │   │   │   ├── ppm -> ../petget/pkg_chooser.sh
+│   │   │   │   │   ├── pprocess -> defaultprocessmanager
+│   │   │   │   │   ├── pupmode
+│   │   │   │   │   ├── pupzip
+│   │   │   │   │   ├── remote-helper
+│   │   │   │   │   ├── remote-poweroff
+│   │   │   │   │   ├── remote-reboot
+│   │   │   │   │   ├── rtf2pdf.sh
+│   │   │   │   │   ├── rtf2ps.sh
+│   │   │   │   │   ├── thunar -> defaultfilemanager
+│   │   │   │   │   ├── timebar
+│   │   │   │   │   ├── wavplay
+│   │   │   │   │   ├── x-terminal-emulator -> defaultterminal
+│   │   │   │   │   ├── xdg-open
+│   │   │   │   │   ├── xdgdefaultapp
+│   │   │   │   │   └── xrun
+│   │   │   │   ├── etc
+│   │   │   │   │   └── README.txt
+│   │   │   │   ├── lib
+│   │   │   │   │   └── X11
+│   │   │   │   │       ├── README.txt
+│   │   │   │   │       ├── mini-icons
+│   │   │   │   │       │   ├── Pwireless.png
+│   │   │   │   │       │   └── default_left_ptr.png
+│   │   │   │   │       ├── pixmaps
+│   │   │   │   │       │   ├── archive48.png
+│   │   │   │   │       │   ├── closebox_outline48.png
+│   │   │   │   │       │   ├── connect48.png
+│   │   │   │   │       │   ├── error.xpm
+│   │   │   │   │       │   ├── folder48.png
+│   │   │   │   │       │   ├── games24.png
+│   │   │   │   │       │   ├── go48.png
+│   │   │   │   │       │   ├── invisible96x8.png
+│   │   │   │   │       │   ├── lock-screen48.png
+│   │   │   │   │       │   ├── locked_outline48.png
+│   │   │   │   │       │   ├── module24.xpm
+│   │   │   │   │       │   ├── nocopy_outline48.png
+│   │   │   │   │       │   ├── ok.xpm
+│   │   │   │   │       │   ├── pc24.png
+│   │   │   │   │       │   ├── pet48x.png
+│   │   │   │   │       │   ├── pupnews48.png
+│   │   │   │   │       │   ├── puppy-bone48.gif
+│   │   │   │   │       │   ├── question.xpm
+│   │   │   │   │       │   ├── save48.png
+│   │   │   │   │       │   ├── shutdown24.png
+│   │   │   │   │       │   ├── trashcan_empty48.png
+│   │   │   │   │       │   └── utility24.png
+│   │   │   │   │       └── themes
+│   │   │   │   │           └── StandardSvg
+│   │   │   │   │               ├── archive.svg -> ../../../../../share/pixmaps/puppy/package_compressed.svg
+│   │   │   │   │               ├── card.svg -> ../../../../../share/pixmaps/puppy/flashcard.svg
+│   │   │   │   │               ├── chat.svg -> ../../../../../share/pixmaps/puppy/chat.svg
+│   │   │   │   │               ├── configuration.svg -> ../../../../../share/pixmaps/puppy/preferences.svg
+│   │   │   │   │               ├── connect.svg -> ../../../../../share/pixmaps/puppy/network.svg
+│   │   │   │   │               ├── console.svg -> ../../../../../share/pixmaps/puppy/terminal.svg
+│   │   │   │   │               ├── date.svg -> ../../../../../share/pixmaps/puppy/calendar.svg
+│   │   │   │   │               ├── draw.svg -> ../../../../../share/pixmaps/puppy/draw_vector.svg
+│   │   │   │   │               ├── drive.svg -> ../../../../../share/pixmaps/puppy/harddisk.svg
+│   │   │   │   │               ├── edit.svg -> ../../../../../share/pixmaps/puppy/edit.svg
+│   │   │   │   │               ├── email.svg -> ../../../../../share/pixmaps/puppy/mail.svg
+│   │   │   │   │               ├── floppy.svg -> ../../../../../share/pixmaps/puppy/floppy.svg
+│   │   │   │   │               ├── folder.svg -> ../../../../../share/pixmaps/puppy/directory.svg
+│   │   │   │   │               ├── games.svg -> ../../../../../share/pixmaps/puppy/game.svg
+│   │   │   │   │               ├── help.svg -> ../../../../../share/pixmaps/puppy/dialog-info.svg
+│   │   │   │   │               ├── home.svg -> ../../../../../share/pixmaps/puppy/home.svg
+│   │   │   │   │               ├── lock-screen.svg -> ../../../../../share/pixmaps/puppy/screen_lock.svg
+│   │   │   │   │               ├── multimedia.svg -> ../../../../../share/pixmaps/puppy/multimedia.svg
+│   │   │   │   │               ├── optical.svg -> ../../../../../share/pixmaps/puppy/cdrom.svg
+│   │   │   │   │               ├── paint.svg -> ../../../../../share/pixmaps/puppy/paint.svg
+│   │   │   │   │               ├── pc.svg -> ../../../../../share/pixmaps/puppy/execute.svg
+│   │   │   │   │               ├── pet.svg -> ../../../../../share/pixmaps/puppy/package_add.svg
+│   │   │   │   │               ├── save.svg -> ../../../../../share/pixmaps/puppy/puppy_save.svg
+│   │   │   │   │               ├── shutdown.svg -> ../../../../../share/pixmaps/puppy/shutdown.svg
+│   │   │   │   │               ├── spread.svg -> ../../../../../share/pixmaps/puppy/spreadsheet.svg
+│   │   │   │   │               ├── trashcan_empty.svg -> ../../../../../share/pixmaps/puppy/trash_empty.svg
+│   │   │   │   │               ├── trashcan_full.svg -> ../../../../../share/pixmaps/puppy/trash.svg
+│   │   │   │   │               ├── usbdrv.svg -> ../../../../../share/pixmaps/puppy/plug_usb.svg
+│   │   │   │   │               ├── utility.svg -> ../../../../../share/pixmaps/puppy/module.svg
+│   │   │   │   │               ├── word.svg -> ../../../../../share/pixmaps/puppy/write.svg
+│   │   │   │   │               ├── www.svg -> ../../../../../share/pixmaps/puppy/internet.svg
+│   │   │   │   │               └── x.svg -> ../../../../../share/pixmaps/puppy/desktop.svg
+│   │   │   │   ├── petget
+│   │   │   │   │   ├── README-add-repo.htm
+│   │   │   │   │   ├── README.txt
+│   │   │   │   │   ├── categories.dat
+│   │   │   │   │   ├── check_deps.sh
+│   │   │   │   │   ├── configure.sh
+│   │   │   │   │   ├── dependencies.sh
+│   │   │   │   │   ├── downloadpkgs.sh
+│   │   │   │   │   ├── fetchinfo.sh
+│   │   │   │   │   ├── filterpkgs.sh
+│   │   │   │   │   ├── findmissingpkgs.sh
+│   │   │   │   │   ├── findnames.sh
+│   │   │   │   │   ├── finduserinstalledpkgs.sh
+│   │   │   │   │   ├── hacks-postinstall.sh
+│   │   │   │   │   ├── hacks-postinstall2.sh
+│   │   │   │   │   ├── help-fr.htm
+│   │   │   │   │   ├── help.htm
+│   │   │   │   │   ├── installed_size_preview.sh
+│   │   │   │   │   ├── installmodes.sh
+│   │   │   │   │   ├── installpkg.sh
+│   │   │   │   │   ├── installpreview.sh
+│   │   │   │   │   ├── petget
+│   │   │   │   │   ├── pkg_chooser.sh
+│   │   │   │   │   ├── postfilterpkgs.sh
+│   │   │   │   │   ├── removemodes.sh
+│   │   │   │   │   ├── removepreview.sh
+│   │   │   │   │   ├── show_installed_version_diffs.sh
+│   │   │   │   │   ├── testurls.sh
+│   │   │   │   │   ├── verifypkg.sh
+│   │   │   │   │   └── z_update_system_cache.sh
+│   │   │   │   ├── pup_event
+│   │   │   │   │   ├── autoshutdown_daemon
+│   │   │   │   │   ├── drive_all
+│   │   │   │   │   ├── frontend_change
+│   │   │   │   │   ├── frontend_rox_funcs
+│   │   │   │   │   ├── frontend_startup
+│   │   │   │   │   └── pup_event_frontend_d
+│   │   │   │   └── share
+│   │   │   │       ├── doc
+│   │   │   │       │   └── EMPTYDIRMARKER
+│   │   │   │       ├── icons -> ../lib/X11/mini-icons
+│   │   │   │       ├── locale -> ../../share/locale
+│   │   │   │       ├── mime-info
+│   │   │   │       │   └── EMPTYDIRMARKER
+│   │   │   │       ├── pixmaps
+│   │   │   │       │   └── EMPTYDIRMARKER
+│   │   │   │       └── sounds
+│   │   │   │           └── EMPTYDIRMARKER
+│   │   │   ├── sbin
+│   │   │   │   ├── Pudd
+│   │   │   │   ├── alsaequal.sh
+│   │   │   │   ├── alsawizard
+│   │   │   │   ├── askpass
+│   │   │   │   ├── asktosave_session
+│   │   │   │   ├── bcrypt_gui
+│   │   │   │   ├── bootflash
+│   │   │   │   ├── bootmanager
+│   │   │   │   ├── burniso2cd
+│   │   │   │   ├── check_internet
+│   │   │   │   ├── checkdeps
+│   │   │   │   ├── chooselayout -> quicksetup
+│   │   │   │   ├── chooselocale -> quicksetup
+│   │   │   │   ├── connectwizard
+│   │   │   │   ├── connectwizard_2nd
+│   │   │   │   ├── connectwizard_crd
+│   │   │   │   ├── connectwizard_exec
+│   │   │   │   ├── connectwizard_wrapper
+│   │   │   │   ├── copy2installdir
+│   │   │   │   ├── countrywizard -> quicksetup
+│   │   │   │   ├── cups_shell
+│   │   │   │   ├── delayedrun
+│   │   │   │   ├── dir2iso
+│   │   │   │   ├── dotpup
+│   │   │   │   ├── dotpup1 -> dotpup
+│   │   │   │   ├── download_file
+│   │   │   │   ├── edit-initramfs
+│   │   │   │   ├── eventmanager
+│   │   │   │   ├── exploderpm
+│   │   │   │   ├── extfile
+│   │   │   │   ├── extrasfsfind
+│   │   │   │   ├── filemnt
+│   │   │   │   ├── filesize
+│   │   │   │   ├── fixPuppyPin
+│   │   │   │   ├── fix_gmt
+│   │   │   │   ├── fix_intel_hd.sh -> xorg_intel_uxa.sh
+│   │   │   │   ├── fixdesk
+│   │   │   │   ├── fixmenus
+│   │   │   │   ├── fontmanager
+│   │   │   │   ├── format-luks-partition
+│   │   │   │   ├── freememappletshell
+│   │   │   │   ├── get_modem_alternate_device
+│   │   │   │   ├── get_ucode.sh
+│   │   │   │   ├── getcurpos
+│   │   │   │   ├── getwoof
+│   │   │   │   ├── globalpmenu
+│   │   │   │   ├── gparted_shell
+│   │   │   │   ├── hackfontsize
+│   │   │   │   ├── hostname-set
+│   │   │   │   ├── icon_switcher
+│   │   │   │   ├── icon_switcher_cli -> icon_switcher
+│   │   │   │   ├── ifplugstatus
+│   │   │   │   ├── indexgen.sh
+│   │   │   │   ├── initmodules
+│   │   │   │   ├── input-wizard
+│   │   │   │   ├── ipinfo
+│   │   │   │   ├── javaifchange
+│   │   │   │   ├── javaiffind
+│   │   │   │   ├── javaiftest
+│   │   │   │   ├── keymap-set
+│   │   │   │   ├── latest_microcode.sh
+│   │   │   │   ├── locale-gen
+│   │   │   │   ├── loginmanager
+│   │   │   │   ├── logout_gui
+│   │   │   │   ├── menumanager
+│   │   │   │   ├── micro2pup.sh
+│   │   │   │   ├── mkautostart
+│   │   │   │   ├── momanager
+│   │   │   │   ├── mscw
+│   │   │   │   ├── mscw2
+│   │   │   │   ├── network_default_connect
+│   │   │   │   ├── networkdisconnect
+│   │   │   │   ├── partview
+│   │   │   │   ├── pcur
+│   │   │   │   ├── pdict
+│   │   │   │   ├── pdsk
+│   │   │   │   ├── petget -> ../local/petget/petget
+│   │   │   │   ├── pm13
+│   │   │   │   ├── pmime
+│   │   │   │   ├── pmirror
+│   │   │   │   ├── pmount
+│   │   │   │   ├── pppconnect
+│   │   │   │   ├── pppdisconnect
+│   │   │   │   ├── pppsetup
+│   │   │   │   ├── proxy-setup
+│   │   │   │   ├── psync
+│   │   │   │   ├── pupautodetect
+│   │   │   │   ├── pupcamera
+│   │   │   │   ├── puplock
+│   │   │   │   ├── pupmtp
+│   │   │   │   ├── puppyapps
+│   │   │   │   ├── puppyhelp
+│   │   │   │   ├── puppyinstaller
+│   │   │   │   ├── puppypdf
+│   │   │   │   ├── pupsave-backup
+│   │   │   │   ├── pupswap
+│   │   │   │   ├── quickcountry -> quicksetup
+│   │   │   │   ├── quicksetup
+│   │   │   │   ├── remasterpup2
+│   │   │   │   ├── remove_builtin
+│   │   │   │   ├── report-video
+│   │   │   │   ├── resizepfile.sh
+│   │   │   │   ├── retrovol_tray_icon_color
+│   │   │   │   ├── run-as -> run-as-spot
+│   │   │   │   ├── run-as-spot
+│   │   │   │   ├── save2flash
+│   │   │   │   ├── savesession-archive
+│   │   │   │   ├── savesession-dvd
+│   │   │   │   ├── scannerwizard.sh
+│   │   │   │   ├── set-time-for-puppy
+│   │   │   │   ├── set_bg
+│   │   │   │   ├── set_hwclock_type
+│   │   │   │   ├── setscreenres -> xorgwizard
+│   │   │   │   ├── setup-spot
+│   │   │   │   ├── sfs_load
+│   │   │   │   ├── sfs_load.overlay
+│   │   │   │   ├── sfsget
+│   │   │   │   ├── shutdownconfig
+│   │   │   │   ├── snapmergepuppy
+│   │   │   │   ├── snapmergepuppy.overlay
+│   │   │   │   ├── spacereplace
+│   │   │   │   ├── timewizard
+│   │   │   │   ├── timezone-set -> quicksetup
+│   │   │   │   ├── touchscreen
+│   │   │   │   ├── updatenetmoduleslist.sh
+│   │   │   │   ├── usb_modem_special_status
+│   │   │   │   ├── usb_modeswitch_status
+│   │   │   │   ├── welcome1stboot
+│   │   │   │   ├── wizardwizard
+│   │   │   │   ├── wmonitors.sh
+│   │   │   │   ├── wmstartups
+│   │   │   │   ├── xdelta_gui
+│   │   │   │   ├── xgamma-gui
+│   │   │   │   ├── xinput-apply
+│   │   │   │   ├── xkb-apply
+│   │   │   │   ├── xkbconfigmanager
+│   │   │   │   ├── xorg-autoconf
+│   │   │   │   ├── xorg_intel_uxa.sh
+│   │   │   │   ├── xorgwizard
+│   │   │   │   ├── xorgwizard-automatic -> xorgwizard
+│   │   │   │   ├── xorgwizard-cli -> xorgwizard
+│   │   │   │   ├── xrandrshell -> quicksetup
+│   │   │   │   ├── xserverwizard -> xorgwizard
+│   │   │   │   ├── xswapmonitors
+│   │   │   │   ├── yelp
+│   │   │   │   └── zzgitrepo
+│   │   │   └── share
+│   │   │       ├── X11
+│   │   │       │   ├── Xcms.txt
+│   │   │       │   ├── fonts
+│   │   │       │   │   ├── TTF -> /usr/share/fonts/default/TTF
+│   │   │       │   │   └── misc
+│   │   │       │   │       ├── 7x14-ISO8859-1.pcf
+│   │   │       │   │       ├── 7x14B-ISO8859-1.pcf
+│   │   │       │   │       ├── 8x16.pcf
+│   │   │       │   │       ├── 9x15B-ISO8859-1.pcf
+│   │   │       │   │       ├── courB12-ISO8859-1.pcf
+│   │   │       │   │       ├── courO12-ISO8859-1.pcf
+│   │   │       │   │       ├── courR12-ISO8859-1.pcf
+│   │   │       │   │       ├── cursor.pcf
+│   │   │       │   │       ├── fonts.alias
+│   │   │       │   │       ├── fonts.dir
+│   │   │       │   │       ├── helvB12-ISO8859-1.pcf
+│   │   │       │   │       ├── helvR12-ISO8859-1.pcf
+│   │   │       │   │       ├── helvR24-ISO8859-1.pcf
+│   │   │       │   │       └── symb12.pcf
+│   │   │       │   └── rgb.txt
+│   │   │       ├── applications
+│   │   │       │   ├── ALSA-sound-Wizard.desktop
+│   │   │       │   ├── BootManager-configure-bootup.desktop
+│   │   │       │   ├── Burniso2cd-burn-iso-file-to-CD-DVD.desktop
+│   │   │       │   ├── Chooselocale-country-localisation.desktop
+│   │   │       │   ├── Desktop-drive-icons.desktop
+│   │   │       │   ├── FontManager.desktop
+│   │   │       │   ├── Internet-Connection-Wizard.desktop
+│   │   │       │   ├── MoManager.desktop
+│   │   │       │   ├── Mouse-keyboard-Wizard.desktop
+│   │   │       │   ├── Partview.desktop
+│   │   │       │   ├── Pdict-online-dictionary.desktop
+│   │   │       │   ├── Pmount-mount-unmount-drives.desktop
+│   │   │       │   ├── Psync.desktop
+│   │   │       │   ├── Pudd-copy-drive-partition.desktop
+│   │   │       │   ├── Puppy-Event-Manager.desktop
+│   │   │       │   ├── Puppy-package-manager.desktop
+│   │   │       │   ├── Puppy-universal-installer.desktop
+│   │   │       │   ├── Pupsave-hot-backup.desktop
+│   │   │       │   ├── QuickSetup.desktop
+│   │   │       │   ├── Remaster-Puppy-live-CD.desktop
+│   │   │       │   ├── Resize-personal-storage-file.desktop
+│   │   │       │   ├── SFS-Load.desktop
+│   │   │       │   ├── Set-date-and-time.desktop
+│   │   │       │   ├── Set-hwclock-type.desktop
+│   │   │       │   ├── Set-timezone.desktop
+│   │   │       │   ├── Top-view-running-processes.desktop
+│   │   │       │   ├── Wizard-Wizard.desktop
+│   │   │       │   ├── Xdelta-difference-manager.desktop
+│   │   │       │   ├── Xorg-Video-Wizard.desktop
+│   │   │       │   ├── bcrypt_gui.desktop
+│   │   │       │   ├── cups.desktop
+│   │   │       │   ├── defaultarchiver.desktop
+│   │   │       │   ├── defaultaudioeditor.desktop
+│   │   │       │   ├── defaultaudiomixer.desktop
+│   │   │       │   ├── defaultaudioplayer.desktop
+│   │   │       │   ├── defaultbrowser.desktop
+│   │   │       │   ├── defaultcalendar.desktop
+│   │   │       │   ├── defaultcdplayer.desktop
+│   │   │       │   ├── defaultcdrecorder.desktop
+│   │   │       │   ├── defaultchat.desktop
+│   │   │       │   ├── defaultchmviewer.desktop
+│   │   │       │   ├── defaultconnect.desktop
+│   │   │       │   ├── defaultcontact.desktop
+│   │   │       │   ├── defaultdraw.desktop
+│   │   │       │   ├── defaultemail.desktop
+│   │   │       │   ├── defaultfilemanager.desktop
+│   │   │       │   ├── defaulthtmleditor.desktop
+│   │   │       │   ├── defaulthtmlviewer.desktop
+│   │   │       │   ├── defaultimageeditor.desktop
+│   │   │       │   ├── defaultimageviewer.desktop
+│   │   │       │   ├── defaultmediaplayer.desktop
+│   │   │       │   ├── defaultpaint.desktop
+│   │   │       │   ├── defaultpdfviewer.desktop
+│   │   │       │   ├── defaultpresentation.desktop
+│   │   │       │   ├── defaultprocessmanager.desktop
+│   │   │       │   ├── defaultrun.desktop
+│   │   │       │   ├── defaultscreenshot.desktop
+│   │   │       │   ├── defaultspreadsheet.desktop
+│   │   │       │   ├── defaultterminal.desktop
+│   │   │       │   ├── defaulttexteditor.desktop
+│   │   │       │   ├── defaulttextviewer.desktop
+│   │   │       │   ├── defaulttorrent.desktop
+│   │   │       │   ├── defaultwordprocessor.desktop
+│   │   │       │   ├── edit-initramfs.desktop
+│   │   │       │   ├── filemnt-manager.desktop
+│   │   │       │   ├── filemnt.desktop
+│   │   │       │   ├── gcolor2.desktop
+│   │   │       │   ├── gfontsel.desktop
+│   │   │       │   ├── ghostview.desktop
+│   │   │       │   ├── icon_switcher.desktop
+│   │   │       │   ├── ipinfo-network-information.desktop
+│   │   │       │   ├── java.desktop
+│   │   │       │   ├── javaws.desktop
+│   │   │       │   ├── loginmanager.desktop
+│   │   │       │   ├── menumanager.desktop
+│   │   │       │   ├── mimeapps.list
+│   │   │       │   ├── pcompress.desktop
+│   │   │       │   ├── pcur.desktop
+│   │   │       │   ├── petget.desktop
+│   │   │       │   ├── pextract.desktop
+│   │   │       │   ├── pfontview.desktop
+│   │   │       │   ├── pmediainfo.desktop
+│   │   │       │   ├── pmirror.desktop
+│   │   │       │   ├── printer-wizard.desktop
+│   │   │       │   ├── pupX-X-settings.desktop
+│   │   │       │   ├── pupcamera.desktop
+│   │   │       │   ├── pupmtp.desktop
+│   │   │       │   ├── puppyPDF-convert-file-to-PDF.desktop
+│   │   │       │   ├── puppyapps.desktop
+│   │   │       │   ├── pupzip.desktop
+│   │   │       │   ├── remove-builtin.desktop
+│   │   │       │   ├── runexec.desktop
+│   │   │       │   ├── startupcontrol.desktop
+│   │   │       │   ├── wl_colpick.desktop
+│   │   │       │   └── xdelta_gui.desktop
+│   │   │       ├── audio
+│   │   │       │   ├── 2barks.au
+│   │   │       │   ├── 2barks.wav
+│   │   │       │   ├── bark.au
+│   │   │       │   ├── complete.wav -> ok.wav
+│   │   │       │   ├── error.wav
+│   │   │       │   ├── generic.wav
+│   │   │       │   ├── goodluck.m4a
+│   │   │       │   ├── illegal_move.ogg
+│   │   │       │   ├── join.wav
+│   │   │       │   ├── leave.wav
+│   │   │       │   ├── login.wav -> join.wav
+│   │   │       │   ├── logout.wav -> leave.wav
+│   │   │       │   └── ok.wav
+│   │   │       ├── backgrounds
+│   │   │       │   ├── 412.svg
+│   │   │       │   ├── 431-dark.svg
+│   │   │       │   ├── 431.svg
+│   │   │       │   ├── Black.svg
+│   │   │       │   ├── Blue.svg
+│   │   │       │   ├── DarkGray.svg
+│   │   │       │   ├── LightGray.svg
+│   │   │       │   ├── Pink.svg
+│   │   │       │   ├── Purple.svg
+│   │   │       │   ├── Sky.svg
+│   │   │       │   ├── SolidDarkGray.svg
+│   │   │       │   ├── buntoo.svg
+│   │   │       │   └── tahrpup.svg
+│   │   │       ├── boot-dialog
+│   │   │       │   ├── Windows_Installer
+│   │   │       │   │   ├── readme.html
+│   │   │       │   │   └── readme.txt
+│   │   │       │   ├── font.pf2
+│   │   │       │   ├── grldr
+│   │   │       │   ├── puppy.png
+│   │   │       │   ├── slacko.png
+│   │   │       │   ├── splash.jpg
+│   │   │       │   ├── tahr.png
+│   │   │       │   ├── wee.mbr
+│   │   │       │   └── xenial.png
+│   │   │       ├── desktop-directories
+│   │   │       │   ├── Puppy-Business-Sub.directory
+│   │   │       │   ├── Puppy-Business-calc.directory
+│   │   │       │   ├── Puppy-Business-finance.directory
+│   │   │       │   ├── Puppy-Business-planner.directory
+│   │   │       │   ├── Puppy-Business-spreadsheet.directory
+│   │   │       │   ├── Puppy-Business.directory
+│   │   │       │   ├── Puppy-Desktop-Sub.directory
+│   │   │       │   ├── Puppy-Desktop-appearance.directory
+│   │   │       │   ├── Puppy-Desktop-applet.directory
+│   │   │       │   ├── Puppy-Desktop-settings.directory
+│   │   │       │   ├── Puppy-Desktop-sleep.directory
+│   │   │       │   ├── Puppy-Desktop-windows.directory
+│   │   │       │   ├── Puppy-Desktop.directory
+│   │   │       │   ├── Puppy-Document-Sub.directory
+│   │   │       │   ├── Puppy-Document-catalog.directory
+│   │   │       │   ├── Puppy-Document-edit.directory
+│   │   │       │   ├── Puppy-Document-layout.directory
+│   │   │       │   ├── Puppy-Document-utility.directory
+│   │   │       │   ├── Puppy-Document-viewer.directory
+│   │   │       │   ├── Puppy-Document.directory
+│   │   │       │   ├── Puppy-Filesystem-Sub.directory
+│   │   │       │   ├── Puppy-Filesystem-filemanager.directory
+│   │   │       │   ├── Puppy-Filesystem-find.directory
+│   │   │       │   ├── Puppy-Filesystem-mount.directory
+│   │   │       │   ├── Puppy-Filesystem-storage.directory
+│   │   │       │   ├── Puppy-Filesystem.directory
+│   │   │       │   ├── Puppy-Fun-Sub.directory
+│   │   │       │   ├── Puppy-Fun-adventure.directory
+│   │   │       │   ├── Puppy-Fun-arcade.directory
+│   │   │       │   ├── Puppy-Fun-boardgame.directory
+│   │   │       │   ├── Puppy-Fun-cardgame.directory
+│   │   │       │   ├── Puppy-Fun-puzzle.directory
+│   │   │       │   ├── Puppy-Fun-shooter.directory
+│   │   │       │   ├── Puppy-Fun.directory
+│   │   │       │   ├── Puppy-Graphic-Sub.directory
+│   │   │       │   ├── Puppy-Graphic-camera.directory
+│   │   │       │   ├── Puppy-Graphic-draw.directory
+│   │   │       │   ├── Puppy-Graphic-flow.directory
+│   │   │       │   ├── Puppy-Graphic-paint.directory
+│   │   │       │   ├── Puppy-Graphic-print.directory
+│   │   │       │   ├── Puppy-Graphic-scanner.directory
+│   │   │       │   ├── Puppy-Graphic-utility.directory
+│   │   │       │   ├── Puppy-Graphic-viewer.directory
+│   │   │       │   ├── Puppy-Graphic.directory
+│   │   │       │   ├── Puppy-Internet-Sub.directory
+│   │   │       │   ├── Puppy-Internet-block.directory
+│   │   │       │   ├── Puppy-Internet-browser.directory
+│   │   │       │   ├── Puppy-Internet-chat.directory
+│   │   │       │   ├── Puppy-Internet-login.directory
+│   │   │       │   ├── Puppy-Internet-mailnews.directory
+│   │   │       │   ├── Puppy-Internet-transfer.directory
+│   │   │       │   ├── Puppy-Internet-utility.directory
+│   │   │       │   ├── Puppy-Internet.directory
+│   │   │       │   ├── Puppy-Multimedia-Sub.directory
+│   │   │       │   ├── Puppy-Multimedia-audiovideo.directory
+│   │   │       │   ├── Puppy-Multimedia-mediaplayer.directory
+│   │   │       │   ├── Puppy-Multimedia-optical.directory
+│   │   │       │   ├── Puppy-Multimedia-sound.directory
+│   │   │       │   ├── Puppy-Multimedia-utility.directory
+│   │   │       │   ├── Puppy-Multimedia-video.directory
+│   │   │       │   ├── Puppy-Multimedia.directory
+│   │   │       │   ├── Puppy-Network-Sub.directory
+│   │   │       │   ├── Puppy-Network-connect.directory
+│   │   │       │   ├── Puppy-Network-firewall.directory
+│   │   │       │   ├── Puppy-Network-phone.directory
+│   │   │       │   ├── Puppy-Network-transfer.directory
+│   │   │       │   ├── Puppy-Network-utility.directory
+│   │   │       │   ├── Puppy-Network.directory
+│   │   │       │   ├── Puppy-Office.directory
+│   │   │       │   ├── Puppy-Personal-Sub.directory
+│   │   │       │   ├── Puppy-Personal-database.directory
+│   │   │       │   ├── Puppy-Personal-date.directory
+│   │   │       │   ├── Puppy-Personal-education.directory
+│   │   │       │   ├── Puppy-Personal-organizer.directory
+│   │   │       │   ├── Puppy-Personal-security.directory
+│   │   │       │   ├── Puppy-Personal-timing.directory
+│   │   │       │   ├── Puppy-Personal.directory
+│   │   │       │   ├── Puppy-Setup-Sub.directory
+│   │   │       │   ├── Puppy-Setup-installation.directory
+│   │   │       │   ├── Puppy-Setup-puppy.directory
+│   │   │       │   ├── Puppy-Setup-wizard.directory
+│   │   │       │   ├── Puppy-Setup.directory
+│   │   │       │   ├── Puppy-System-Sub.directory
+│   │   │       │   ├── Puppy-System-memory.directory
+│   │   │       │   ├── Puppy-System-print.directory
+│   │   │       │   ├── Puppy-System-process.directory
+│   │   │       │   ├── Puppy-System-security.directory
+│   │   │       │   ├── Puppy-System-storage.directory
+│   │   │       │   ├── Puppy-System.directory
+│   │   │       │   ├── Puppy-Utility-Sub.directory
+│   │   │       │   ├── Puppy-Utility-development.directory
+│   │   │       │   ├── Puppy-Utility-help.directory
+│   │   │       │   ├── Puppy-Utility-package.directory
+│   │   │       │   ├── Puppy-Utility-shell.directory
+│   │   │       │   └── Puppy-Utility.directory
+│   │   │       ├── doc
+│   │   │       │   ├── HOWTO-internationalization.htm
+│   │   │       │   ├── HOWTO-microsoft.htm
+│   │   │       │   ├── HOWTO-multimedia.htm
+│   │   │       │   ├── HOWTO-regexps.htm
+│   │   │       │   ├── HOWTO_Internet.htm
+│   │   │       │   ├── HOWTO_modem.htm
+│   │   │       │   ├── Pudd.htm
+│   │   │       │   ├── chat.png
+│   │   │       │   ├── community48.jpg
+│   │   │       │   ├── cups_shell.htm
+│   │   │       │   ├── devx.htm
+│   │   │       │   ├── devx.jpg
+│   │   │       │   ├── edit_html.png
+│   │   │       │   ├── forums.css
+│   │   │       │   ├── forums.htm
+│   │   │       │   ├── gtkdialog.htm
+│   │   │       │   ├── gtkdialog.jpg
+│   │   │       │   ├── help
+│   │   │       │   │   ├── de
+│   │   │       │   │   │   └── menu2.png
+│   │   │       │   │   └── ru
+│   │   │       │   │       └── menu2.png
+│   │   │       │   ├── highlight.css
+│   │   │       │   ├── home.css
+│   │   │       │   ├── home.htm
+│   │   │       │   ├── index.html.bottom
+│   │   │       │   ├── index.html.top
+│   │   │       │   ├── info.png
+│   │   │       │   ├── installation.htm
+│   │   │       │   ├── internet.png
+│   │   │       │   ├── langpack-template
+│   │   │       │   │   └── pinstall.sh
+│   │   │       │   ├── legal
+│   │   │       │   │   ├── gpl-2.0.txt
+│   │   │       │   │   ├── gpl-3.0.htm
+│   │   │       │   │   ├── legal.css
+│   │   │       │   │   ├── lgpl-2.1.txt
+│   │   │       │   │   ├── lgpl-3.0.htm
+│   │   │       │   │   └── puppy.htm
+│   │   │       │   ├── manual.css
+│   │   │       │   ├── menu2.png
+│   │   │       │   ├── octocatwoof48.png
+│   │   │       │   ├── pup48.jpg
+│   │   │       │   ├── puplogos
+│   │   │       │   │   ├── bionicpup64.svg -> upup.svg
+│   │   │       │   │   ├── debian.svg
+│   │   │       │   │   ├── fossapup64.svg -> upup.svg
+│   │   │       │   │   ├── readme.txt
+│   │   │       │   │   ├── slacko48.png
+│   │   │       │   │   ├── slacko6448.png -> slacko48.png
+│   │   │       │   │   ├── slacko6496.png -> slacko96.png
+│   │   │       │   │   ├── slacko96.png
+│   │   │       │   │   ├── tahr48.png
+│   │   │       │   │   ├── tahr6448.png
+│   │   │       │   │   ├── tahr6496.png
+│   │   │       │   │   ├── tahr96.png
+│   │   │       │   │   └── ubuntu.svg
+│   │   │       │   ├── puppylogo48.png
+│   │   │       │   ├── puppylogo96-trans.png
+│   │   │       │   ├── puppylogo96.png
+│   │   │       │   ├── release-skeleton.bottom.htm
+│   │   │       │   ├── release-skeleton.top.htm
+│   │   │       │   ├── root.htm
+│   │   │       │   ├── samba-printing.css
+│   │   │       │   ├── samba-printing.htm
+│   │   │       │   ├── sfsload0.jpg
+│   │   │       │   ├── sfsload1.jpg
+│   │   │       │   ├── software.png
+│   │   │       │   ├── style.css
+│   │   │       │   ├── tray.png
+│   │   │       │   └── woof_logo48.png
+│   │   │       ├── fonts
+│   │   │       │   ├── TTF -> default/TTF
+│   │   │       │   └── default
+│   │   │       │       └── TTF
+│   │   │       │           └── EMPTYDIRMARKER
+│   │   │       ├── icons
+│   │   │       │   ├── folder.png -> ../../local/lib/X11/pixmaps/folder48.png
+│   │   │       │   ├── gnome-fs-directory.png -> ../../local/lib/X11/pixmaps/folder48.png
+│   │   │       │   ├── hicolor
+│   │   │       │   │   └── scalable
+│   │   │       │   │       ├── actions
+│   │   │       │   │       │   ├── open-menu.svg
+│   │   │       │   │       │   └── send-to.svg
+│   │   │       │   │       └── status
+│   │   │       │   │           ├── changes-allow.svg
+│   │   │       │   │           └── changes-prevent.svg
+│   │   │       │   ├── pet48x.png -> /usr/local/lib/X11/pixmaps/pet48x.png
+│   │   │       │   └── player_play.png -> ../../local/lib/X11/pixmaps/go48.png
+│   │   │       ├── images
+│   │   │       │   └── xgamma-gui.xpm
+│   │   │       ├── locale
+│   │   │       │   ├── C
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── be
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── cs
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── en
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── en_US
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── fr
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── he
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── hu
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── it
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── ja
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── locale.alias
+│   │   │       │   ├── pl
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── pt_BR
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── ru
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── ru_RU
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── sv
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── uk
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   ├── uk_UA
+│   │   │       │   │   └── EMPTYDIRMARKER
+│   │   │       │   └── zh_CN
+│   │   │       │       └── EMPTYDIRMARKER
+│   │   │       ├── midi-icons -> ../local/lib/X11/pixmaps
+│   │   │       ├── mime
+│   │   │       │   └── packages
+│   │   │       │       ├── extra.xml
+│   │   │       │       ├── homebank.xml
+│   │   │       │       ├── image-files.xml
+│   │   │       │       ├── puppy.xml
+│   │   │       │       ├── x-java-archive.xml
+│   │   │       │       └── x-java-jnlp-file.xml
+│   │   │       ├── mini-icons -> ../local/lib/X11/mini-icons
+│   │   │       ├── misc
+│   │   │       │   └── EMPTYDIRMARKER
+│   │   │       ├── pixmaps
+│   │   │       │   ├── BuildingBlock.svg -> puppy/BuildingBlock.svg
+│   │   │       │   ├── Business-calc.svg -> puppy/calculator.svg
+│   │   │       │   ├── Business-finance.svg -> puppy/Business.svg
+│   │   │       │   ├── Business-planner.svg -> puppy/spreadsheet.svg
+│   │   │       │   ├── Business-spreadsheet.svg -> puppy/spreadsheet.svg
+│   │   │       │   ├── Business.svg -> puppy/Business.svg
+│   │   │       │   ├── Desktop-appearance.svg -> puppy/desktop_appearance.svg
+│   │   │       │   ├── Desktop-applet.svg -> puppy/desktop_tray.svg
+│   │   │       │   ├── Desktop-settings.svg -> puppy/desktop_tray_config.svg
+│   │   │       │   ├── Desktop-sleep.svg -> puppy/screen_suspend.svg
+│   │   │       │   ├── Desktop-windows.svg -> puppy/windows.svg
+│   │   │       │   ├── Desktop.svg -> puppy/desktop.svg
+│   │   │       │   ├── Document-catalog.svg -> puppy/Document-edit.svg
+│   │   │       │   ├── Document-edit.svg -> puppy/Document-edit.svg
+│   │   │       │   ├── Document-layout.svg -> puppy/Document-edit.svg
+│   │   │       │   ├── Document-utility.svg -> puppy/Document-edit.svg
+│   │   │       │   ├── Document-viewer.svg -> puppy/document_viewer.svg
+│   │   │       │   ├── Document.svg -> puppy/document.svg
+│   │   │       │   ├── Filesystem-filemanager.svg -> puppy/directory.svg
+│   │   │       │   ├── Filesystem-find.svg -> puppy/find.svg
+│   │   │       │   ├── Filesystem-mount.svg -> puppy/harddisk.svg
+│   │   │       │   ├── Filesystem-storage.svg -> puppy/partition.svg
+│   │   │       │   ├── Filesystem.svg -> puppy/directory.svg
+│   │   │       │   ├── Fun-adventure.svg -> puppy/game.svg
+│   │   │       │   ├── Fun-arcade.svg -> puppy/game_arcade.svg
+│   │   │       │   ├── Fun-boardgame.svg -> puppy/game_chess.svg
+│   │   │       │   ├── Fun-cardgame.svg -> puppy/game_card.svg
+│   │   │       │   ├── Fun-puzzle.svg -> puppy/game_puzzle.svg
+│   │   │       │   ├── Fun-shooter.svg -> puppy/game_shooter.svg
+│   │   │       │   ├── Fun.svg -> puppy/game.svg
+│   │   │       │   ├── Graphic-camera.svg -> puppy/photocamera.svg
+│   │   │       │   ├── Graphic-draw.svg -> puppy/draw.svg
+│   │   │       │   ├── Graphic-flow.svg -> puppy/draw.svg
+│   │   │       │   ├── Graphic-paint.svg -> puppy/paint.svg
+│   │   │       │   ├── Graphic-print.svg -> puppy/print.svg
+│   │   │       │   ├── Graphic-scanner.svg -> puppy/scanner.svg
+│   │   │       │   ├── Graphic-utility.svg -> puppy/edit_image.svg
+│   │   │       │   ├── Graphic-viewer.svg -> puppy/image_viewer.svg
+│   │   │       │   ├── Graphic.svg -> puppy/paint.svg
+│   │   │       │   ├── Internet-block.svg -> puppy/internet_block.svg
+│   │   │       │   ├── Internet-browser.svg -> puppy/internet.svg
+│   │   │       │   ├── Internet-chat.svg -> puppy/chat.svg
+│   │   │       │   ├── Internet-login.svg -> puppy/user_login.svg
+│   │   │       │   ├── Internet-mailnews.svg -> puppy/mail.svg
+│   │   │       │   ├── Internet-transfer.svg -> puppy/Internet-transfer.svg
+│   │   │       │   ├── Internet-utility.svg -> puppy/edit_html.svg
+│   │   │       │   ├── Internet.svg -> puppy/internet.svg
+│   │   │       │   ├── Multimedia-audiovideo.svg -> puppy/multimedia.svg
+│   │   │       │   ├── Multimedia-mediaplayer.svg -> puppy/mediaplayer.svg
+│   │   │       │   ├── Multimedia-optical.svg -> puppy/cdrom.svg
+│   │   │       │   ├── Multimedia-sound.svg -> puppy/audio.svg
+│   │   │       │   ├── Multimedia-utility.svg -> puppy/edit_sound.svg
+│   │   │       │   ├── Multimedia-video.svg -> puppy/video.svg
+│   │   │       │   ├── Multimedia.svg -> puppy/multimedia.svg
+│   │   │       │   ├── Network-connect.svg -> puppy/network_connect.svg
+│   │   │       │   ├── Network-firewall.svg -> puppy/firewall.svg
+│   │   │       │   ├── Network-phone.svg -> puppy/phone.svg
+│   │   │       │   ├── Network-transfer.svg -> puppy/network_transfer.svg
+│   │   │       │   ├── Network-utility.svg -> puppy/network_utility.svg
+│   │   │       │   ├── Network.svg -> puppy/network2.svg
+│   │   │       │   ├── Personal-database.svg -> puppy/book_address.svg
+│   │   │       │   ├── Personal-date.svg -> puppy/calendar.svg
+│   │   │       │   ├── Personal-education.svg -> puppy/book_dictionary.svg
+│   │   │       │   ├── Personal-organiser.svg -> puppy/book_address.svg
+│   │   │       │   ├── Personal-security.svg -> puppy/lock.svg
+│   │   │       │   ├── Personal-timing.svg -> puppy/clock.svg
+│   │   │       │   ├── Personal.svg -> puppy/book.svg
+│   │   │       │   ├── Setup-installation.svg -> puppy/puppy_install.svg
+│   │   │       │   ├── Setup-puppy.svg -> puppy/puppy_config.svg
+│   │   │       │   ├── Setup-wizard.svg -> puppy/puppy_config.svg
+│   │   │       │   ├── Setup.svg -> puppy/preferences.svg
+│   │   │       │   ├── System-memory.svg -> puppy/system_memory.svg
+│   │   │       │   ├── System-print.svg -> puppy/system_print.svg
+│   │   │       │   ├── System-process.svg -> puppy/system_process.svg
+│   │   │       │   ├── System-security.svg -> puppy/system_security.svg
+│   │   │       │   ├── System-storage.svg -> puppy/system_storage.svg
+│   │   │       │   ├── System.svg -> puppy/computer.svg
+│   │   │       │   ├── Utility-development.svg -> puppy/Utility-development.svg
+│   │   │       │   ├── Utility-help.svg -> puppy/help.svg
+│   │   │       │   ├── Utility-package.svg -> puppy/utility_package.svg
+│   │   │       │   ├── Utility-shell.svg -> puppy/terminal.svg
+│   │   │       │   ├── Utility.svg -> puppy/module.svg
+│   │   │       │   ├── amd_logo.svg
+│   │   │       │   ├── euro16.png
+│   │   │       │   ├── intel_logo.svg
+│   │   │       │   ├── java.png
+│   │   │       │   ├── keyboard.png
+│   │   │       │   ├── midi-icons -> ../../local/lib/X11/pixmaps
+│   │   │       │   ├── net-setup_btnsize.png
+│   │   │       │   ├── nvidia48x32.png
+│   │   │       │   ├── puppy
+│   │   │       │   │   ├── BuildingBlock.svg -> building_block.svg
+│   │   │       │   │   ├── Business.svg -> currency_dollar.svg
+│   │   │       │   │   ├── Document-edit.svg -> edit.svg
+│   │   │       │   │   ├── Fun-adventure.svg -> game.svg
+│   │   │       │   │   ├── Fun-arcade.svg -> game_arcade.svg
+│   │   │       │   │   ├── Fun-boardgame.svg -> game_chess.svg
+│   │   │       │   │   ├── Fun-cardgame.svg -> game_card.svg
+│   │   │       │   │   ├── Fun-puzzle.svg -> game_puzzle.svg
+│   │   │       │   │   ├── Fun-shooter.svg -> game_shooter.svg
+│   │   │       │   │   ├── Fun.svg -> game.svg
+│   │   │       │   │   ├── Help.svg -> help.svg
+│   │   │       │   │   ├── Internet-transfer.svg
+│   │   │       │   │   ├── Multimedia-audiovideo.svg -> multimedia.svg
+│   │   │       │   │   ├── Multimedia-mediaplayer.svg -> gnome-mplayer.svg
+│   │   │       │   │   ├── Multimedia-optical.svg -> cdrom.svg
+│   │   │       │   │   ├── Multimedia-sound.svg -> audio.svg
+│   │   │       │   │   ├── Multimedia-utility.svg -> multimedia.svg
+│   │   │       │   │   ├── Multimedia-video.svg -> video.svg
+│   │   │       │   │   ├── Multimedia.svg -> multimedia.svg
+│   │   │       │   │   ├── README.TXT
+│   │   │       │   │   ├── Utility-development.svg -> preferences.svg
+│   │   │       │   │   ├── about.svg
+│   │   │       │   │   ├── add.svg
+│   │   │       │   │   ├── apply.svg
+│   │   │       │   │   ├── arrow_mini_down.svg
+│   │   │       │   │   ├── arrow_mini_left.svg
+│   │   │       │   │   ├── arrow_mini_right.svg
+│   │   │       │   │   ├── arrow_mini_up.svg
+│   │   │       │   │   ├── audio.svg
+│   │   │       │   │   ├── book.svg
+│   │   │       │   │   ├── book_address.svg
+│   │   │       │   │   ├── book_dictionary.svg
+│   │   │       │   │   ├── bookmark.svg
+│   │   │       │   │   ├── bookmark_add.svg
+│   │   │       │   │   ├── bookmark_no.svg
+│   │   │       │   │   ├── building_block.svg
+│   │   │       │   │   ├── bulb.svg
+│   │   │       │   │   ├── button.svg
+│   │   │       │   │   ├── calculator.svg
+│   │   │       │   │   ├── calendar.svg
+│   │   │       │   │   ├── cancel.svg
+│   │   │       │   │   ├── card_pci.svg
+│   │   │       │   │   ├── card_usb.svg
+│   │   │       │   │   ├── cd_audio.svg
+│   │   │       │   │   ├── cd_burn.svg
+│   │   │       │   │   ├── cd_mount.svg
+│   │   │       │   │   ├── cd_no.svg
+│   │   │       │   │   ├── cd_rip.svg
+│   │   │       │   │   ├── cd_yes.svg
+│   │   │       │   │   ├── cdrom.svg
+│   │   │       │   │   ├── chat.svg
+│   │   │       │   │   ├── clear.svg
+│   │   │       │   │   ├── clipboard.svg
+│   │   │       │   │   ├── clock.svg
+│   │   │       │   │   ├── clock_alarm.svg
+│   │   │       │   │   ├── clock_countdown.svg
+│   │   │       │   │   ├── clock_digital.svg
+│   │   │       │   │   ├── clock_interval.svg
+│   │   │       │   │   ├── clock_stopwatch.svg
+│   │   │       │   │   ├── close.svg
+│   │   │       │   │   ├── compass.svg
+│   │   │       │   │   ├── computer.svg
+│   │   │       │   │   ├── connect.svg
+│   │   │       │   │   ├── connect_no.svg
+│   │   │       │   │   ├── connect_yes.svg
+│   │   │       │   │   ├── container_0.svg
+│   │   │       │   │   ├── container_1.svg
+│   │   │       │   │   ├── container_2.svg
+│   │   │       │   │   ├── container_3.svg
+│   │   │       │   │   ├── container_4.svg
+│   │   │       │   │   ├── copy.svg
+│   │   │       │   │   ├── copy_cd.svg
+│   │   │       │   │   ├── copy_disk.svg
+│   │   │       │   │   ├── country.svg
+│   │   │       │   │   ├── country_keyboard.svg
+│   │   │       │   │   ├── country_language.svg
+│   │   │       │   │   ├── country_timezone.svg
+│   │   │       │   │   ├── currency_dollar.svg
+│   │   │       │   │   ├── date_time.svg
+│   │   │       │   │   ├── desktop.svg
+│   │   │       │   │   ├── desktop_appearance.svg
+│   │   │       │   │   ├── desktop_icons.svg
+│   │   │       │   │   ├── desktop_tray.svg
+│   │   │       │   │   ├── desktop_tray_config.svg
+│   │   │       │   │   ├── dialog-complete.svg
+│   │   │       │   │   ├── dialog-error.svg
+│   │   │       │   │   ├── dialog-info.svg
+│   │   │       │   │   ├── dialog-question.svg
+│   │   │       │   │   ├── dialog-warning.svg
+│   │   │       │   │   ├── dialog_stop.svg
+│   │   │       │   │   ├── directory.svg
+│   │   │       │   │   ├── directory_execute.svg
+│   │   │       │   │   ├── disconnect.svg
+│   │   │       │   │   ├── disk_usb.svg
+│   │   │       │   │   ├── document.svg
+│   │   │       │   │   ├── document_viewer.svg
+│   │   │       │   │   ├── draw.svg
+│   │   │       │   │   ├── draw_vector.svg
+│   │   │       │   │   ├── edit.svg
+│   │   │       │   │   ├── edit_html.svg
+│   │   │       │   │   ├── edit_image.svg
+│   │   │       │   │   ├── edit_sound.svg
+│   │   │       │   │   ├── execute.svg
+│   │   │       │   │   ├── execute_add.svg
+│   │   │       │   │   ├── execute_inspect.svg
+│   │   │       │   │   ├── execute_interval.svg
+│   │   │       │   │   ├── execute_yes.svg
+│   │   │       │   │   ├── file.svg
+│   │   │       │   │   ├── file_compare.svg
+│   │   │       │   │   ├── file_lock.svg
+│   │   │       │   │   ├── find.svg
+│   │   │       │   │   ├── firewall.svg
+│   │   │       │   │   ├── flashcard.svg
+│   │   │       │   │   ├── flashcard_usb.svg
+│   │   │       │   │   ├── flashcard_usb_2.svg
+│   │   │       │   │   ├── floppy.svg
+│   │   │       │   │   ├── flowchart.svg
+│   │   │       │   │   ├── font.svg
+│   │   │       │   │   ├── font_add.svg
+│   │   │       │   │   ├── font_size.svg
+│   │   │       │   │   ├── game.svg
+│   │   │       │   │   ├── game_arcade.svg
+│   │   │       │   │   ├── game_card.svg
+│   │   │       │   │   ├── game_chess.svg
+│   │   │       │   │   ├── game_puzzle.svg
+│   │   │       │   │   ├── game_shooter.svg
+│   │   │       │   │   ├── gnome-mplayer.svg
+│   │   │       │   │   ├── graph.svg
+│   │   │       │   │   ├── graphics.svg
+│   │   │       │   │   ├── graphics_3D.svg
+│   │   │       │   │   ├── graphics_lowres.svg
+│   │   │       │   │   ├── graphics_restart.svg
+│   │   │       │   │   ├── graphics_xorg.svg
+│   │   │       │   │   ├── harddisk.svg
+│   │   │       │   │   ├── harddisk_scsi.svg
+│   │   │       │   │   ├── harddisk_usb.svg
+│   │   │       │   │   ├── hardware_detect.svg
+│   │   │       │   │   ├── height.svg
+│   │   │       │   │   ├── help.svg
+│   │   │       │   │   ├── help_online.svg
+│   │   │       │   │   ├── home.svg
+│   │   │       │   │   ├── image.svg
+│   │   │       │   │   ├── image_viewer.svg
+│   │   │       │   │   ├── index.svg
+│   │   │       │   │   ├── info.svg
+│   │   │       │   │   ├── install.svg
+│   │   │       │   │   ├── install_options.svg
+│   │   │       │   │   ├── internet.svg
+│   │   │       │   │   ├── internet_block.svg
+│   │   │       │   │   ├── internet_connect.svg
+│   │   │       │   │   ├── internet_connect_no.svg
+│   │   │       │   │   ├── internet_connect_yes.svg
+│   │   │       │   │   ├── keyboard.svg
+│   │   │       │   │   ├── keyboard_shortcut.svg
+│   │   │       │   │   ├── lock.svg
+│   │   │       │   │   ├── mail.svg
+│   │   │       │   │   ├── media-pause.svg
+│   │   │       │   │   ├── media-play.svg
+│   │   │       │   │   ├── media-stop.svg
+│   │   │       │   │   ├── mediaplayer.svg
+│   │   │       │   │   ├── menu.svg
+│   │   │       │   │   ├── modem.svg
+│   │   │       │   │   ├── modem_config.svg
+│   │   │       │   │   ├── modem_no.svg
+│   │   │       │   │   ├── modem_search.svg
+│   │   │       │   │   ├── modem_yes.svg
+│   │   │       │   │   ├── module.svg
+│   │   │       │   │   ├── module_no.svg
+│   │   │       │   │   ├── module_yes.svg
+│   │   │       │   │   ├── mouse.svg
+│   │   │       │   │   ├── mouse_cursor.svg
+│   │   │       │   │   ├── mouse_keyboard.svg
+│   │   │       │   │   ├── mouse_keyboard_shortcut.svg
+│   │   │       │   │   ├── mouse_sensitivity.svg
+│   │   │       │   │   ├── move.svg
+│   │   │       │   │   ├── multimedia.svg
+│   │   │       │   │   ├── nb.svg
+│   │   │       │   │   ├── network.svg
+│   │   │       │   │   ├── network2.svg
+│   │   │       │   │   ├── network_connect.svg
+│   │   │       │   │   ├── network_transfer.svg
+│   │   │       │   │   ├── network_utility.svg
+│   │   │       │   │   ├── new.svg
+│   │   │       │   │   ├── notes.svg
+│   │   │       │   │   ├── nr_1.svg
+│   │   │       │   │   ├── nr_2.svg
+│   │   │       │   │   ├── nr_3.svg
+│   │   │       │   │   ├── ok.svg
+│   │   │       │   │   ├── open.svg
+│   │   │       │   │   ├── package.svg
+│   │   │       │   │   ├── package_add.svg
+│   │   │       │   │   ├── package_compressed.svg
+│   │   │       │   │   ├── package_inspect.svg
+│   │   │       │   │   ├── package_pet.svg
+│   │   │       │   │   ├── package_remove.svg
+│   │   │       │   │   ├── package_sfs.svg
+│   │   │       │   │   ├── paint.svg
+│   │   │       │   │   ├── partition.svg
+│   │   │       │   │   ├── paste.svg
+│   │   │       │   │   ├── pdf.svg
+│   │   │       │   │   ├── phone.svg
+│   │   │       │   │   ├── phone_mobile.svg
+│   │   │       │   │   ├── photocamera.svg
+│   │   │       │   │   ├── photocamera_no.svg
+│   │   │       │   │   ├── photocamera_yes.svg
+│   │   │       │   │   ├── placement.svg
+│   │   │       │   │   ├── placement_bottom.svg
+│   │   │       │   │   ├── placement_bottomleft.svg
+│   │   │       │   │   ├── placement_bottomright.svg
+│   │   │       │   │   ├── placement_corners.svg
+│   │   │       │   │   ├── placement_left.svg
+│   │   │       │   │   ├── placement_left_right.svg
+│   │   │       │   │   ├── placement_none.svg
+│   │   │       │   │   ├── placement_right.svg
+│   │   │       │   │   ├── placement_top.svg
+│   │   │       │   │   ├── placement_top_bottom.svg
+│   │   │       │   │   ├── placement_topleft.svg
+│   │   │       │   │   ├── placement_topright.svg
+│   │   │       │   │   ├── playmode_loop.svg
+│   │   │       │   │   ├── playmode_shuffle.svg
+│   │   │       │   │   ├── playmode_straight.svg
+│   │   │       │   │   ├── plug_parallel.svg
+│   │   │       │   │   ├── plug_ps2_keyboard.svg
+│   │   │       │   │   ├── plug_ps2_mouse.svg
+│   │   │       │   │   ├── plug_scsi.svg
+│   │   │       │   │   ├── plug_serial.svg
+│   │   │       │   │   ├── plug_usb.svg
+│   │   │       │   │   ├── power.svg
+│   │   │       │   │   ├── preferences.svg
+│   │   │       │   │   ├── print-preview.svg
+│   │   │       │   │   ├── print.svg
+│   │   │       │   │   ├── print_add.svg
+│   │   │       │   │   ├── print_no.svg
+│   │   │       │   │   ├── print_yes.svg
+│   │   │       │   │   ├── properties.svg
+│   │   │       │   │   ├── puppy.svg
+│   │   │       │   │   ├── puppy_config.svg
+│   │   │       │   │   ├── puppy_increase.svg
+│   │   │       │   │   ├── puppy_install.svg
+│   │   │       │   │   ├── puppy_remaster.svg
+│   │   │       │   │   ├── puppy_save.svg
+│   │   │       │   │   ├── puppy_theme.svg
+│   │   │       │   │   ├── puppy_theme_412.svg
+│   │   │       │   │   ├── puppy_theme_431.svg
+│   │   │       │   │   ├── puppy_theme_daylight_mouse.svg
+│   │   │       │   │   ├── puppy_theme_daylight_touch.svg
+│   │   │       │   │   ├── puppy_theme_eve_mouse.svg
+│   │   │       │   │   ├── puppy_theme_eve_touch.svg
+│   │   │       │   │   ├── puppy_theme_flat_grey.svg
+│   │   │       │   │   ├── puppy_theme_generic.svg
+│   │   │       │   │   ├── puppy_theme_tahrpup.svg
+│   │   │       │   │   ├── quality_0.svg
+│   │   │       │   │   ├── quality_1.svg
+│   │   │       │   │   ├── quality_2.svg
+│   │   │       │   │   ├── quality_3.svg
+│   │   │       │   │   ├── quality_4.svg
+│   │   │       │   │   ├── quality_5.svg
+│   │   │       │   │   ├── quit.svg
+│   │   │       │   │   ├── reboot.svg
+│   │   │       │   │   ├── refresh.svg
+│   │   │       │   │   ├── remove.svg
+│   │   │       │   │   ├── rename.svg
+│   │   │       │   │   ├── rss.svg
+│   │   │       │   │   ├── save.svg
+│   │   │       │   │   ├── scanner.svg
+│   │   │       │   │   ├── screen_calibration.svg
+│   │   │       │   │   ├── screen_lock.svg
+│   │   │       │   │   ├── screen_resolution.svg
+│   │   │       │   │   ├── screen_suspend.svg
+│   │   │       │   │   ├── screen_xy.svg
+│   │   │       │   │   ├── select-color.svg
+│   │   │       │   │   ├── select-font.svg
+│   │   │       │   │   ├── shield_internet.svg
+│   │   │       │   │   ├── shield_no.svg
+│   │   │       │   │   ├── shield_yes.svg
+│   │   │       │   │   ├── shutdown.svg
+│   │   │       │   │   ├── shutdown_interval.svg
+│   │   │       │   │   ├── size.svg
+│   │   │       │   │   ├── sound.svg
+│   │   │       │   │   ├── sound_config.svg
+│   │   │       │   │   ├── sound_eq.svg
+│   │   │       │   │   ├── sound_mixer.svg
+│   │   │       │   │   ├── speaker_0.svg
+│   │   │       │   │   ├── speaker_1.svg
+│   │   │       │   │   ├── speaker_2.svg
+│   │   │       │   │   ├── speaker_3.svg
+│   │   │       │   │   ├── spreadsheet.svg
+│   │   │       │   │   ├── startup.svg
+│   │   │       │   │   ├── startup_app.svg
+│   │   │       │   │   ├── startup_config.svg
+│   │   │       │   │   ├── startup_os.svg
+│   │   │       │   │   ├── startup_services.svg
+│   │   │       │   │   ├── system_memory.svg
+│   │   │       │   │   ├── system_print.svg
+│   │   │       │   │   ├── system_process.svg
+│   │   │       │   │   ├── system_security.svg
+│   │   │       │   │   ├── system_storage.svg
+│   │   │       │   │   ├── terminal.svg
+│   │   │       │   │   ├── touch.svg
+│   │   │       │   │   ├── touchpad.svg
+│   │   │       │   │   ├── trash.svg
+│   │   │       │   │   ├── trash_empty.svg
+│   │   │       │   │   ├── trash_full.svg
+│   │   │       │   │   ├── user.svg
+│   │   │       │   │   ├── user_female.svg
+│   │   │       │   │   ├── user_login.svg
+│   │   │       │   │   ├── user_male.svg
+│   │   │       │   │   ├── utility_package.svg
+│   │   │       │   │   ├── video.svg
+│   │   │       │   │   ├── wallpaper.svg
+│   │   │       │   │   ├── wifi_encrypted.svg
+│   │   │       │   │   ├── wifi_open.svg
+│   │   │       │   │   ├── windows.svg
+│   │   │       │   │   ├── windows_buttons.svg
+│   │   │       │   │   ├── windows_theme.svg
+│   │   │       │   │   ├── wireless.svg
+│   │   │       │   │   ├── wm_restart.svg
+│   │   │       │   │   ├── write.svg
+│   │   │       │   │   ├── zoom-in.svg
+│   │   │       │   │   └── zoom-out.svg
+│   │   │       │   └── squashfs-image.png
+│   │   │       ├── sounds
+│   │   │       │   ├── 2barks.au -> ../audio/2barks.au
+│   │   │       │   ├── bark.au -> ../audio/bark.au
+│   │   │       │   ├── complete.wav -> ../audio/ok.wav
+│   │   │       │   ├── error.wav -> ../audio/error.wav
+│   │   │       │   ├── generic.wav -> ../audio/generic.wav
+│   │   │       │   ├── illegal_move.ogg -> ../audio/illegal_move.ogg
+│   │   │       │   ├── join.wav -> ../audio/join.wav
+│   │   │       │   ├── leave.wav -> ../audio/leave.wav
+│   │   │       │   ├── login.wav -> ../audio/join.wav
+│   │   │       │   ├── logout.wav -> ../audio/leave.wav
+│   │   │       │   └── ok.wav -> ../audio/ok.wav
+│   │   │       ├── sss
+│   │   │       │   ├── desk_strings
+│   │   │       │   │   └── desk_strings
+│   │   │       │   └── menu_strings
+│   │   │       │       └── menu_strings
+│   │   │       └── terminfox
+│   │   │           ├── l
+│   │   │           │   ├── linux
+│   │   │           │   ├── linux-c
+│   │   │           │   ├── linux-c-nc
+│   │   │           │   ├── linux-koi8
+│   │   │           │   ├── linux-koi8r
+│   │   │           │   ├── linux-lat
+│   │   │           │   ├── linux-m
+│   │   │           │   └── linux-nic
+│   │   │           ├── r
+│   │   │           │   ├── rxvt
+│   │   │           │   ├── rxvt-basic
+│   │   │           │   ├── rxvt-m -> rxvt-basic
+│   │   │           │   └── rxvt-unicode -> rxvt
+│   │   │           ├── v
+│   │   │           │   ├── vt100
+│   │   │           │   ├── vt102
+│   │   │           │   ├── vt125
+│   │   │           │   ├── vt131
+│   │   │           │   ├── vt132
+│   │   │           │   ├── vt200
+│   │   │           │   ├── vt220
+│   │   │           │   └── vt52
+│   │   │           └── x
+│   │   │               ├── xterm
+│   │   │               ├── xterm-color
+│   │   │               ├── xterm-mono
+│   │   │               ├── xterm-new
+│   │   │               ├── xterm-nic
+│   │   │               ├── xterm-nrc
+│   │   │               ├── xterm-r5
+│   │   │               ├── xterm-redhat
+│   │   │               ├── xterm-rep
+│   │   │               ├── xterm-sun
+│   │   │               ├── xterm-vi
+│   │   │               ├── xterm-vt220
+│   │   │               ├── xterm-xfree86
+│   │   │               ├── xterms
+│   │   │               └── xterms-sun
+│   │   └── var
+│   │       ├── cache
+│   │       │   └── libx11
+│   │       │       └── compose
+│   │       │           └── EMPTYDIRMARKER
+│   │       ├── empty
+│   │       │   └── EMPTYDIRMARKER
+│   │       ├── lib
+│   │       │   ├── alsa
+│   │       │   │   └── EMPTYDIRMARKER
+│   │       │   ├── xdm
+│   │       │   │   └── EMPTYDIRMARKER
+│   │       │   └── xkb
+│   │       │       └── README
+│   │       ├── local
+│   │       │   ├── lib
+│   │       │   │   └── games
+│   │       │   │       └── gtkfish.score
+│   │       │   ├── pupdial
+│   │       │   │   └── isp -> isp1
+│   │       │   └── xwin_disable_xerrs_log_flag
+│   │       ├── lock
+│   │       │   └── subsys
+│   │       │       └── EMPTYDIRMARKER
+│   │       ├── log
+│   │       │   └── cups
+│   │       │       └── EMPTYDIRMARKER
+│   │       ├── packages
+│   │       │   ├── EMPTYDIRMARKER
+│   │       │   └── package-deps-ignore.list
+│   │       ├── run
+│   │       │   └── EMPTYDIRMARKER
+│   │       ├── spool
+│   │       │   ├── cron
+│   │       │   │   └── crontabs
+│   │       │   │       └── EMPTYDIRMARKER
+│   │       │   ├── cups
+│   │       │   │   └── tmp
+│   │       │   │       └── EMPTYDIRMARKER
+│   │       │   └── uucp
+│   │       │       └── EMPTYDIRMARKER
+│   │       └── tmp
+│   │           └── EMPTYDIRMARKER
+│   ├── runqemu_woof.sh
+│   ├── support
+│   │   ├── 2createpackages.fix.desktop.files.sh
+│   │   ├── arm_sd_image.sh
+│   │   ├── arm_zip_file.sh
+│   │   ├── bdrv.sh
+│   │   ├── builtin_files.sh
+│   │   ├── busybox_symlinks.sh
+│   │   ├── choose_themes
+│   │   ├── docx_nlsx.sh
+│   │   ├── download_file.sh
+│   │   ├── files2delete.sh
+│   │   ├── findpkgs
+│   │   ├── findwoofinstalledpkgs
+│   │   ├── huge_kernel.sh
+│   │   ├── kit_kernel.sh
+│   │   ├── latest_microcode.sh -> ../rootfs-skeleton/usr/sbin/latest_microcode.sh
+│   │   ├── mk_iso.sh
+│   │   ├── pc_image.sh
+│   │   ├── petbuilds.sh
+│   │   ├── release_extras
+│   │   │   ├── bionicpup64.htm
+│   │   │   ├── raspup.htm
+│   │   │   ├── slacko-14.2.htm
+│   │   │   ├── slacko64-14.2.htm
+│   │   │   ├── tahr.htm
+│   │   │   └── tahr64.htm
+│   │   ├── resolvedeps.sh
+│   │   ├── rootfs-hacks.sh
+│   │   ├── rootfs-hacks.sh_desktop
+│   │   ├── rootfs-hacks.sh_libs
+│   │   ├── slacko
+│   │   │   ├── S_puppy.gif
+│   │   │   ├── mkwall.conf
+│   │   │   ├── s_puppylogo48.png
+│   │   │   ├── s_puppylogo96.png
+│   │   │   └── slacko_logo_trans.png
+│   │   └── z_xorgdrivers_deb.sh
+│   └── xlog
+├── woof-distro
+│   ├── Packages-puppy-noarch-official
+│   ├── arm
+│   │   ├── Packages-puppy-armv6-official
+│   │   └── raspbian
+│   │       ├── README.md
+│   │       └── buster
+│   │           ├── DISTRO_COMPAT_REPOS-raspbian-buster
+│   │           ├── DISTRO_PET_REPOS
+│   │           ├── DISTRO_PKGS_SPECS-raspbian-buster
+│   │           ├── DISTRO_SPECS
+│   │           ├── Packages-puppy-buster-official
+│   │           ├── Packages-puppy-stretch-official
+│   │           ├── _00build.conf
+│   │           ├── packages-templates
+│   │           │   └── firmware-brcm80211
+│   │           │       └── lib
+│   │           │           └── firmware
+│   │           │               └── brcm
+│   │           │                   ├── brcmfmac43430-sdio.txt
+│   │           │                   └── brcmfmac43455-sdio.txt
+│   │           ├── rootfs-packages
+│   │           │   └── ptheme_pi
+│   │           │       ├── pet.specs
+│   │           │       └── usr
+│   │           │           └── share
+│   │           │               ├── backgrounds
+│   │           │               │   └── pi.png
+│   │           │               ├── jwm
+│   │           │               │   └── tray_templates
+│   │           │               │       └── pi_bot
+│   │           │               │           ├── jwmrc-tray1
+│   │           │               │           ├── jwmrc-tray2
+│   │           │               │           ├── jwmrc-tray3
+│   │           │               │           └── jwmrc-tray4
+│   │           │               └── ptheme
+│   │           │                   └── globals
+│   │           │                       ├── pi bottom
+│   │           │                       └── pi original
+│   │           ├── rootfs-skeleton
+│   │           │   └── boot
+│   │           │       ├── bootmenu.txt
+│   │           │       └── config.txt
+│   │           └── support
+│   │               ├── mk_arm_img.sh
+│   │               └── rootfs-packages.conf
+│   ├── x86
+│   │   ├── Packages-puppy-common32-official
+│   │   ├── debian
+│   │   │   ├── Packages-puppy-stretch-official
+│   │   │   ├── bookworm
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-debian-bookworm -> ../../../x86_64/debian/bookworm64/DISTRO_COMPAT_REPOS-debian-bookworm
+│   │   │   │   ├── DISTRO_PET_REPOS -> ../../../x86_64/debian/bookworm64/DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-debian-bookworm -> ../../../x86_64/debian/bookworm64/DISTRO_PKGS_SPECS-debian-bookworm
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── _00build.conf -> ../../../x86_64/debian/bookworm64/_00build.conf
+│   │   │   │   └── _00build_2.conf -> ../../../x86_64/debian/bookworm64/_00build_2.conf
+│   │   │   ├── bullseye
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-debian-bullseye -> ../../../x86_64/debian/bullseye64/DISTRO_COMPAT_REPOS-debian-bullseye
+│   │   │   │   ├── DISTRO_PET_REPOS -> ../../../x86_64/debian/bullseye64/DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-debian-bullseye -> ../../../x86_64/debian/bullseye64/DISTRO_PKGS_SPECS-debian-bullseye
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── _00build.conf -> ../../../x86_64/debian/bullseye64/_00build.conf
+│   │   │   │   └── _00build_2.conf -> ../../../x86_64/debian/bullseye64/_00build_2.conf
+│   │   │   ├── buster
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-debian-buster
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-debian-buster
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── dpupbw32
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-debian-bookworm
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-debian-bookworm
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── support
+│   │   │   │       ├── bwp32
+│   │   │   │       │   └── README-extra_sfs
+│   │   │   │       └── rootfs-packages.conf
+│   │   │   └── stretch
+│   │   │       ├── DISTRO_COMPAT_REPOS-debian-stretch
+│   │   │       ├── DISTRO_PET_REPOS
+│   │   │       ├── DISTRO_PKGS_SPECS-debian-stretch
+│   │   │       ├── DISTRO_SPECS
+│   │   │       ├── _00build.conf
+│   │   │       └── _00build_2.conf
+│   │   ├── slackware
+│   │   │   ├── 14.0
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-slackware-14.0
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-slacko14-official
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── 14.1
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-slackware-14.1
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-slacko14.1-official
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── 14.2
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-slackware-14.2
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-slacko14.2-official
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── 15.0
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-slackware-15.0
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-slacko15.0-official
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── DISTRO_COMPAT_REPOS
+│   │   │   └── s15pup32
+│   │   │       ├── 0-README-get-extra-items.txt
+│   │   │       ├── DISTRO_COMPAT_REPOS
+│   │   │       ├── DISTRO_PET_REPOS
+│   │   │       ├── DISTRO_PKGS_SPECS-slackware-15.0
+│   │   │       ├── DISTRO_SPECS
+│   │   │       ├── _00build.conf
+│   │   │       └── support
+│   │   │           └── rootfs-packages.conf
+│   │   ├── ubuntu
+│   │   │   ├── Packages-puppy-tahr-official
+│   │   │   ├── trusty
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-trusty
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-ubuntu-trusty
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── _00build_2.conf
+│   │   │   ├── upupbb
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-bionic
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-ubuntu-bionic
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-extra-upupbb
+│   │   │   │   ├── Packages-puppy-upupbb-extra
+│   │   │   │   ├── Packages-puppy-upupbb-official
+│   │   │   │   ├── _00build.conf
+│   │   │   │   ├── _00build_2.conf
+│   │   │   │   ├── readme.md
+│   │   │   │   └── rootfs-packages.conf
+│   │   │   ├── upupff+d
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-focal
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-ubuntu-focal
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-upupff+d-extra
+│   │   │   │   ├── Packages-puppy-upupff+d-official
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── support
+│   │   │   │       └── rootfs-packages.conf
+│   │   │   ├── upupjj+d
+│   │   │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-jammy
+│   │   │   │   ├── DISTRO_PET_REPOS
+│   │   │   │   ├── DISTRO_PKGS_SPECS-ubuntu-jammy
+│   │   │   │   ├── DISTRO_SPECS
+│   │   │   │   ├── Packages-puppy-upupjj+d-extra
+│   │   │   │   ├── Packages-puppy-upupjj+d-official
+│   │   │   │   ├── _00build.conf
+│   │   │   │   └── support
+│   │   │   │       ├── jammy32
+│   │   │   │       │   └── devx-hack.sh
+│   │   │   │       └── rootfs-packages.conf
+│   │   │   └── xenial
+│   │   │       ├── DISTRO_COMPAT_REPOS-ubuntu-xenial
+│   │   │       ├── DISTRO_PET_REPOS
+│   │   │       ├── DISTRO_PKGS_SPECS-ubuntu-xenial
+│   │   │       ├── DISTRO_SPECS
+│   │   │       ├── Packages-puppy-xenial-official
+│   │   │       ├── _00build.conf
+│   │   │       └── _00build_2.conf
+│   │   └── void
+│   │       └── voidpup32
+│   │           ├── DISTRO_COMPAT_REPOS-void
+│   │           ├── DISTRO_PET_REPOS
+│   │           ├── DISTRO_PKGS_SPECS-void-current
+│   │           ├── DISTRO_SPECS
+│   │           ├── _00build.conf
+│   │           ├── rootfs-petbuilds
+│   │           │   └── busybox-void -> busybox
+│   │           └── support
+│   │               └── void
+│   │                   ├── cvt.sh
+│   │                   ├── makepkgdb.sh
+│   │                   └── void0setup
+│   └── x86_64
+│       ├── Packages-puppy-common64-official
+│       ├── debian
+│       │   ├── bookworm64
+│       │   │   ├── DISTRO_COMPAT_REPOS-debian-bookworm
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-debian-bookworm
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── bullseye64
+│       │   │   ├── DISTRO_COMPAT_REPOS-debian-bullseye
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-debian-bullseye
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── buster64
+│       │   │   ├── DISTRO_COMPAT_REPOS-debian-buster
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-debian-buster
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── Packages-puppy-buster-official
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── sid64
+│       │   │   ├── DISTRO_COMPAT_REPOS-debian-sid
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-debian-sid
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   └── trixie64
+│       │       ├── DISTRO_COMPAT_REPOS-debian-trixie
+│       │       ├── DISTRO_PET_REPOS
+│       │       ├── DISTRO_PKGS_SPECS-debian-trixie
+│       │       ├── DISTRO_SPECS
+│       │       ├── _00build.conf
+│       │       └── _00build_2.conf
+│       ├── devuan
+│       │   ├── chimaera64
+│       │   │   ├── DISTRO_COMPAT_REPOS-devuan-chimaera
+│       │   │   ├── DISTRO_PET_REPOS -> ../../debian/bullseye64/DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-devuan-chimaera -> ../../debian/bullseye64/DISTRO_PKGS_SPECS-debian-bullseye
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf -> ../../debian/bullseye64/_00build.conf
+│       │   │   └── _00build_2.conf -> ../../debian/bullseye64/_00build_2.conf
+│       │   └── daedalus64
+│       │       ├── DISTRO_COMPAT_REPOS-devuan-daedalus
+│       │       ├── DISTRO_PET_REPOS -> ../../debian/bookworm64/DISTRO_PET_REPOS
+│       │       ├── DISTRO_PKGS_SPECS-devuan-daedalus -> ../../debian/bookworm64/DISTRO_PKGS_SPECS-debian-bookworm
+│       │       ├── DISTRO_SPECS
+│       │       ├── _00build.conf -> ../../debian/bookworm64/_00build.conf
+│       │       └── _00build_2.conf -> ../../debian/bookworm64/_00build_2.conf
+│       ├── slackware64
+│       │   ├── 14.0
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-slackware64-14.0
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── Packages-puppy-slacko6414-official
+│       │   │   └── _00build_2.conf
+│       │   ├── 14.1
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-slackware64-14.1
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── Packages-puppy-slacko6414.1-official
+│       │   │   └── _00build_2.conf
+│       │   ├── 14.2
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-slackware64-14.2
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── Packages-puppy-slacko6414.2-official
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── 15.0
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-slackware64-15.0
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── Packages-puppy-slacko6415.0-official
+│       │   │   ├── README.txt
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── DISTRO_COMPAT_REPOS
+│       │   └── s15pup64
+│       │       ├── 0-README-get-extra-items.txt
+│       │       ├── DISTRO_COMPAT_REPOS
+│       │       ├── DISTRO_PET_REPOS
+│       │       ├── DISTRO_PKGS_SPECS-slackware64-15.0
+│       │       ├── DISTRO_SPECS
+│       │       ├── _00build.conf
+│       │       └── support
+│       │           └── rootfs-packages.conf
+│       ├── ubuntu
+│       │   ├── Packages-puppy-tahr64-official
+│       │   ├── bionic64
+│       │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-bionic
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-ubuntu-bionic
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── PKGS_MANAGEMENT
+│       │   │   ├── Packages-puppy-bionic64-official
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── focal64
+│       │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-focal
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-ubuntu-focal
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── PKGS_MANAGEMENT
+│       │   │   ├── Packages-puppy-fossa64-official
+│       │   │   ├── _00build.conf
+│       │   │   ├── adrv
+│       │   │   │   ├── DISTRO_PKGS_SPECS-ubuntu-focal
+│       │   │   │   └── rootfs-packages.conf
+│       │   │   └── support
+│       │   │       ├── big-rootfs-packages.conf
+│       │   │       └── rootfs-packages.conf
+│       │   ├── jammy64
+│       │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-jammy
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-ubuntu-jammy
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   ├── trusty64
+│       │   │   ├── DISTRO_COMPAT_REPOS-ubuntu-trusty
+│       │   │   ├── DISTRO_PET_REPOS
+│       │   │   ├── DISTRO_PKGS_SPECS-ubuntu-trusty
+│       │   │   ├── DISTRO_SPECS
+│       │   │   ├── _00build.conf
+│       │   │   └── _00build_2.conf
+│       │   └── xenial64
+│       │       ├── DISTRO_COMPAT_REPOS-ubuntu-xenial
+│       │       ├── DISTRO_PET_REPOS
+│       │       ├── DISTRO_PKGS_SPECS-ubuntu-xenial
+│       │       ├── DISTRO_SPECS
+│       │       ├── Packages-puppy-xenial64-official
+│       │       ├── _00build.conf
+│       │       ├── _00build_2.conf
+│       │       └── rootfs-packages.conf
+│       └── void
+│           └── voidpup64
+│               ├── DISTRO_COMPAT_REPOS-void
+│               ├── DISTRO_PET_REPOS
+│               ├── DISTRO_PKGS_SPECS-void-current
+│               ├── DISTRO_SPECS
+│               ├── _00build.conf
+│               ├── rootfs-petbuilds
+│               │   └── busybox-void -> busybox
+│               └── support
+│                   └── void
+│                       ├── cvt.sh
+│                       ├── devx-hack.sh
+│                       ├── makepkgdb.sh
+│                       └── void0setup
+├── ztools
+│   ├── README.md
+│   ├── gitrepo -> ../woof-code/rootfs-skeleton/usr/sbin/zzgitrepo
+│   └── patch-generator.sh
+└── zwn
+    ├── LICENSE -> ../LICENSE
+    ├── README.md
+    ├── builders
+    │   ├── build-iso.sh
+    │   ├── build-tar.sh
+    │   ├── deb-build.sh
+    │   ├── deb2repo
+    │   ├── debian-build.sh -> deb-build.sh
+    │   ├── devuan-build.sh -> deb-build.sh
+    │   ├── installpkg
+    │   ├── makedeb
+    │   ├── makepkg
+    │   ├── pkg2repo
+    │   ├── removepkg
+    │   ├── runqemu.sh
+    │   ├── slack-build.sh
+    │   ├── slackware-build.sh -> slack-build.sh
+    │   ├── ubuntu-build.sh -> deb-build.sh
+    │   └── xlog
+    ├── initrd-progs -> ../initrd-progs
+    ├── kernel-kit -> ../kernel-kit
+    ├── setup.sh
+    ├── woof-arch -> ../woof-arch
+    ├── woof-code -> ../woof-code
+    └── woof-distro
+        ├── arm
+        │   └── devuan
+        │       └── ascii
+        │           ├── basesfs
+        │           ├── devx
+        │           └── repo-url
+        ├── x86
+        │   └── slackware
+        │       └── 14.2
+        │           ├── basesfs
+        │           ├── devx
+        │           └── repo-url
+        └── x86_64
+            └── slackware
+                └── 14.2
+                    ├── basesfs -> ../../../x86/slackware/14.2/basesfs
+                    ├── devx -> ../../../x86/slackware/14.2/devx
+                    └── repo-url
+
+969 directories, 3819 files
